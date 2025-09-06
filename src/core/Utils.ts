@@ -1,0 +1,42 @@
+import { ZContainer } from "zimporter-pixi";
+import { EntityObj } from "../game/Model";
+import { Entity } from "./Entity";
+
+export class Utils {
+    static distance(x1: number, y1: number, x2: number, y2: number): number {
+        return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+    }
+    static sign(n: number): number {
+        return n === 0 ? 0 : n > 0 ? 1 : -1;
+    }
+
+    static deepcopy<T>(obj: T): T {
+        return JSON.parse(JSON.stringify(obj));
+    }
+
+    static getCollision(
+        entity: Entity,
+        radius: number,
+        matrix: Record<string, Record<string, Entity>>,
+        gridSize: number
+    ): Entity | null {
+        const col = Math.floor(entity.x! / gridSize);
+        const row = Math.floor(entity.y! / gridSize);
+        for (let r = -1; r <= 1; r++) {
+            for (let c = -1; c <= 1; c++) {
+                const dictName = `${row + r}_${col + c}`;
+                if (matrix[dictName]) {
+                    for (const k of Object.values(matrix[dictName])) {
+                        if (entity === k) continue;
+                        const dist = Math.abs(Utils.distance(k.x!, k.y!, entity.x!, entity.y!));
+                        if (dist < (radius + k.radius!)) {
+                            console.log('Collision detected between entities:', k, 'and', { x: entity.x!, y: entity.y!, radius });
+                            return k;
+                        }
+                    }
+                }
+            }
+        }
+        return null;
+    }
+}

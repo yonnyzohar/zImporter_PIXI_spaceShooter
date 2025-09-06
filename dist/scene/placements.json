@@ -1,0 +1,624 @@
+{
+  "resolution": {
+    "x": 1136,
+    "y": 640
+  },
+  "animTracks": {},
+  "stage": {
+    "children": [
+      {
+        "type": "asset",
+        "name": "ShieldTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "shieldView",
+        "filters": {},
+        "portrait": {
+          "x": 177.6942533033028,
+          "y": 894.9267784845392,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 340.07743648648596,
+          "y": 353.1946463524072,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "MagnetTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "magnetView",
+        "filters": {},
+        "portrait": {
+          "x": 223.68962627627582,
+          "y": 899.7424828302424,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 386.072809459459,
+          "y": 358.0103506981103,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "EnemyTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "enemyView",
+        "filters": {},
+        "portrait": {
+          "x": 269.68499924924885,
+          "y": 893.3215386163752,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 432.068182432432,
+          "y": 351.5894064842431,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "BulletTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "bulletView",
+        "filters": {},
+        "portrait": {
+          "x": 315.6803722222219,
+          "y": 907.2335716974299,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 478.06355540540505,
+          "y": 365.5014395652978,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "ExplosionTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "explosionView",
+        "filters": {},
+        "portrait": {
+          "x": 102.48270817500617,
+          "y": 888.2386107613024,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 264.86589135818934,
+          "y": 346.5064786291704,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "FireRateTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "fireRateView",
+        "filters": {},
+        "portrait": {
+          "x": 361.67574519519496,
+          "y": 911.5141960870783,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 524.0589283783781,
+          "y": 369.78206395494624,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "CoinTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "coinView",
+        "filters": {},
+        "portrait": {
+          "x": 407.67111816816794,
+          "y": 907.2335716974299,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 570.0543013513511,
+          "y": 365.5014395652978,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "FireAnglesTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "fireAnglesView",
+        "filters": {},
+        "portrait": {
+          "x": 499.6618641141141,
+          "y": 908.3037316095392,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 662.0450472972973,
+          "y": 366.5715994774072,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "HealthPackTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "healthPackView",
+        "filters": {},
+        "portrait": {
+          "x": 545.6572370870871,
+          "y": 902.9529473077814,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 708.0404202702703,
+          "y": 361.22081517564936,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "ShipTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "shipView",
+        "filters": {},
+        "portrait": {
+          "x": 413.69301692256,
+          "y": 745.3968905018801,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 413.69301692256,
+          "y": 745.3968905018801,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      }
+    ],
+    "type": "Container",
+    "name": "stage"
+  },
+  "templates": {
+    "ShieldTemplate": {
+      "children": [
+        {
+          "type": "img",
+          "name": "ShieldTemplate_IMG",
+          "width": 42,
+          "height": 47,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/shield.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "ShieldTemplate"
+    },
+    "MagnetTemplate": {
+      "children": [
+        {
+          "type": "img",
+          "name": "MagnetTemplate_IMG",
+          "width": 36,
+          "height": 38,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/magnet.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "MagnetTemplate"
+    },
+    "EnemyTemplate": {
+      "children": [
+        {
+          "type": "img",
+          "name": "EnemyTemplate_IMG",
+          "width": 51,
+          "height": 50,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/enemy.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "EnemyTemplate"
+    },
+    "BulletTemplate": {
+      "children": [
+        {
+          "type": "img",
+          "name": "BulletTemplate_IMG",
+          "width": 24,
+          "height": 24,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/bullet.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "BulletTemplate"
+    },
+    "ExplosionTemplate": {
+      "children": [
+        {
+          "type": "img",
+          "name": "ExplosionTemplate_IMG",
+          "width": 64,
+          "height": 64,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/explosion.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "ExplosionTemplate"
+    },
+    "FireRateTemplate": {
+      "children": [
+        {
+          "type": "img",
+          "name": "FireRateTemplate_IMG",
+          "width": 32,
+          "height": 16,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/fireRate.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "FireRateTemplate"
+    },
+    "CoinTemplate": {
+      "children": [
+        {
+          "type": "img",
+          "name": "CoinTemplate_IMG",
+          "width": 24,
+          "height": 24,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/coin.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "CoinTemplate"
+    },
+    "FireAnglesTemplate": {
+      "children": [
+        {
+          "type": "img",
+          "name": "FireAnglesTemplate_IMG",
+          "width": 38,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/fireAngles.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "FireAnglesTemplate"
+    },
+    "HealthPackTemplate": {
+      "children": [
+        {
+          "type": "img",
+          "name": "HealthPackTemplate_IMG",
+          "width": 32,
+          "height": 32,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/health.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "HealthPackTemplate"
+    },
+    "ShipTemplate": {
+      "children": [
+        {
+          "type": "asset",
+          "name": "ShipTemplateInner",
+          "template": true,
+          "guide": false,
+          "instanceName": "shipViewInner",
+          "filters": {},
+          "portrait": {
+            "x": -19.98673710929063,
+            "y": -35.149089399097136,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 641.513170435835,
+            "y": 452.78282848760074,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 20,
+            "pivotY": 37,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ],
+      "type": "asset",
+      "name": "ShipTemplate"
+    },
+    "ShipTemplateInner": {
+      "children": [
+        {
+          "type": "img",
+          "name": "ShipTemplateInner_IMG",
+          "width": 40,
+          "height": 74,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/ship.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "ShipTemplateInner"
+    }
+  },
+  "fonts": [],
+  "fps": 60,
+  "cuePoints": {}
+}
