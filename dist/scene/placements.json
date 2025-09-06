@@ -14,8 +14,8 @@
         "instanceName": "shieldView",
         "filters": {},
         "portrait": {
-          "x": 177.6942533033028,
-          "y": 894.9267784845392,
+          "x": 340.07743648648596,
+          "y": 353.1946463524072,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -54,8 +54,8 @@
         "instanceName": "magnetView",
         "filters": {},
         "portrait": {
-          "x": 223.68962627627582,
-          "y": 899.7424828302424,
+          "x": 386.072809459459,
+          "y": 358.0103506981103,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -88,54 +88,14 @@
       },
       {
         "type": "asset",
-        "name": "EnemyTemplate",
-        "template": true,
-        "guide": false,
-        "instanceName": "enemyView",
-        "filters": {},
-        "portrait": {
-          "x": 269.68499924924885,
-          "y": 893.3215386163752,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        "landscape": {
-          "x": 432.068182432432,
-          "y": 351.5894064842431,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        }
-      },
-      {
-        "type": "asset",
         "name": "BulletTemplate",
         "template": true,
         "guide": false,
         "instanceName": "bulletView",
         "filters": {},
         "portrait": {
-          "x": 315.6803722222219,
-          "y": 907.2335716974299,
+          "x": 478.06355540540505,
+          "y": 365.5014395652978,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -174,8 +134,8 @@
         "instanceName": "explosionView",
         "filters": {},
         "portrait": {
-          "x": 102.48270817500617,
-          "y": 888.2386107613024,
+          "x": 264.86589135818934,
+          "y": 346.5064786291704,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -214,8 +174,8 @@
         "instanceName": "fireRateView",
         "filters": {},
         "portrait": {
-          "x": 361.67574519519496,
-          "y": 911.5141960870783,
+          "x": 524.0589283783781,
+          "y": 369.78206395494624,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -254,8 +214,8 @@
         "instanceName": "coinView",
         "filters": {},
         "portrait": {
-          "x": 407.67111816816794,
-          "y": 907.2335716974299,
+          "x": 570.0543013513511,
+          "y": 365.5014395652978,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -294,8 +254,8 @@
         "instanceName": "fireAnglesView",
         "filters": {},
         "portrait": {
-          "x": 499.6618641141141,
-          "y": 908.3037316095392,
+          "x": 662.0450472972973,
+          "y": 366.5715994774072,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -334,8 +294,8 @@
         "instanceName": "healthPackView",
         "filters": {},
         "portrait": {
-          "x": 545.6572370870871,
-          "y": 902.9529473077814,
+          "x": 708.0404202702703,
+          "y": 361.22081517564936,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -374,8 +334,8 @@
         "instanceName": "shipView",
         "filters": {},
         "portrait": {
-          "x": 413.69301692256,
-          "y": 745.3968905018801,
+          "x": 618.051040218146,
+          "y": 379.39766825272324,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -390,8 +350,48 @@
           }
         },
         "landscape": {
-          "x": 413.69301692256,
-          "y": 745.3968905018801,
+          "x": 618.051040218146,
+          "y": 379.39766825272324,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "EnemyTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "enemy",
+        "filters": {},
+        "portrait": {
+          "x": 451.7903649527585,
+          "y": 375.53777097321097,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 451.7903649527585,
+          "y": 375.53777097321097,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -442,22 +442,6 @@
       ],
       "type": "asset",
       "name": "MagnetTemplate"
-    },
-    "EnemyTemplate": {
-      "children": [
-        {
-          "type": "img",
-          "name": "EnemyTemplate_IMG",
-          "width": 51,
-          "height": 50,
-          "x": 0,
-          "y": 0,
-          "filePath": "images/enemy.png",
-          "filters": {}
-        }
-      ],
-      "type": "asset",
-      "name": "EnemyTemplate"
     },
     "BulletTemplate": {
       "children": [
@@ -565,14 +549,14 @@
           "instanceName": "shipViewInner",
           "filters": {},
           "portrait": {
-            "x": -19.98673710929063,
-            "y": -35.149089399097136,
+            "x": 0,
+            "y": 0,
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
             "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
+            "pivotX": 20,
+            "pivotY": 37,
             "visible": true,
             "isAnchored": false,
             "anchorLocalPercentage": {
@@ -581,8 +565,8 @@
             }
           },
           "landscape": {
-            "x": 641.513170435835,
-            "y": 452.78282848760074,
+            "x": 0,
+            "y": 0,
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
@@ -616,6 +600,68 @@
       ],
       "type": "asset",
       "name": "ShipTemplateInner"
+    },
+    "EnemyTemplate": {
+      "children": [
+        {
+          "type": "asset",
+          "name": "EnemyTemplateInner",
+          "template": true,
+          "guide": false,
+          "instanceName": "enemyView",
+          "filters": {},
+          "portrait": {
+            "x": -25.357091811848363,
+            "y": -22.89181899680753,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": -25.357091811848363,
+            "y": -22.89181899680753,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ],
+      "type": "asset",
+      "name": "EnemyTemplate"
+    },
+    "EnemyTemplateInner": {
+      "children": [
+        {
+          "type": "img",
+          "name": "EnemyTemplateInner_IMG",
+          "width": 51,
+          "height": 50,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/enemy.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "EnemyTemplateInner"
     }
   },
   "fonts": [],
