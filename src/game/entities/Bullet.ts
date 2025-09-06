@@ -38,6 +38,8 @@ export class Bullet extends Entity {
     }
 
     update(dt: number) {
+        let scene: ZScene = ZScene.getSceneById("game-scene")!;
+        let dimensions = scene.getInnerDimensions();
         const cos = Math.cos(this.angle);
         const sin = Math.sin(this.angle);
 
@@ -48,7 +50,7 @@ export class Bullet extends Entity {
         this.asset!.x = newX;
         this.asset!.y = newY;
 
-        if (this.y < 0 || this.x < 0 || this.x > Model.stageWidth!) {
+        if (this.y < 0 || this.x < 0 || this.x > dimensions.width) {
             this.destroyEntity();
             return;
         }

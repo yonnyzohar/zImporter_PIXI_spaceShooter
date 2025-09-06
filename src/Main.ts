@@ -25,13 +25,11 @@ export class Main {
         scene.load(loadPath, () => {
             ZSceneStack.push(scene);
             let stage = scene.sceneStage;
+            scene.loadStage(appStage);
             Model.stage = stage;
-            let dimensions = scene.getInnerDimensions();
-            Model.stageWidth! = dimensions.width;
-            Model.stageHeight! = dimensions.height;
+
             resizeCanvas?.();
             this.game = new Game();
-            appStage.addChild(stage);
 
         });
         //EventsManager.addListener('MENU_SPACE_PRESSED', game, onMenuSpacePressed);

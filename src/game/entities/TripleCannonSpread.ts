@@ -1,23 +1,20 @@
 import { Entity } from "../../core/Entity";
 import { Pool } from "../../core/Pool";
-import { Model } from "../Model";
+import { Model, WeaponObj } from "../Model";
 import { Bullet } from "./Bullet";
+import { Cannon } from "./Cannon";
 
-interface TripleCannonSpreadParams {
-    fireRate: number;
-    numTurrets: number;
-    spreadAngle: number;
-    bullet: string;
-}
 
-export class TripleCannonSpread {
+
+export class TripleCannonSpread extends Entity {
     private bulletsPool: Pool<Entity>;
     private fireCounter: number = 0;
     private fireRate: number;
     private numTurrets: number;
     private spreadAngle: number;
 
-    constructor(params: TripleCannonSpreadParams) {
+    constructor(params: WeaponObj) {
+        super(params);
         // Assuming allPools is a global object
         if (!Model.allPools) {
             Model.allPools = {};
@@ -30,10 +27,10 @@ export class TripleCannonSpread {
 
         this.fireRate = params.fireRate;
         this.numTurrets = params.numTurrets;
-        this.spreadAngle = params.spreadAngle;
+        this.spreadAngle = params.spreadAngle!;
     }
 
-    update(dt: number, spawnX: number, spawnY: number) {
+    updateFire(dt: number, spawnX: number, spawnY: number) {
         // Assuming Model.movement.space is a boolean indicating fire
         const fire = Model.movement.space;
         this.fireCounter += dt;

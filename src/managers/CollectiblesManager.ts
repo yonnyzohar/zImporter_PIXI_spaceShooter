@@ -4,10 +4,10 @@
 // First, this class parses the probabilities table to determine what will be spawned.
 // Then, when an enemy dies, it spawns according to that probability - a coin, health pack, or weapon.
 
-import { Pool } from "undici-types";
-import { Model, SpawnProbabilities } from "../game/Model";
+import { Model, PoolsObj, SpawnProbabilities } from "../game/Model";
 import { Utils } from "../core/Utils";
 import { Collectible } from "../game/Collectible";
+import { Pool } from "../core/Pool";
 
 type CollectibleName = keyof typeof Model.spawnProbabilities;
 type ProbabilityEntry = {
@@ -33,19 +33,19 @@ export class CollectiblesManager {
         for (const k of Object.keys(props) as CollectibleName[]) {
             props[k] = props[k] / total;
         }
-        /*
+
         for (const k of Object.keys(props) as CollectibleName[]) {
             if (!Model.allPools[k]) {
-                const poolParams = Model.pools[k] || {
+                const poolParams = Model.pools![k] || {
                     numElements: 50,
                     params: Model.collectibles[k]
-                };
+                } as PoolsObj;
                 Model.allPools[k] = new Pool(poolParams);
             }
             arr.push({ name: k, startVal: curr, endVal: props[k] + curr });
             curr += props[k];
         }
-            */
+        /*  */
         this.probabilitiesArr = arr;
     }
 

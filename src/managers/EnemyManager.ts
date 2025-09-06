@@ -4,6 +4,7 @@ import { Entity } from "../core/Entity";
 import { EnemyManagerParams, Model } from "../game/Model";
 import { EventsManager } from "../core/EventsManager";
 import { Enemy } from "../game/entities/Enemy";
+import { ZScene } from "zimporter-pixi/dist/ZScene";
 
 
 
@@ -26,9 +27,11 @@ export class EnemyManager {
         if (this.count >= this.spawnRate && this.totalEnemies > 0) {
             const enemy = this.pool.get() as Enemy;
             enemy.grid = Model.enemiesGrid;
+            let scene: ZScene = ZScene.getSceneById("game-scene")!;
+            let dimensions = scene.getInnerDimensions();
 
-            const tenPerStage = Model.stageWidth! * 0.1;
-            const eightyPerStage = Model.stageHeight! * 0.8;
+            const tenPerStage = dimensions.width * 0.1;
+            const eightyPerStage = dimensions.width * 0.8;
             const rndInRange = eightyPerStage * Math.random();
 
             enemy.spawn(tenPerStage + rndInRange, -20);

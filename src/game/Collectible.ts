@@ -14,7 +14,7 @@ export class Collectible extends Entity {
 
     constructor(params: CollectibleObj) {
         super(params);
-        console.log("Coin init!");
+
         this.pool = params.pool;
         this.speed = params.speed ?? 50;
         let scene = ZScene.getSceneById("game-scene");
@@ -27,12 +27,16 @@ export class Collectible extends Entity {
     }
 
     spawn(_x: number, _y: number) {
+        console.log("Coin init!");
         this.x = _x;
         this.y = _y;
+        Model.stage?.addChild(this.asset!);
         Updatables.add(this);
     }
 
     update(dt: number) {
+        let scene: ZScene = ZScene.getSceneById("game-scene")!;
+        let dimensions = scene.getInnerDimensions();
         super.update(dt);
         this.x! += Math.cos(performance.now() / 1000 * 2 * this.rnd) * (50 * dt);
         this.y! += this.speed * dt;
@@ -41,7 +45,7 @@ export class Collectible extends Entity {
         this.asset!.x = newX;
         this.asset!.y = newY;
 
-        if (this.y! > Model.stageHeight!) {
+        if (this.y! > dimensions.height) {
             this.destroyEntity();
         }
     }
