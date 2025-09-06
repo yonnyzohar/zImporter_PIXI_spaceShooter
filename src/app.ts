@@ -13,6 +13,7 @@ const app = new PIXI.Application({
   antialias: true // Smooth rendering
 });
 
+
 function resizeCanvas() {
   app.renderer.resize(window.innerWidth, window.innerHeight);
   ZSceneStack.resize(window.innerWidth, window.innerHeight);
