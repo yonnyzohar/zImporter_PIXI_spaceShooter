@@ -1,23 +1,19 @@
 // Assuming you have a base class system, but in TypeScript we use classes directly.
 
-type PoolParams<T> = {
-    numElements: number;
-    params: any; // You can specify a more precise type if known
-    ClassName: { new(params: any): T };
-    assetName?: string;
-};
+import { PoolsObj } from "../game/Model";
+
 
 export class Pool<T> {
     private arr: T[];
     private curIndex: number;
     private params: any;
 
-    constructor(params: PoolParams<T>) {
+    constructor(params: PoolsObj) {
         const numElements = params.numElements;
         const p = params.params;
         this.params = p;
         // So the entity can place itself back inside
-        p.pool = this;
+        (p as any).pool = this;
         const CLS_STR = this.params.ClassName as unknown as string;
         const CLS = (window as any).SpaceGame[CLS_STR]
         this.arr = [];

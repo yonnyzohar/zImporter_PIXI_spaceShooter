@@ -17,15 +17,13 @@ export class Enemy extends Entity {
 
     constructor(params: EntityObj) {
         super(params);
+
         console.log("Enemy init!");
         this.pool = params.pool!;
-        let scene = ZScene.getSceneById("game-scene");
+        let scene: ZScene = ZScene.getSceneById("game-scene")!;
         this.asset = scene?.spawn(params.assetName);
-
         this.fireRate = params.cannonObj?.fireRate || 0;
         this.speed = params.speed!;
-        this.x = Model.stageWidth! / 2;
-        this.y = Model.stageHeight! / 2;
         this.w = this.asset!.width;
         this.h = this.asset!.height;
         this.radius = Math.min(this.w!, this.h!) / 2;
@@ -40,6 +38,8 @@ export class Enemy extends Entity {
     }
 
     update(dt: number) {
+        let scene: ZScene = ZScene.getSceneById("game-scene")!;
+        let dimensions = scene.getInnerDimensions();
         super.update(dt);
         this.x! += Math.cos(performance.now() / 1000 + this.initialXOffset) * 50 * dt;
         this.y! += this.speed * dt;
@@ -48,9 +48,22 @@ export class Enemy extends Entity {
         this.asset!.x = newX;
         this.asset!.y = newY;
 
-        if (this.y! > Model.stageHeight!) {
+        if (this.y! > dimensions.height) {
             this.destroyEntity();
         }
+        this.fixBounds();
+    }
+
+    fixBounds() {
+        let scene: ZScene = ZScene.getSceneById("game-scene")!;
+        let dimensions = scene.getInnerDimensions();
+        if ((this.x! + this.w! / 2) > dimensions.width) {
+            this.x = dimensions.width - this.w! / 2;
+        }
+        if ((this.x! - this.w! / 2) < 0) {
+            this.x = this.w! / 2;
+        }
+
     }
 
     destroyEntity() {

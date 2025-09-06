@@ -1,3 +1,4 @@
+import { ZScene } from "zimporter-pixi/dist/ZScene";
 import { EventsManager } from "../core/EventsManager";
 import { Model, ScoreHolderParams } from "./Model";
 import * as PIXI from 'pixi.js';
@@ -11,6 +12,8 @@ export class ScoreHolder {
     private view: PIXI.Text = new PIXI.Text('');
 
     constructor(params: ScoreHolderParams) {
+        let scene: ZScene = ZScene.getSceneById("game-scene")!;
+        let dimensions = scene.getInnerDimensions();
         this.enemyVal = params.enemyVal;
         this.collectibleVal = params.collectibleVal;
         EventsManager.addListener("COIN_COLLECTED", this.onCoinCollected);
@@ -20,7 +23,7 @@ export class ScoreHolder {
             fill: '#ffffff',
             fontSize: 14,
         });
-        this.view.x = Model.stageWidth! - 100;
+        this.view.x = dimensions.width - 100;
         this.view.y = 10;
         this.view.text = `Score : ${this.score}`;
     }

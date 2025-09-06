@@ -29,11 +29,12 @@ export class Ship extends Entity {
         super(params);
         this.speed = params.speed!;
         this.defaultCannonName = params.cannonName!;
-        let scene = ZScene.getSceneById("game-scene");
+        let scene: ZScene = ZScene.getSceneById("game-scene")!;
+        let dimensions = scene.getInnerDimensions();
         this.asset = scene?.spawn(params.assetName);
         Model.stage?.addChild(this.asset!);
-        this.x = Model.stageWidth! / 2;
-        this.y = Model.stageHeight! / 2;
+        this.x = dimensions.width / 2;
+        this.y = dimensions.height / 2;
         this.asset!.x = this.x;
         this.asset!.y = this.y;
         this.w = this.asset!.width;
@@ -77,14 +78,16 @@ export class Ship extends Entity {
     }
 
     fixBounds() {
-        if ((this.x! + this.w! / 2) > Model.stageWidth!) {
-            this.x = Model.stageWidth! - this.w! / 2;
+        let scene: ZScene = ZScene.getSceneById("game-scene")!;
+        let dimensions = scene.getInnerDimensions();
+        if ((this.x! + this.w! / 2) > dimensions.width) {
+            this.x = dimensions.width - this.w! / 2;
         }
         if ((this.x! - this.w! / 2) < 0) {
             this.x = this.w! / 2;
         }
-        if ((this.y! + this.h! / 2) > Model.stageHeight!) {
-            this.y = Model.stageHeight! - this.h! / 2;
+        if ((this.y! + this.h! / 2) > dimensions.height) {
+            this.y = dimensions.height - this.h! / 2;
         }
         if ((this.y! - this.h! / 2) < 0) {
             this.y = this.h! / 2;

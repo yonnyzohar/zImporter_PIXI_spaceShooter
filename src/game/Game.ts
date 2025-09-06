@@ -12,6 +12,7 @@ import { CollectiblesManager } from './../managers/CollectiblesManager';
 import { ScoreHolder } from './ScoreHolder';
 import { Entity } from '../core/Entity';
 import { Explosion } from './entities/Explosion';
+import { ZScene } from 'zimporter-pixi';
 
 type Rect = {
     x: number;
@@ -53,9 +54,9 @@ export class Game {
 
         const levelsObj = Model.levels[Model.level];
 
-        Model.allPools['enemy'] = new Pool(Model.pools.enemy as any);
-        Model.allPools['explosion'] = new Pool(Model.pools.explosion as any);
-        Model.allPools["bullet"] = new Pool(Model.pools.bullet as any);
+        Model.allPools['enemy'] = new Pool(Model.pools!.enemy!);
+        Model.allPools['explosion'] = new Pool(Model.pools!.explosion!);
+        Model.allPools["bullet"] = new Pool(Model.pools!.bullet!);
 
         this.healthbar = new Healthbar(levelsObj.healthParams);
         this.stars = new Stars(levelsObj.starsParams, Model.stage!);
@@ -80,10 +81,12 @@ export class Game {
     }
 
     onWeaponPickup(obj: any) {
+        let scene: ZScene = ZScene.getSceneById("game-scene")!;
+        let dimensions = scene.getInnerDimensions();
         this.weaponRect = {
             x: 0,
-            y: Model.stageHeight! - 20,
-            w: Model.stageWidth!,
+            y: dimensions.height - 20,
+            w: dimensions.width,
             h: 20,
             per: 0,
             color: obj.color,
@@ -97,10 +100,12 @@ export class Game {
     }
 
     onShieldPickup(obj: any) {
+        let scene: ZScene = ZScene.getSceneById("game-scene")!;
+        let dimensions = scene.getInnerDimensions();
         this.shieldRect = {
             x: 0,
-            y: Model.stageHeight! - 40,
-            w: Model.stageWidth!,
+            y: dimensions.height - 40,
+            w: dimensions.width,
             h: 20,
             per: 0,
             color: obj.color,
@@ -151,8 +156,10 @@ export class Game {
                 this.win ? 'LEVEL COMPLETE' : 'GAME OVER',
                 { fill: 0xffffff, fontSize: 32 }
             );
-            text.x = Model.stageWidth! / 2;
-            text.y = Model.stageHeight! / 2;
+            let scene: ZScene = ZScene.getSceneById("game-scene")!;
+            let dimensions = scene.getInnerDimensions();
+            text.x = dimensions.width / 2;
+            text.y = dimensions.height / 2;
             Model.stage!.addChild(text);
         }
 

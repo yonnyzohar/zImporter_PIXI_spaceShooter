@@ -7,6 +7,59 @@
   "stage": {
     "children": [
       {
+        "type": "fullScreen",
+        "name": "BGTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "bg",
+        "filters": {},
+        "portrait": {
+          "x": 0,
+          "y": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": true,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          },
+          "anchorType": "center",
+          "anchorPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 0.08460093897645038,
+          "y": 0.8749323973154333,
+          "rotation": 0,
+          "scaleX": 0.5361564394259334,
+          "scaleY": 0.5361564394259334,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": true,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          },
+          "anchorType": "center",
+          "anchorPercentage": {
+            "x": 0.00007447265754968773,
+            "y": 0.0013670818708053677
+          }
+        },
+        "attrs": {
+          "fitToScreen": true
+        }
+      },
+      {
         "type": "asset",
         "name": "ShieldTemplate",
         "template": true,
@@ -14,8 +67,8 @@
         "instanceName": "shieldView",
         "filters": {},
         "portrait": {
-          "x": 340.07743648648596,
-          "y": 353.1946463524072,
+          "x": 104.15487941690981,
+          "y": -356.4282430270798,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -30,8 +83,8 @@
           }
         },
         "landscape": {
-          "x": 340.07743648648596,
-          "y": 353.1946463524072,
+          "x": 403.35063915036153,
+          "y": -292.2288347240495,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -54,8 +107,8 @@
         "instanceName": "magnetView",
         "filters": {},
         "portrait": {
-          "x": 386.072809459459,
-          "y": 358.0103506981103,
+          "x": 110.5438432596643,
+          "y": -289.72752441540996,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -70,8 +123,8 @@
           }
         },
         "landscape": {
-          "x": 386.072809459459,
-          "y": 358.0103506981103,
+          "x": 409.739602993116,
+          "y": -225.52811611237962,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -94,8 +147,8 @@
         "instanceName": "bulletView",
         "filters": {},
         "portrait": {
-          "x": 478.06355540540505,
-          "y": 365.5014395652978,
+          "x": 312.6899145990309,
+          "y": -415.9080663627105,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -110,8 +163,8 @@
           }
         },
         "landscape": {
-          "x": 478.06355540540505,
-          "y": 365.5014395652978,
+          "x": 611.8856743324826,
+          "y": -351.70865805968015,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -134,8 +187,8 @@
         "instanceName": "explosionView",
         "filters": {},
         "portrait": {
-          "x": 264.86589135818934,
-          "y": 346.5064786291704,
+          "x": 99.49225055181523,
+          "y": -434.9030272988379,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -150,8 +203,8 @@
           }
         },
         "landscape": {
-          "x": 264.86589135818934,
-          "y": 346.5064786291704,
+          "x": 398.68801028526696,
+          "y": -370.7036189958076,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -174,8 +227,8 @@
         "instanceName": "fireRateView",
         "filters": {},
         "portrait": {
-          "x": 524.0589283783781,
-          "y": 369.78206395494624,
+          "x": 358.685287572004,
+          "y": -411.62744197306205,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -190,8 +243,8 @@
           }
         },
         "landscape": {
-          "x": 524.0589283783781,
-          "y": 369.78206395494624,
+          "x": 657.8810473054557,
+          "y": -347.4280336700317,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -214,8 +267,8 @@
         "instanceName": "coinView",
         "filters": {},
         "portrait": {
-          "x": 570.0543013513511,
-          "y": 365.5014395652978,
+          "x": 404.68066054497694,
+          "y": -415.9080663627105,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -230,8 +283,8 @@
           }
         },
         "landscape": {
-          "x": 570.0543013513511,
-          "y": 365.5014395652978,
+          "x": 703.8764202784287,
+          "y": -351.70865805968015,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -254,8 +307,8 @@
         "instanceName": "fireAnglesView",
         "filters": {},
         "portrait": {
-          "x": 662.0450472972973,
-          "y": 366.5715994774072,
+          "x": 496.6714064909231,
+          "y": -414.8379064506011,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -270,8 +323,8 @@
           }
         },
         "landscape": {
-          "x": 662.0450472972973,
-          "y": 366.5715994774072,
+          "x": 795.8671662243748,
+          "y": -350.6384981475708,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -294,8 +347,8 @@
         "instanceName": "healthPackView",
         "filters": {},
         "portrait": {
-          "x": 708.0404202702703,
-          "y": 361.22081517564936,
+          "x": 109.47167960212948,
+          "y": -163.98473169125702,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -310,8 +363,8 @@
           }
         },
         "landscape": {
-          "x": 708.0404202702703,
-          "y": 361.22081517564936,
+          "x": 408.6674393355812,
+          "y": -99.78532338822669,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -334,8 +387,8 @@
         "instanceName": "shipView",
         "filters": {},
         "portrait": {
-          "x": 618.051040218146,
-          "y": 379.39766825272324,
+          "x": 129.63762494342575,
+          "y": -497.3147596448737,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -350,8 +403,8 @@
           }
         },
         "landscape": {
-          "x": 618.051040218146,
-          "y": 379.39766825272324,
+          "x": 428.8333846768775,
+          "y": -433.11535134184334,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -374,8 +427,8 @@
         "instanceName": "enemy",
         "filters": {},
         "portrait": {
-          "x": 451.7903649527585,
-          "y": 375.53777097321097,
+          "x": 130.46648819614836,
+          "y": -209.07738958902348,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -390,8 +443,8 @@
           }
         },
         "landscape": {
-          "x": 451.7903649527585,
-          "y": 375.53777097321097,
+          "x": 429.6622479296001,
+          "y": -144.87798128599314,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -411,6 +464,22 @@
     "name": "stage"
   },
   "templates": {
+    "BGTemplate": {
+      "children": [
+        {
+          "type": "img",
+          "name": "BGTemplate_IMG",
+          "width": 2300,
+          "height": 1190,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/what-is-space-milky-way-full-width.jpg",
+          "filters": {}
+        }
+      ],
+      "type": "fullScreen",
+      "name": "BGTemplate"
+    },
     "ShieldTemplate": {
       "children": [
         {

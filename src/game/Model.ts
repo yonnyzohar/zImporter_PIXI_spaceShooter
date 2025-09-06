@@ -46,12 +46,19 @@ export interface ModelInterface {
     weapons: Record<string, WeaponObj>;
     entities: Record<string, EntityObj>;
     collectibles: Record<string, CollectibleObj | Record<string, number>>;
-    pools: Record<string, PoolsObj>;
+    pools?: {
+        explosion?: PoolsObj;
+        bullet?: PoolsObj;
+        enemy?: PoolsObj;
+        coin?: PoolsObj;
+        tripleCannon?: PoolsObj;
+        tripleCannonSpread?: PoolsObj;
+        health?: PoolsObj;
+        defaultShield?: PoolsObj;
+    },
     stars: Record<string, StarObj>;
     spawnProbabilities: SpawnProbabilities;
     allPools: Record<string, Pool<Entity>>;
-    stageWidth?: number;
-    stageHeight?: number;
 }
 
 export interface ScoreHolderParams {
@@ -152,7 +159,6 @@ export const Model: ModelInterface = {
             numStars: 200
         }
     },
-    pools: {}, // <-- Add this line to satisfy ModelInterface
     weapons: {
 
         defaultCannon: {
