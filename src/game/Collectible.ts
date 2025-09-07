@@ -24,6 +24,7 @@ export class Collectible extends Entity {
         this.h = this.asset!.height;
         this.rnd = Math.random();
         this.radius = Math.min(this.w, this.h) / 2;
+
     }
 
     spawn(_x: number, _y: number) {
@@ -51,6 +52,7 @@ export class Collectible extends Entity {
     }
 
     destroyEntity() {
+        this.asset?.removeFromParent();
         super.destroyEntity();
         this.pool!.putBack(this);
         Updatables.remove(this);
