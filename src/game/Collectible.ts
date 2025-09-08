@@ -9,7 +9,8 @@ export class Collectible extends Entity {
     speed: number;
     type: string;
     rnd: number;
-
+    time: number;
+    currTime: number = 0;
 
 
     constructor(params: CollectibleObj) {
@@ -24,15 +25,17 @@ export class Collectible extends Entity {
         this.h = this.asset!.height;
         this.rnd = Math.random();
         this.radius = Math.min(this.w, this.h) / 2;
+        this.time = params.time;
 
     }
 
     spawn(_x: number, _y: number) {
-        console.log("Coin init!");
         this.x = _x;
         this.y = _y;
         Model.stage?.addChild(this.asset!);
         Updatables.add(this);
+        this.currTime = 0;
+
     }
 
     update(dt: number) {
@@ -45,8 +48,9 @@ export class Collectible extends Entity {
         const newY = this.y!;
         this.asset!.x = newX;
         this.asset!.y = newY;
+        this.currTime += (dt * 1000);
 
-        if (this.y! > dimensions.height) {
+        if (this.y! > dimensions.height || this.currTime > this.time) {
             this.destroyEntity();
         }
     }

@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import { Model } from './Model';
+import { Model, ShieldObj, WeaponObj } from './Model';
 import { EventsManager } from './../core/EventsManager';
 import { Pool } from './../core/Pool';
 import { Updatables } from './../core/Updatables';
@@ -36,8 +36,8 @@ export class Game {
     private healthbar!: Healthbar;
     private scoreHolder!: ScoreHolder;
 
-    private weaponRect?: Rect;
-    private shieldRect?: Rect;
+    private weaponRect: PIXI.Graphics = new PIXI.Graphics();
+    private shieldRect: PIXI.Graphics = new PIXI.Graphics();
     private gameOver = false;
     private win = false;
     private callback?: () => void;
@@ -80,60 +80,48 @@ export class Game {
         EventsManager.addListener('SHIELD_PICKUP', this.onShieldPickup.bind(this));
     }
 
-    onWeaponPickup(obj: any) {
+    onWeaponPickup(obj: WeaponObj) {
         let scene: ZScene = ZScene.getSceneById("game-scene")!;
         let dimensions = scene.getInnerDimensions();
-        this.weaponRect = {
-            x: 0,
-            y: dimensions.height - 20,
-            w: dimensions.width,
-            h: 20,
-            per: 0,
-            color: obj.color,
-        };
+
+        this.weaponRect.beginFill(obj.color!);
+        this.weaponRect.drawRect(0, dimensions.height - 20, dimensions.width, 20);
+        this.weaponRect.endFill();
+        Model.stage!.addChild(this.weaponRect);
+
         this.weaponTimerService.start(
-            obj.time,
-            this,
-            this.onWeaponTimerComplete.bind(this),
-            this.onWeaponUpdate.bind(this)
+            obj.time!,
+            () => {
+                this.weaponRect.clear();
+                this.ship.setCannon(undefined);
+            },
+            (per: number) => {
+                let dimensions = scene.getInnerDimensions();
+                this.weaponRect.width = dimensions.width * per;
+            }
+
         );
     }
 
-    onShieldPickup(obj: any) {
+    onShieldPickup(obj: ShieldObj) {
         let scene: ZScene = ZScene.getSceneById("game-scene")!;
         let dimensions = scene.getInnerDimensions();
-        this.shieldRect = {
-            x: 0,
-            y: dimensions.height - 40,
-            w: dimensions.width,
-            h: 20,
-            per: 0,
-            color: obj.color,
-        };
+        this.shieldRect.beginFill(obj.color);
+        this.shieldRect.drawRect(0, dimensions.height - 40, dimensions.width, 40);
+        this.shieldRect.endFill();
+        Model.stage!.addChild(this.shieldRect);
+
         this.shieldTimerService.start(
             obj.time,
-            this,
-            this.onShieldTimerComplete.bind(this),
-            this.onShieldUpdate.bind(this)
+            () => {
+                this.shieldRect.clear();
+                this.ship.setShield(undefined);
+            },
+            (per: number) => {
+                let dimensions = scene.getInnerDimensions();
+                this.shieldRect.width = dimensions.width * per;
+            }
         );
-    }
-
-    onWeaponUpdate(per: number) {
-        if (this.weaponRect) this.weaponRect.per = per;
-    }
-
-    onShieldUpdate(per: number) {
-        if (this.shieldRect) this.shieldRect.per = per;
-    }
-
-    onShieldTimerComplete() {
-        this.shieldRect = undefined;
-        this.ship.setShield(undefined);
-    }
-
-    onWeaponTimerComplete() {
-        this.weaponRect = undefined;
-        this.ship.setCannon(undefined);
     }
 
     onEnemyDestroyed(obj: { x: number; y: number }) {
@@ -163,31 +151,23 @@ export class Game {
             Model.stage!.addChild(text);
         }
 
-        if (this.weaponRect) {
-            const wr = this.weaponRect;
-            const graphics = new PIXI.Graphics();
-            graphics.beginFill(PIXI.utils.rgb2hex(wr.color));
-            graphics.drawRect(wr.x, wr.y, wr.w * (1 - wr.per), wr.h);
-            graphics.endFill();
-            Model.stage!.addChild(graphics);
-        }
 
-        if (this.shieldRect) {
-            const sr = this.shieldRect;
-            const graphics = new PIXI.Graphics();
-            graphics.beginFill(PIXI.utils.rgb2hex(sr.color));
-            graphics.drawRect(sr.x, sr.y, sr.w * (1 - sr.per), sr.h);
-            graphics.endFill();
-            Model.stage!.addChild(graphics);
-        }
     }
 
     onGameOver(callback: () => void, win: boolean) {
         EventsManager.removeListener('WEAPON_PICKUP', this.onWeaponPickup.bind(this));
         EventsManager.removeListener('SHIELD_PICKUP', this.onShieldPickup.bind(this));
         EventsManager.removeListener('ENEMY_DESTROYED', this.onEnemyDestroyed.bind(this));
-        this.timerService.start(5, this, this.onTimerComplete.bind(this));
-        this.callback = callback;
+        this.timerService.start(5, () => {
+            for (const k in Model.allPools) {
+                // Model.allPools[k].reset();
+            }
+            this.ship.destroyEntity();
+            this.healthbar.destroy();
+            this.scoreHolder.destroy();
+            Updatables.clear();
+            if (callback) callback();
+        });
         this.gameOver = true;
         this.win = win;
 
@@ -198,14 +178,5 @@ export class Game {
         }
     }
 
-    onTimerComplete() {
-        for (const k in Model.allPools) {
-            // Model.allPools[k].reset();
-        }
-        this.ship.destroyEntity();
-        this.healthbar.destroy();
-        this.scoreHolder.destroy();
-        Updatables.clear();
-        if (this.callback) this.callback();
-    }
+
 }

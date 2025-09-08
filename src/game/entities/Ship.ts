@@ -177,6 +177,8 @@ export class Ship extends Entity {
                 if (newShield.time) {
                     EventsManager.emit('SHIELD_PICKUP', newShield);
                 }
+            } else if (collision.params.type === 'magnet') {
+
             }
             collision.destroyEntity();
         }
