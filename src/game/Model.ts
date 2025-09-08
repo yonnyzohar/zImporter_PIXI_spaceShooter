@@ -95,7 +95,7 @@ export interface ShieldObj extends BaseObj {
     speed: number;
     radius: number;
     numShields: number;
-    color: [number, number, number];
+    color: PIXI.ColorSource;
 }
 
 export interface WeaponObj extends BaseObj {
@@ -105,7 +105,7 @@ export interface WeaponObj extends BaseObj {
     fireRate: number;
     bullet: string;
     time?: number;
-    color?: [number, number, number];
+    color?: PIXI.ColorSource;
 }
 
 
@@ -113,6 +113,7 @@ export interface CollectibleObj extends BaseObj {
     value?: number;
     speed?: number;
     numLives?: number;
+    time: number;
 }
 
 export interface PoolsObj {
@@ -149,7 +150,7 @@ export const Model: ModelInterface = {
             assetName: "ShieldTemplate",
             type: "shield",
             ClassName: "Shield",
-            color: [255, 0, 0]
+            color: [0, 255, 255]
         }
     },
     stars: {
@@ -225,33 +226,44 @@ export const Model: ModelInterface = {
 
     },
     collectibles: {
+        magnet: {
+            ClassName: "Collectible",
+            assetName: "MagnetTemplate",
+            type: "magnet",
+            time: 5000
+        },
         tripleCannon: {
             ClassName: "Collectible",
             assetName: "FireRateTemplate",
-            type: "weapon"
+            type: "weapon",
+            time: 5000
         },
         tripleCannonSpread: {
             ClassName: "Collectible",
             assetName: "FireAnglesTemplate",
             type: "weapon",
+            time: 5000
         },
         health: {
             assetName: "HealthPackTemplate",
             numLives: 1,
             ClassName: "Collectible",
-            type: "health"
+            type: "health",
+            time: 5000
         },
         coin: {
             assetName: "CoinTemplate",
             ClassName: "Collectible",
             value: 10,
             speed: 10,
-            type: "collectible"
+            type: "collectible",
+            time: 5000
         },
         defaultShield: {
             assetName: "ShieldTemplate",
             ClassName: "Collectible",
-            type: "shield"
+            type: "shield",
+            time: 5000
         }
     },
     spawnProbabilities: {
