@@ -196,14 +196,14 @@ export const Model: ModelInterface = {
     },
     entities: {
         defaultEnemy: {
-            assetName: "EnemyTemplate",
+            assetName: "Enemy1",
             ClassName: "Enemy",
             speed: 200,
             value: 5,
             type: "entity"
         },
         defaultShip: {
-            assetName: "ShipTemplate",
+            assetName: "Ship1",
             speed: 300,
             acceleration: 0.03,
             deceleration: 0.05,
@@ -211,13 +211,13 @@ export const Model: ModelInterface = {
             cannonName: "defaultCannon"
         },
         defaultBullet: {
-            assetName: "BulletTemplate",
+            assetName: "Bullet1",
             ClassName: "Bullet",
             speed: 400,
             type: "weapon"
         },
         defaultExplosion: {
-            assetName: "ExplosionTemplate",
+            assetName: "Explosion1",
             duration: .5,
             ClassName: "Explosion",
             type: "explosion"

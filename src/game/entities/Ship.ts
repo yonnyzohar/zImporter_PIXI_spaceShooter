@@ -32,11 +32,14 @@ export class Ship extends Entity {
         let scene: ZScene = ZScene.getSceneById("game-scene")!;
         let dimensions = scene.getInnerDimensions();
         this.asset = scene?.spawn(params.assetName);
+
         Model.stage?.addChild(this.asset!);
         this.x = dimensions.width / 2;
         this.y = dimensions.height / 2;
         this.asset!.x = this.x;
         this.asset!.y = this.y;
+        this.asset!.pivotX = this.asset!.width / 2;
+        this.asset!.pivotY = this.asset!.height / 2;
         this.w = this.asset!.width;
         this.h = this.asset!.height;
         this.radius = Math.min(this.w, this.h!) / 2;

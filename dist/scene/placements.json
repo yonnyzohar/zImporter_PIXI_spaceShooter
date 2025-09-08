@@ -19,7 +19,7 @@
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
-          "alpha": 1,
+          "alpha": 0.5,
           "pivotX": 0,
           "pivotY": 0,
           "visible": true,
@@ -40,7 +40,7 @@
           "rotation": 0,
           "scaleX": 0.5361564394259334,
           "scaleY": 0.5361564394259334,
-          "alpha": 1,
+          "alpha": 0.69,
           "pivotX": 0,
           "pivotY": 0,
           "visible": true,
@@ -61,14 +61,14 @@
       },
       {
         "type": "asset",
-        "name": "ShieldTemplate",
+        "name": "Templatefvz3",
         "template": true,
         "guide": false,
-        "instanceName": "shieldView",
+        "instanceName": "instance_f0bo",
         "filters": {},
         "portrait": {
-          "x": 104.15487941690981,
-          "y": -356.4282430270798,
+          "x": -477.48582339529025,
+          "y": 459.85728780412387,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -83,14 +83,1174 @@
           }
         },
         "landscape": {
-          "x": 403.35063915036153,
-          "y": -292.2288347240495,
+          "x": -477.48582339529025,
+          "y": 459.85728780412387,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
           "pivotX": 0,
           "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Templatetpg2",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_hvmv",
+        "filters": {},
+        "portrait": {
+          "x": -397.48582339529025,
+          "y": 459.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -397.48582339529025,
+          "y": 459.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Templatetpmm",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_5waa",
+        "filters": {},
+        "portrait": {
+          "x": -373.58475420464515,
+          "y": 561.659426185414,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -373.58475420464515,
+          "y": 561.659426185414,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Templateby12",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_r38y",
+        "filters": {},
+        "portrait": {
+          "x": -318.7708635918847,
+          "y": 543.097245391123,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -318.7708635918847,
+          "y": 543.097245391123,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Templatecsvb",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_9u3a",
+        "filters": {},
+        "portrait": {
+          "x": -366.59650643611553,
+          "y": 608.2617766317081,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -366.59650643611553,
+          "y": 608.2617766317081,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Templatehh1u",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_n4lm",
+        "filters": {},
+        "portrait": {
+          "x": -301.5426582363558,
+          "y": 589.0972453911231,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -301.5426582363558,
+          "y": 589.0972453911231,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Templateifoi",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_j5o5",
+        "filters": {},
+        "portrait": {
+          "x": -371.48582339529025,
+          "y": 482.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -371.48582339529025,
+          "y": 482.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Template3ujb",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_xdpp",
+        "filters": {},
+        "portrait": {
+          "x": -371.48582339529025,
+          "y": 505.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -371.48582339529025,
+          "y": 505.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Templatexil9",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_x3dk",
+        "filters": {},
+        "portrait": {
+          "x": -396.48582339529025,
+          "y": 423.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -396.48582339529025,
+          "y": 423.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Template5kj7",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_mhka",
+        "filters": {},
+        "portrait": {
+          "x": -325.48582339529025,
+          "y": 505.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -325.48582339529025,
+          "y": 505.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Templatetqgi",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_b5cp",
+        "filters": {},
+        "portrait": {
+          "x": -247.1635394750146,
+          "y": 446.0267212170516,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -247.1635394750146,
+          "y": 446.0267212170516,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Templateucm5",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_rolo",
+        "filters": {},
+        "portrait": {
+          "x": -335.1734261031827,
+          "y": 637.8455355726535,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -335.1734261031827,
+          "y": 637.8455355726535,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Template4wpi",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_us74",
+        "filters": {},
+        "portrait": {
+          "x": -419.48582339529025,
+          "y": 672.8572878041239,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -419.48582339529025,
+          "y": 672.8572878041239,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Template9hlf",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_0lvb",
+        "filters": {},
+        "portrait": {
+          "x": -586.4197573292242,
+          "y": 500.44287338970935,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -586.4197573292242,
+          "y": 500.44287338970935,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Planet1",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_ahtu",
+        "filters": {},
+        "portrait": {
+          "x": -544.3496536449043,
+          "y": -266.6101785466906,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -544.3496536449043,
+          "y": -266.6101785466906,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Planet3",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_ukd1",
+        "filters": {},
+        "portrait": {
+          "x": -202.5045905865996,
+          "y": -253.81957235510998,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -202.5045905865996,
+          "y": -253.81957235510998,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Planet2",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_y6cs",
+        "filters": {},
+        "portrait": {
+          "x": -352.79445084602656,
+          "y": -266.98702204537153,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -352.79445084602656,
+          "y": -266.98702204537153,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Template3o9d",
+        "template": true,
+        "guide": false,
+        "instanceName": "instance_fccz",
+        "filters": {},
+        "portrait": {
+          "x": -396.48582339529025,
+          "y": 400.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -396.48582339529025,
+          "y": 400.85728780412387,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "state",
+        "name": "StarTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "stars",
+        "filters": {},
+        "portrait": {
+          "x": -533.159873465064,
+          "y": 453.9990723706615,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -533.159873465064,
+          "y": 453.9990723706615,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Ship5",
+        "template": true,
+        "guide": false,
+        "instanceName": "ship5",
+        "filters": {},
+        "portrait": {
+          "x": -441.6005835863866,
+          "y": 49.73032768753279,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 39.5,
+          "pivotY": 34,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -441.6005835863866,
+          "y": 49.73032768753279,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 39.5,
+          "pivotY": 34,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Ship2",
+        "template": true,
+        "guide": false,
+        "instanceName": "ship2",
+        "filters": {},
+        "portrait": {
+          "x": -558.0419684533852,
+          "y": 49.730342129636426,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 34.5,
+          "pivotY": 51,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -558.0419684533852,
+          "y": 49.730342129636426,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 34.5,
+          "pivotY": 51,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Sip3",
+        "template": true,
+        "guide": false,
+        "instanceName": "ship3",
+        "filters": {},
+        "portrait": {
+          "x": -325.1591987193881,
+          "y": 49.730339769125464,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 44,
+          "pivotY": 46.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -325.1591987193881,
+          "y": 49.730339769125464,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 44,
+          "pivotY": 46.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Ship4",
+        "template": true,
+        "guide": false,
+        "instanceName": "ship4",
+        "filters": {},
+        "portrait": {
+          "x": -208.71781385238944,
+          "y": 49.73033767402177,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 33,
+          "pivotY": 37,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -208.71781385238944,
+          "y": 49.73033767402177,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 33,
+          "pivotY": 37,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Ship1",
+        "template": true,
+        "guide": false,
+        "instanceName": "ship1",
+        "filters": {},
+        "portrait": {
+          "x": -92.27642898539091,
+          "y": 49.73035459065272,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 32,
+          "pivotY": 39,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -92.27642898539091,
+          "y": 49.73035459065272,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 32,
+          "pivotY": 39,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Enemy3",
+        "template": true,
+        "guide": false,
+        "instanceName": "enemy3",
+        "filters": {},
+        "portrait": {
+          "x": -562.0921209933305,
+          "y": 184.08915184576654,
+          "rotation": 0,
+          "scaleX": 1.0227180534021998,
+          "scaleY": 1.0227180534021998,
+          "alpha": 1,
+          "pivotX": 33.5,
+          "pivotY": 38.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -562.0921209933305,
+          "y": 184.08915184576654,
+          "rotation": 0,
+          "scaleX": 1.0227180534021998,
+          "scaleY": 1.0227180534021998,
+          "alpha": 1,
+          "pivotX": 33.5,
+          "pivotY": 38.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Enemy4",
+        "template": true,
+        "guide": false,
+        "instanceName": "enemy4",
+        "filters": {},
+        "portrait": {
+          "x": -444.12862870240644,
+          "y": 184.08917507131537,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 40,
+          "pivotY": 47,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -444.12862870240644,
+          "y": 184.08917507131537,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 40,
+          "pivotY": 47,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Enemy5",
+        "template": true,
+        "guide": false,
+        "instanceName": "enemy5",
+        "filters": {},
+        "portrait": {
+          "x": -326.1651364114824,
+          "y": 184.08917507131537,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 40,
+          "pivotY": 39,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -326.1651364114824,
+          "y": 184.08917507131537,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 40,
+          "pivotY": 39,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Enemy2",
+        "template": true,
+        "guide": false,
+        "instanceName": "enemy2",
+        "filters": {},
+        "portrait": {
+          "x": -208.2016441205584,
+          "y": 184.08917507131537,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 45.5,
+          "pivotY": 36,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -208.2016441205584,
+          "y": 184.08917507131537,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 45.5,
+          "pivotY": 36,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Enemy1",
+        "template": true,
+        "guide": false,
+        "instanceName": "enemy1",
+        "filters": {},
+        "portrait": {
+          "x": -90.23815182963438,
+          "y": 184.08917507131537,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 34.5,
+          "pivotY": 48,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -90.23815182963438,
+          "y": 184.08917507131537,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 34.5,
+          "pivotY": 48,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "ShieldTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "shieldView",
+        "filters": {},
+        "portrait": {
+          "x": -563.146326441232,
+          "y": 279.22302352590685,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 21,
+          "pivotY": 23.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -563.146326441232,
+          "y": 279.22302352590685,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 21,
+          "pivotY": 23.5,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -107,14 +1267,14 @@
         "instanceName": "magnetView",
         "filters": {},
         "portrait": {
-          "x": 110.5438432596643,
-          "y": -289.72752441540996,
+          "x": -468.74152163642714,
+          "y": 279.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 18,
+          "pivotY": 19,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -123,94 +1283,14 @@
           }
         },
         "landscape": {
-          "x": 409.739602993116,
-          "y": -225.52811611237962,
+          "x": -468.74152163642714,
+          "y": 279.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        }
-      },
-      {
-        "type": "asset",
-        "name": "BulletTemplate",
-        "template": true,
-        "guide": false,
-        "instanceName": "bulletView",
-        "filters": {},
-        "portrait": {
-          "x": 312.6899145990309,
-          "y": -415.9080663627105,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        "landscape": {
-          "x": 611.8856743324826,
-          "y": -351.70865805968015,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        }
-      },
-      {
-        "type": "asset",
-        "name": "ExplosionTemplate",
-        "template": true,
-        "guide": false,
-        "instanceName": "explosionView",
-        "filters": {},
-        "portrait": {
-          "x": 99.49225055181523,
-          "y": -434.9030272988379,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        "landscape": {
-          "x": 398.68801028526696,
-          "y": -370.7036189958076,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 18,
+          "pivotY": 19,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -227,14 +1307,14 @@
         "instanceName": "fireRateView",
         "filters": {},
         "portrait": {
-          "x": 358.685287572004,
-          "y": -411.62744197306205,
+          "x": -374.3367168316223,
+          "y": 279.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 16,
+          "pivotY": 8,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -243,14 +1323,14 @@
           }
         },
         "landscape": {
-          "x": 657.8810473054557,
-          "y": -347.4280336700317,
+          "x": -374.3367168316223,
+          "y": 279.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 16,
+          "pivotY": 8,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -267,14 +1347,14 @@
         "instanceName": "coinView",
         "filters": {},
         "portrait": {
-          "x": 404.68066054497694,
-          "y": -415.9080663627105,
+          "x": -279.9319120268175,
+          "y": 279.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 12,
+          "pivotY": 12,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -283,14 +1363,14 @@
           }
         },
         "landscape": {
-          "x": 703.8764202784287,
-          "y": -351.70865805968015,
+          "x": -279.9319120268175,
+          "y": 279.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 12,
+          "pivotY": 12,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -307,14 +1387,14 @@
         "instanceName": "fireAnglesView",
         "filters": {},
         "portrait": {
-          "x": 496.6714064909231,
-          "y": -414.8379064506011,
+          "x": -185.52710722201266,
+          "y": 279.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 19,
+          "pivotY": 11,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -323,14 +1403,14 @@
           }
         },
         "landscape": {
-          "x": 795.8671662243748,
-          "y": -350.6384981475708,
+          "x": -185.52710722201266,
+          "y": 279.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 19,
+          "pivotY": 11,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -347,14 +1427,14 @@
         "instanceName": "healthPackView",
         "filters": {},
         "portrait": {
-          "x": 109.47167960212948,
-          "y": -163.98473169125702,
+          "x": -91.12230241720783,
+          "y": 278.4542547571381,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 16,
+          "pivotY": 16,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -363,14 +1443,14 @@
           }
         },
         "landscape": {
-          "x": 408.6674393355812,
-          "y": -99.78532338822669,
+          "x": -91.12230241720783,
+          "y": 278.4542547571381,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 16,
+          "pivotY": 16,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -381,20 +1461,20 @@
       },
       {
         "type": "asset",
-        "name": "ShipTemplate",
+        "name": "Explosion1",
         "template": true,
         "guide": false,
-        "instanceName": "shipView",
+        "instanceName": "explosion1",
         "filters": {},
         "portrait": {
-          "x": 129.63762494342575,
-          "y": -497.3147596448737,
+          "x": -104.68999162644275,
+          "y": -68.5973496996586,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 32,
+          "pivotY": 32,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -403,14 +1483,14 @@
           }
         },
         "landscape": {
-          "x": 428.8333846768775,
-          "y": -433.11535134184334,
+          "x": -104.68999162644275,
+          "y": -68.5973496996586,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 32,
+          "pivotY": 32,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -421,20 +1501,20 @@
       },
       {
         "type": "asset",
-        "name": "EnemyTemplate",
+        "name": "Explosion2",
         "template": true,
         "guide": false,
-        "instanceName": "enemy",
+        "instanceName": "explosion2",
         "filters": {},
         "portrait": {
-          "x": 130.46648819614836,
-          "y": -209.07738958902348,
+          "x": -542.5221094585605,
+          "y": -69.3295104318193,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 24.5,
+          "pivotY": 25,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -443,14 +1523,414 @@
           }
         },
         "landscape": {
-          "x": 429.6622479296001,
-          "y": -144.87798128599314,
+          "x": -542.5221094585605,
+          "y": -69.3295104318193,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
+          "pivotX": 24.5,
+          "pivotY": 25,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Explosion3",
+        "template": true,
+        "guide": false,
+        "instanceName": "explosion3",
+        "filters": {},
+        "portrait": {
+          "x": -323.60605054250163,
+          "y": -69.3295104318193,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 25.5,
+          "pivotY": 21,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -323.60605054250163,
+          "y": -69.3295104318193,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 25.5,
+          "pivotY": 21,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Bullet9",
+        "template": true,
+        "guide": false,
+        "instanceName": "bullet9",
+        "filters": {},
+        "portrait": {
+          "x": -563.6072087079405,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 12,
+          "pivotY": 12,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -563.6072087079405,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 12,
+          "pivotY": 12,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Bullet8",
+        "template": true,
+        "guide": false,
+        "instanceName": "bullet8",
+        "filters": {},
+        "portrait": {
+          "x": -505.2365821265864,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 3.5,
+          "pivotY": 5.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -505.2365821265864,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 3.5,
+          "pivotY": 5.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Bullet7",
+        "template": true,
+        "guide": false,
+        "instanceName": "bullet7",
+        "filters": {},
+        "portrait": {
+          "x": -446.86595554523245,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 6,
+          "pivotY": 17,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -446.86595554523245,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 6,
+          "pivotY": 17,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Bullet6",
+        "template": true,
+        "guide": false,
+        "instanceName": "bullet6",
+        "filters": {},
+        "portrait": {
+          "x": -388.4953289638784,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 4,
+          "pivotY": 17,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -388.4953289638784,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 4,
+          "pivotY": 17,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Bullet5",
+        "template": true,
+        "guide": false,
+        "instanceName": "bullet5",
+        "filters": {},
+        "portrait": {
+          "x": -330.12470238252445,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 4.5,
+          "pivotY": 14,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -330.12470238252445,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 4.5,
+          "pivotY": 14,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Bullet4",
+        "template": true,
+        "guide": false,
+        "instanceName": "bullet4",
+        "filters": {},
+        "portrait": {
+          "x": -271.7540758011704,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 5,
+          "pivotY": 17,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -271.7540758011704,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 5,
+          "pivotY": 17,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Bullet2",
+        "template": true,
+        "guide": false,
+        "instanceName": "bullet2",
+        "filters": {},
+        "portrait": {
+          "x": -213.38344921981638,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 3.5,
+          "pivotY": 6.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -213.38344921981638,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 3.5,
+          "pivotY": 6.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Bullet3",
+        "template": true,
+        "guide": false,
+        "instanceName": "bullet3",
+        "filters": {},
+        "portrait": {
+          "x": -155.0128226384624,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 1.5,
+          "pivotY": 6.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -155.0128226384624,
+          "y": 345.27606437959236,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 1.5,
+          "pivotY": 6.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "name": "Bullet1",
+        "template": true,
+        "guide": false,
+        "instanceName": "bullet1",
+        "filters": {},
+        "portrait": {
+          "x": -96.64219605710838,
+          "y": 346.4233985630097,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 5.5,
+          "pivotY": 7.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": -96.64219605710838,
+          "y": 346.4233985630097,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 5.5,
+          "pivotY": 7.5,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -479,6 +1959,1020 @@
       ],
       "type": "fullScreen",
       "name": "BGTemplate"
+    },
+    "Templatefvz3": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templatefvz3_IMG",
+          "width": 79,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 12.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templatefvz3"
+    },
+    "Templatetpg2": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templatetpg2_IMG",
+          "width": 79,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 10.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templatetpg2"
+    },
+    "Templatetpmm": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templatetpmm_IMG",
+          "width": 27,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 5.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templatetpmm"
+    },
+    "Templateby12": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templateby12_IMG",
+          "width": 79,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 11.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templateby12"
+    },
+    "Templatecsvb": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templatecsvb_IMG",
+          "width": 41,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 8.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templatecsvb"
+    },
+    "Templatehh1u": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templatehh1u_IMG",
+          "width": 25,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 6.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templatehh1u"
+    },
+    "Templateifoi": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templateifoi_IMG",
+          "width": 79,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 14.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templateifoi"
+    },
+    "Template3ujb": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Template3ujb_IMG",
+          "width": 45,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 3.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Template3ujb"
+    },
+    "Templatexil9": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templatexil9_IMG",
+          "width": 79,
+          "height": 21,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 13.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templatexil9"
+    },
+    "Template5kj7": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Template5kj7_IMG",
+          "width": 46,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 7.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Template5kj7"
+    },
+    "Templatetqgi": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templatetqgi_IMG",
+          "width": 45,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 4.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templatetqgi"
+    },
+    "Templateucm5": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templateucm5_IMG",
+          "width": 32,
+          "height": 27,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 36.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templateucm5"
+    },
+    "Template4wpi": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Template4wpi_IMG",
+          "width": 32,
+          "height": 27,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 35.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Template4wpi"
+    },
+    "Template9hlf": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Template9hlf_IMG",
+          "width": 23,
+          "height": 61,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 34.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Template9hlf"
+    },
+    "Planet1": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Planet1_IMG",
+          "width": 87,
+          "height": 96,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 37.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Planet1"
+    },
+    "Planet3": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Planet3_IMG",
+          "width": 68,
+          "height": 68,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 33.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Planet3"
+    },
+    "Planet2": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Planet2_IMG",
+          "width": 84,
+          "height": 83,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 30.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Planet2"
+    },
+    "Template3o9d": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Template3o9d_IMG",
+          "width": 79,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 15.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Template3o9d"
+    },
+    "StarTemplate": {
+      "children": [
+        {
+          "type": "asset",
+          "name": "Star4",
+          "template": true,
+          "guide": false,
+          "instanceName": "star4",
+          "filters": {},
+          "portrait": {
+            "x": 0.09476606343892513,
+            "y": 0.07921564185720342,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 5.5,
+            "pivotY": 5,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0.09476606343892513,
+            "y": 0.07921564185720342,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 5.5,
+            "pivotY": 5,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "name": "Star5",
+          "template": true,
+          "guide": false,
+          "instanceName": "star5",
+          "filters": {},
+          "portrait": {
+            "x": 0.09476867170197067,
+            "y": 0.07922751279697593,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 3.5,
+            "pivotY": 3,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0.09476867170197067,
+            "y": 0.07922751279697593,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 3.5,
+            "pivotY": 3,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "name": "Star1",
+          "template": true,
+          "guide": false,
+          "instanceName": "star1",
+          "filters": {},
+          "portrait": {
+            "x": 0.0947671479148795,
+            "y": 0.07922486867747125,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 7,
+            "pivotY": 7,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0.0947671479148795,
+            "y": 0.07922486867747125,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 7,
+            "pivotY": 7,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "name": "Star6",
+          "template": true,
+          "guide": false,
+          "instanceName": "star6",
+          "filters": {},
+          "portrait": {
+            "x": 0.09476594964883134,
+            "y": 0.0792268550327151,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 13.5,
+            "pivotY": 13,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0.09476594964883134,
+            "y": 0.0792268550327151,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 13.5,
+            "pivotY": 13,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "name": "Star2",
+          "template": true,
+          "guide": false,
+          "instanceName": "star2",
+          "filters": {},
+          "portrait": {
+            "x": 0.0947641707633693,
+            "y": 0.07921744218069193,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 7.5,
+            "pivotY": 7,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0.0947641707633693,
+            "y": 0.07921744218069193,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 7.5,
+            "pivotY": 7,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "name": "Star7",
+          "template": true,
+          "guide": false,
+          "instanceName": "star7",
+          "filters": {},
+          "portrait": {
+            "x": 0.09476488275302586,
+            "y": 0.07922312089746697,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 13.5,
+            "pivotY": 13,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0.09476488275302586,
+            "y": 0.07922312089746697,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 13.5,
+            "pivotY": 13,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "name": "Star8",
+          "template": true,
+          "guide": false,
+          "instanceName": "star8",
+          "filters": {},
+          "portrait": {
+            "x": 0.09476606343893934,
+            "y": 0.07921564185724606,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 5.5,
+            "pivotY": 5,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0.09476606343893934,
+            "y": 0.07921564185724606,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 5.5,
+            "pivotY": 5,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "name": "Star9",
+          "template": true,
+          "guide": false,
+          "instanceName": "star9",
+          "filters": {},
+          "portrait": {
+            "x": 0.09476606343893934,
+            "y": 0.07921564185724606,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 5.5,
+            "pivotY": 5,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0.09476606343893934,
+            "y": 0.07921564185724606,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 5.5,
+            "pivotY": 5,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "name": "Star10",
+          "template": true,
+          "guide": false,
+          "instanceName": "star10",
+          "filters": {},
+          "portrait": {
+            "x": 0.09476867170197067,
+            "y": 0.07922751279697593,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 3.5,
+            "pivotY": 3,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0.09476867170197067,
+            "y": 0.07922751279697593,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 3.5,
+            "pivotY": 3,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "name": "Star3",
+          "template": true,
+          "guide": false,
+          "instanceName": "star3",
+          "filters": {},
+          "portrait": {
+            "x": 0.09476559291373121,
+            "y": 0.07922717538261281,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 4.5,
+            "pivotY": 6,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0.09476559291373121,
+            "y": 0.07922717538261281,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 4.5,
+            "pivotY": 6,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ],
+      "type": "state",
+      "name": "StarTemplate"
+    },
+    "Star4": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Star4_IMG",
+          "width": 11,
+          "height": 10,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 48.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Star4"
+    },
+    "Star5": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Star5_IMG",
+          "width": 7,
+          "height": 6,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 47.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Star5"
+    },
+    "Star1": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Star1_IMG",
+          "width": 14,
+          "height": 14,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 46.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Star1"
+    },
+    "Star6": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Star6_IMG",
+          "width": 27,
+          "height": 26,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 45.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Star6"
+    },
+    "Star2": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Star2_IMG",
+          "width": 15,
+          "height": 14,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 44.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Star2"
+    },
+    "Star7": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Star7_IMG",
+          "width": 27,
+          "height": 26,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 43.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Star7"
+    },
+    "Star8": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Star8_IMG",
+          "width": 11,
+          "height": 10,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 40.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Star8"
+    },
+    "Star9": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Star9_IMG",
+          "width": 11,
+          "height": 10,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 38.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Star9"
+    },
+    "Star10": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Star10_IMG",
+          "width": 7,
+          "height": 6,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 39.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Star10"
+    },
+    "Star3": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Star3_IMG",
+          "width": 9,
+          "height": 12,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 27.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Star3"
+    },
+    "Ship5": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Ship5_IMG",
+          "width": 79,
+          "height": 68,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 1.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Ship5"
+    },
+    "Ship2": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Ship2_IMG",
+          "width": 69,
+          "height": 102,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 2.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Ship2"
+    },
+    "Sip3": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Sip3_IMG",
+          "width": 88,
+          "height": 93,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 28.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Sip3"
+    },
+    "Ship4": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Ship4_IMG",
+          "width": 66,
+          "height": 74,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 25.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Ship4"
+    },
+    "Ship1": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Ship1_IMG",
+          "width": 64,
+          "height": 78,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 24.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Ship1"
+    },
+    "Enemy3": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Enemy3_IMG",
+          "width": 67,
+          "height": 77,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 9.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Enemy3"
+    },
+    "Enemy4": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Enemy4_IMG",
+          "width": 80,
+          "height": 94,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 32.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Enemy4"
+    },
+    "Enemy5": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Enemy5_IMG",
+          "width": 80,
+          "height": 78,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 31.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Enemy5"
+    },
+    "Enemy2": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Enemy2_IMG",
+          "width": 91,
+          "height": 72,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 29.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Enemy2"
+    },
+    "Enemy1": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Enemy1_IMG",
+          "width": 69,
+          "height": 96,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 19.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Enemy1"
     },
     "ShieldTemplate": {
       "children": [
@@ -511,38 +3005,6 @@
       ],
       "type": "asset",
       "name": "MagnetTemplate"
-    },
-    "BulletTemplate": {
-      "children": [
-        {
-          "type": "img",
-          "name": "BulletTemplate_IMG",
-          "width": 24,
-          "height": 24,
-          "x": 0,
-          "y": 0,
-          "filePath": "images/bullet.png",
-          "filters": {}
-        }
-      ],
-      "type": "asset",
-      "name": "BulletTemplate"
-    },
-    "ExplosionTemplate": {
-      "children": [
-        {
-          "type": "img",
-          "name": "ExplosionTemplate_IMG",
-          "width": 64,
-          "height": 64,
-          "x": 0,
-          "y": 0,
-          "filePath": "images/explosion.png",
-          "filters": {}
-        }
-      ],
-      "type": "asset",
-      "name": "ExplosionTemplate"
     },
     "FireRateTemplate": {
       "children": [
@@ -608,129 +3070,197 @@
       "type": "asset",
       "name": "HealthPackTemplate"
     },
-    "ShipTemplate": {
-      "children": [
-        {
-          "type": "asset",
-          "name": "ShipTemplateInner",
-          "template": true,
-          "guide": false,
-          "instanceName": "shipViewInner",
-          "filters": {},
-          "portrait": {
-            "x": 0,
-            "y": 0,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 20,
-            "pivotY": 37,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          },
-          "landscape": {
-            "x": 0,
-            "y": 0,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 20,
-            "pivotY": 37,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          }
-        }
-      ],
-      "type": "asset",
-      "name": "ShipTemplate"
-    },
-    "ShipTemplateInner": {
+    "Explosion1": {
       "children": [
         {
           "type": "img",
-          "name": "ShipTemplateInner_IMG",
-          "width": 40,
-          "height": 74,
+          "name": "Explosion1_IMG",
+          "width": 64,
+          "height": 64,
           "x": 0,
           "y": 0,
-          "filePath": "images/ship.png",
+          "filePath": "images/explosion.png",
           "filters": {}
         }
       ],
       "type": "asset",
-      "name": "ShipTemplateInner"
+      "name": "Explosion1"
     },
-    "EnemyTemplate": {
-      "children": [
-        {
-          "type": "asset",
-          "name": "EnemyTemplateInner",
-          "template": true,
-          "guide": false,
-          "instanceName": "enemyView",
-          "filters": {},
-          "portrait": {
-            "x": -25.357091811848363,
-            "y": -22.89181899680753,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          },
-          "landscape": {
-            "x": -25.357091811848363,
-            "y": -22.89181899680753,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          }
-        }
-      ],
-      "type": "asset",
-      "name": "EnemyTemplate"
-    },
-    "EnemyTemplateInner": {
+    "Explosion2": {
       "children": [
         {
           "type": "img",
-          "name": "EnemyTemplateInner_IMG",
-          "width": 51,
+          "name": "Explosion2_IMG",
+          "width": 49,
           "height": 50,
           "x": 0,
           "y": 0,
-          "filePath": "images/enemy.png",
+          "filePath": "images/שכבה 42.png",
           "filters": {}
         }
       ],
       "type": "asset",
-      "name": "EnemyTemplateInner"
+      "name": "Explosion2"
+    },
+    "Explosion3": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Explosion3_IMG",
+          "width": 51,
+          "height": 42,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 41.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Explosion3"
+    },
+    "Bullet9": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Bullet9_IMG",
+          "width": 24,
+          "height": 24,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/bullet.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Bullet9"
+    },
+    "Bullet8": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Bullet8_IMG",
+          "width": 7,
+          "height": 11,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 26.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Bullet8"
+    },
+    "Bullet7": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Bullet7_IMG",
+          "width": 12,
+          "height": 34,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 23.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Bullet7"
+    },
+    "Bullet6": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Bullet6_IMG",
+          "width": 8,
+          "height": 34,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 22.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Bullet6"
+    },
+    "Bullet5": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Bullet5_IMG",
+          "width": 9,
+          "height": 28,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 21.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Bullet5"
+    },
+    "Bullet4": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Bullet4_IMG",
+          "width": 10,
+          "height": 34,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 20.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Bullet4"
+    },
+    "Bullet2": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Bullet2_IMG",
+          "width": 7,
+          "height": 13,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 18.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Bullet2"
+    },
+    "Bullet3": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Bullet3_IMG",
+          "width": 3,
+          "height": 13,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 17.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Bullet3"
+    },
+    "Bullet1": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Bullet1_IMG",
+          "width": 11,
+          "height": 15,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/שכבה 16.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Bullet1"
     }
   },
   "fonts": [],

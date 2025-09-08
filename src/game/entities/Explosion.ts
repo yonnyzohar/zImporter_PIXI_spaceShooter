@@ -69,6 +69,8 @@ export class Explosion extends Entity {
             asset!.scale.set(obj.scale);
             asset!.x = obj.x;
             asset!.y = obj.y;
+            asset!.pivotX = asset!.width / 2;
+            asset!.pivotY = asset!.height / 2;
             Model.stage?.addChild(asset!);
         }
         this.num = num;
