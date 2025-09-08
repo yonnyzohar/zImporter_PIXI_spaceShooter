@@ -34,6 +34,8 @@ export class Bullet extends Entity {
         Model.stage?.addChild(this.asset!);
         this.asset!.x = this.x;
         this.asset!.y = this.y;
+        this.asset!.pivotX = this.asset!.width / 2;
+        this.asset!.pivotY = this.asset!.height / 2;
         Updatables.add(this);
     }
 

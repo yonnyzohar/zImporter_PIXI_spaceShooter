@@ -22,6 +22,8 @@ export class Enemy extends Entity {
         this.pool = params.pool!;
         let scene: ZScene = ZScene.getSceneById("game-scene")!;
         this.asset = scene?.spawn(params.assetName);
+        this.asset!.pivotX = this.asset!.width / 2;
+        this.asset!.pivotY = this.asset!.height / 2;
         this.fireRate = params.cannonObj?.fireRate || 0;
         this.speed = params.speed!;
         this.w = this.asset!.width;
