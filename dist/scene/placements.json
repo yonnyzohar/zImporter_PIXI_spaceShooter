@@ -51,8 +51,8 @@
           },
           "anchorType": "center",
           "anchorPercentage": {
-            "x": 0.00007447265754968773,
-            "y": 0.0013670818708053677
+            "x": 0.00007447265754969437,
+            "y": 0.0013670818708053708
           }
         },
         "attrs": {
@@ -827,14 +827,14 @@
         "instanceName": "ship5",
         "filters": {},
         "portrait": {
-          "x": -441.6005835863866,
-          "y": 49.73032768753279,
+          "x": -472.64412712993015,
+          "y": 61.08768504489015,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 39.5,
-          "pivotY": 34,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -843,14 +843,14 @@
           }
         },
         "landscape": {
-          "x": -441.6005835863866,
-          "y": 49.73032768753279,
+          "x": -472.64412712993015,
+          "y": 61.08768504489015,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 39.5,
-          "pivotY": 34,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -867,14 +867,14 @@
         "instanceName": "ship2",
         "filters": {},
         "portrait": {
-          "x": -558.0419684533852,
-          "y": 49.730342129636426,
+          "x": -583.3167432281599,
+          "y": 46.394005793300096,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 34.5,
-          "pivotY": 51,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -883,14 +883,14 @@
           }
         },
         "landscape": {
-          "x": -558.0419684533852,
-          "y": 49.730342129636426,
+          "x": -583.3167432281599,
+          "y": 46.394005793300096,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 34.5,
-          "pivotY": 51,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -907,14 +907,14 @@
         "instanceName": "ship3",
         "filters": {},
         "portrait": {
-          "x": -325.1591987193881,
-          "y": 49.730339769125464,
+          "x": -359.1652047253941,
+          "y": 61.65676619555191,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 44,
-          "pivotY": 46.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -923,14 +923,14 @@
           }
         },
         "landscape": {
-          "x": -325.1591987193881,
-          "y": 49.730339769125464,
+          "x": -359.1652047253941,
+          "y": 61.65676619555191,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 44,
-          "pivotY": 46.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -947,14 +947,14 @@
         "instanceName": "ship4",
         "filters": {},
         "portrait": {
-          "x": -208.71781385238944,
-          "y": 49.73033767402177,
+          "x": -230.95505108962675,
+          "y": 66.54415148783556,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 33,
-          "pivotY": 37,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -963,14 +963,14 @@
           }
         },
         "landscape": {
-          "x": -208.71781385238944,
-          "y": 49.73033767402177,
+          "x": -230.95505108962675,
+          "y": 66.54415148783556,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 33,
-          "pivotY": 37,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -987,14 +987,14 @@
         "instanceName": "ship1",
         "filters": {},
         "portrait": {
-          "x": -92.27642898539091,
-          "y": 49.73035459065272,
+          "x": -130.42657913554103,
+          "y": 66.85047471077286,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 32,
-          "pivotY": 39,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1003,14 +1003,14 @@
           }
         },
         "landscape": {
-          "x": -92.27642898539091,
-          "y": 49.73035459065272,
+          "x": -130.42657913554103,
+          "y": 66.85047471077286,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 32,
-          "pivotY": 39,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1027,14 +1027,14 @@
         "instanceName": "enemy3",
         "filters": {},
         "portrait": {
-          "x": -562.0921209933305,
-          "y": 184.08915184576654,
+          "x": -596.3531757823041,
+          "y": 145.56207435734942,
           "rotation": 0,
           "scaleX": 1.0227180534021998,
           "scaleY": 1.0227180534021998,
           "alpha": 1,
-          "pivotX": 33.5,
-          "pivotY": 38.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1043,14 +1043,14 @@
           }
         },
         "landscape": {
-          "x": -562.0921209933305,
-          "y": 184.08915184576654,
+          "x": -596.3531757823041,
+          "y": 145.56207435734942,
           "rotation": 0,
           "scaleX": 1.0227180534021998,
           "scaleY": 1.0227180534021998,
           "alpha": 1,
-          "pivotX": 33.5,
-          "pivotY": 38.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1067,14 +1067,14 @@
         "instanceName": "enemy4",
         "filters": {},
         "portrait": {
-          "x": -444.12862870240644,
-          "y": 184.08917507131537,
+          "x": -484.12862870240644,
+          "y": 137.08917507131537,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 40,
-          "pivotY": 47,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1083,14 +1083,14 @@
           }
         },
         "landscape": {
-          "x": -444.12862870240644,
-          "y": 184.08917507131537,
+          "x": -484.12862870240644,
+          "y": 137.08917507131537,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 40,
-          "pivotY": 47,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1107,14 +1107,14 @@
         "instanceName": "enemy5",
         "filters": {},
         "portrait": {
-          "x": -326.1651364114824,
-          "y": 184.08917507131537,
+          "x": -366.1651364114824,
+          "y": 145.08917507131537,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 40,
-          "pivotY": 39,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1123,14 +1123,14 @@
           }
         },
         "landscape": {
-          "x": -326.1651364114824,
-          "y": 184.08917507131537,
+          "x": -366.1651364114824,
+          "y": 145.08917507131537,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 40,
-          "pivotY": 39,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1147,14 +1147,14 @@
         "instanceName": "enemy2",
         "filters": {},
         "portrait": {
-          "x": -208.2016441205584,
-          "y": 184.08917507131537,
+          "x": -253.7016441205584,
+          "y": 148.08917507131537,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 45.5,
-          "pivotY": 36,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1163,14 +1163,14 @@
           }
         },
         "landscape": {
-          "x": -208.2016441205584,
-          "y": 184.08917507131537,
+          "x": -253.7016441205584,
+          "y": 148.08917507131537,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 45.5,
-          "pivotY": 36,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1187,14 +1187,14 @@
         "instanceName": "enemy1",
         "filters": {},
         "portrait": {
-          "x": -90.23815182963438,
-          "y": 184.08917507131537,
+          "x": -124.73815182963438,
+          "y": 136.08917507131537,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 34.5,
-          "pivotY": 48,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1203,14 +1203,14 @@
           }
         },
         "landscape": {
-          "x": -90.23815182963438,
-          "y": 184.08917507131537,
+          "x": -124.73815182963438,
+          "y": 136.08917507131537,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 34.5,
-          "pivotY": 48,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1227,14 +1227,14 @@
         "instanceName": "shieldView",
         "filters": {},
         "portrait": {
-          "x": -563.146326441232,
-          "y": 279.22302352590685,
+          "x": -584.146326441232,
+          "y": 255.72302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 21,
-          "pivotY": 23.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1243,14 +1243,14 @@
           }
         },
         "landscape": {
-          "x": -563.146326441232,
-          "y": 279.22302352590685,
+          "x": -584.146326441232,
+          "y": 255.72302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 21,
-          "pivotY": 23.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1267,14 +1267,14 @@
         "instanceName": "magnetView",
         "filters": {},
         "portrait": {
-          "x": -468.74152163642714,
-          "y": 279.22302352590685,
+          "x": -486.74152163642714,
+          "y": 260.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 18,
-          "pivotY": 19,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1283,14 +1283,14 @@
           }
         },
         "landscape": {
-          "x": -468.74152163642714,
-          "y": 279.22302352590685,
+          "x": -486.74152163642714,
+          "y": 260.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 18,
-          "pivotY": 19,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1307,14 +1307,14 @@
         "instanceName": "fireRateView",
         "filters": {},
         "portrait": {
-          "x": -374.3367168316223,
-          "y": 279.22302352590685,
+          "x": -390.3367168316223,
+          "y": 271.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 16,
-          "pivotY": 8,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1323,14 +1323,14 @@
           }
         },
         "landscape": {
-          "x": -374.3367168316223,
-          "y": 279.22302352590685,
+          "x": -390.3367168316223,
+          "y": 271.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 16,
-          "pivotY": 8,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1347,14 +1347,14 @@
         "instanceName": "coinView",
         "filters": {},
         "portrait": {
-          "x": -279.9319120268175,
-          "y": 279.22302352590685,
+          "x": -291.9319120268175,
+          "y": 267.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 12,
-          "pivotY": 12,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1363,14 +1363,14 @@
           }
         },
         "landscape": {
-          "x": -279.9319120268175,
-          "y": 279.22302352590685,
+          "x": -291.9319120268175,
+          "y": 267.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 12,
-          "pivotY": 12,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1387,14 +1387,14 @@
         "instanceName": "fireAnglesView",
         "filters": {},
         "portrait": {
-          "x": -185.52710722201266,
-          "y": 279.22302352590685,
+          "x": -204.52710722201266,
+          "y": 268.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 19,
-          "pivotY": 11,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1403,14 +1403,14 @@
           }
         },
         "landscape": {
-          "x": -185.52710722201266,
-          "y": 279.22302352590685,
+          "x": -204.52710722201266,
+          "y": 268.22302352590685,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 19,
-          "pivotY": 11,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1427,14 +1427,14 @@
         "instanceName": "healthPackView",
         "filters": {},
         "portrait": {
-          "x": -91.12230241720783,
-          "y": 278.4542547571381,
+          "x": -118.5067258521658,
+          "y": 278.26595397235747,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 16,
-          "pivotY": 16,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1443,14 +1443,14 @@
           }
         },
         "landscape": {
-          "x": -91.12230241720783,
-          "y": 278.4542547571381,
+          "x": -118.5067258521658,
+          "y": 278.26595397235747,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 16,
-          "pivotY": 16,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1587,14 +1587,14 @@
         "instanceName": "bullet9",
         "filters": {},
         "portrait": {
-          "x": -563.6072087079405,
-          "y": 345.27606437959236,
+          "x": -575.6072087079405,
+          "y": 333.27606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 12,
-          "pivotY": 12,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1603,14 +1603,14 @@
           }
         },
         "landscape": {
-          "x": -563.6072087079405,
-          "y": 345.27606437959236,
+          "x": -575.6072087079405,
+          "y": 333.27606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 12,
-          "pivotY": 12,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1627,14 +1627,14 @@
         "instanceName": "bullet8",
         "filters": {},
         "portrait": {
-          "x": -505.2365821265864,
-          "y": 345.27606437959236,
+          "x": -508.7365821265864,
+          "y": 339.77606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 3.5,
-          "pivotY": 5.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1643,14 +1643,14 @@
           }
         },
         "landscape": {
-          "x": -505.2365821265864,
-          "y": 345.27606437959236,
+          "x": -508.7365821265864,
+          "y": 339.77606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 3.5,
-          "pivotY": 5.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1667,14 +1667,14 @@
         "instanceName": "bullet7",
         "filters": {},
         "portrait": {
-          "x": -446.86595554523245,
-          "y": 345.27606437959236,
+          "x": -452.86595554523245,
+          "y": 328.27606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 6,
-          "pivotY": 17,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1683,14 +1683,14 @@
           }
         },
         "landscape": {
-          "x": -446.86595554523245,
-          "y": 345.27606437959236,
+          "x": -452.86595554523245,
+          "y": 328.27606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 6,
-          "pivotY": 17,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1707,14 +1707,14 @@
         "instanceName": "bullet6",
         "filters": {},
         "portrait": {
-          "x": -388.4953289638784,
-          "y": 345.27606437959236,
+          "x": -391.7980330284873,
+          "y": 328.27606437959236,
           "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
+          "scaleX": 1.0871619919238924,
+          "scaleY": 1.0871619919238924,
           "alpha": 1,
-          "pivotX": 4,
-          "pivotY": 17,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1723,14 +1723,14 @@
           }
         },
         "landscape": {
-          "x": -388.4953289638784,
-          "y": 345.27606437959236,
+          "x": -391.7980330284873,
+          "y": 328.27606437959236,
           "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
+          "scaleX": 1.0871619919238924,
+          "scaleY": 1.0871619919238924,
           "alpha": 1,
-          "pivotX": 4,
-          "pivotY": 17,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1747,14 +1747,14 @@
         "instanceName": "bullet5",
         "filters": {},
         "portrait": {
-          "x": -330.12470238252445,
-          "y": 345.27606437959236,
+          "x": -334.62470238252445,
+          "y": 331.27606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 4.5,
-          "pivotY": 14,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1763,14 +1763,14 @@
           }
         },
         "landscape": {
-          "x": -330.12470238252445,
-          "y": 345.27606437959236,
+          "x": -334.62470238252445,
+          "y": 331.27606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 4.5,
-          "pivotY": 14,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1787,14 +1787,14 @@
         "instanceName": "bullet4",
         "filters": {},
         "portrait": {
-          "x": -271.7540758011704,
-          "y": 345.27606437959236,
+          "x": -276.7540758011704,
+          "y": 328.27606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 5,
-          "pivotY": 17,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1803,14 +1803,14 @@
           }
         },
         "landscape": {
-          "x": -271.7540758011704,
-          "y": 345.27606437959236,
+          "x": -276.7540758011704,
+          "y": 328.27606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 5,
-          "pivotY": 17,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1827,14 +1827,14 @@
         "instanceName": "bullet2",
         "filters": {},
         "portrait": {
-          "x": -213.38344921981638,
-          "y": 345.27606437959236,
+          "x": -216.88344921981638,
+          "y": 338.77606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 3.5,
-          "pivotY": 6.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1843,14 +1843,14 @@
           }
         },
         "landscape": {
-          "x": -213.38344921981638,
-          "y": 345.27606437959236,
+          "x": -216.88344921981638,
+          "y": 338.77606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 3.5,
-          "pivotY": 6.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1867,14 +1867,14 @@
         "instanceName": "bullet3",
         "filters": {},
         "portrait": {
-          "x": -155.0128226384624,
-          "y": 345.27606437959236,
+          "x": -156.5128226384624,
+          "y": 338.77606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 1.5,
-          "pivotY": 6.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1883,14 +1883,14 @@
           }
         },
         "landscape": {
-          "x": -155.0128226384624,
-          "y": 345.27606437959236,
+          "x": -156.5128226384624,
+          "y": 338.77606437959236,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 1.5,
-          "pivotY": 6.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1907,14 +1907,14 @@
         "instanceName": "bullet1",
         "filters": {},
         "portrait": {
-          "x": -96.64219605710838,
-          "y": 346.4233985630097,
+          "x": -120.45565125455437,
+          "y": 329.76667096428673,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 5.5,
-          "pivotY": 7.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1923,14 +1923,14 @@
           }
         },
         "landscape": {
-          "x": -96.64219605710838,
-          "y": 346.4233985630097,
+          "x": -120.45565125455437,
+          "y": 329.76667096428673,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 1,
-          "pivotX": 5.5,
-          "pivotY": 7.5,
+          "pivotX": 0,
+          "pivotY": 0,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -1953,6 +1953,8 @@
           "height": 1190,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/what-is-space-milky-way-full-width.jpg",
           "filters": {}
         }
@@ -1969,6 +1971,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 12.png",
           "filters": {}
         }
@@ -1985,6 +1989,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 10.png",
           "filters": {}
         }
@@ -2001,6 +2007,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 5.png",
           "filters": {}
         }
@@ -2017,6 +2025,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 11.png",
           "filters": {}
         }
@@ -2033,6 +2043,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 8.png",
           "filters": {}
         }
@@ -2049,6 +2061,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 6.png",
           "filters": {}
         }
@@ -2065,6 +2079,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 14.png",
           "filters": {}
         }
@@ -2081,6 +2097,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 3.png",
           "filters": {}
         }
@@ -2097,6 +2115,8 @@
           "height": 21,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 13.png",
           "filters": {}
         }
@@ -2113,6 +2133,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 7.png",
           "filters": {}
         }
@@ -2129,6 +2151,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 4.png",
           "filters": {}
         }
@@ -2145,6 +2169,8 @@
           "height": 27,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 36.png",
           "filters": {}
         }
@@ -2161,6 +2187,8 @@
           "height": 27,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 35.png",
           "filters": {}
         }
@@ -2177,6 +2205,8 @@
           "height": 61,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 34.png",
           "filters": {}
         }
@@ -2193,6 +2223,8 @@
           "height": 96,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 37.png",
           "filters": {}
         }
@@ -2209,6 +2241,8 @@
           "height": 68,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 33.png",
           "filters": {}
         }
@@ -2225,6 +2259,8 @@
           "height": 83,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 30.png",
           "filters": {}
         }
@@ -2241,6 +2277,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 15.png",
           "filters": {}
         }
@@ -2663,6 +2701,8 @@
           "height": 10,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 48.png",
           "filters": {}
         }
@@ -2679,6 +2719,8 @@
           "height": 6,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 47.png",
           "filters": {}
         }
@@ -2695,6 +2737,8 @@
           "height": 14,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 46.png",
           "filters": {}
         }
@@ -2711,6 +2755,8 @@
           "height": 26,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 45.png",
           "filters": {}
         }
@@ -2727,6 +2773,8 @@
           "height": 14,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 44.png",
           "filters": {}
         }
@@ -2743,6 +2791,8 @@
           "height": 26,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 43.png",
           "filters": {}
         }
@@ -2759,6 +2809,8 @@
           "height": 10,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 40.png",
           "filters": {}
         }
@@ -2775,6 +2827,8 @@
           "height": 10,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 38.png",
           "filters": {}
         }
@@ -2791,6 +2845,8 @@
           "height": 6,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 39.png",
           "filters": {}
         }
@@ -2807,6 +2863,8 @@
           "height": 12,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 27.png",
           "filters": {}
         }
@@ -2823,6 +2881,8 @@
           "height": 68,
           "x": 0,
           "y": 0,
+          "pivotX": 39.5,
+          "pivotY": 34,
           "filePath": "images/שכבה 1.png",
           "filters": {}
         }
@@ -2839,6 +2899,8 @@
           "height": 102,
           "x": 0,
           "y": 0,
+          "pivotX": 34.5,
+          "pivotY": 51,
           "filePath": "images/שכבה 2.png",
           "filters": {}
         }
@@ -2855,6 +2917,8 @@
           "height": 93,
           "x": 0,
           "y": 0,
+          "pivotX": 44,
+          "pivotY": 46.5,
           "filePath": "images/שכבה 28.png",
           "filters": {}
         }
@@ -2871,6 +2935,8 @@
           "height": 74,
           "x": 0,
           "y": 0,
+          "pivotX": 33,
+          "pivotY": 37,
           "filePath": "images/שכבה 25.png",
           "filters": {}
         }
@@ -2887,6 +2953,8 @@
           "height": 78,
           "x": 0,
           "y": 0,
+          "pivotX": 32,
+          "pivotY": 39,
           "filePath": "images/שכבה 24.png",
           "filters": {}
         }
@@ -2903,6 +2971,8 @@
           "height": 77,
           "x": 0,
           "y": 0,
+          "pivotX": 33.5,
+          "pivotY": 38.5,
           "filePath": "images/שכבה 9.png",
           "filters": {}
         }
@@ -2919,6 +2989,8 @@
           "height": 94,
           "x": 0,
           "y": 0,
+          "pivotX": 40,
+          "pivotY": 47,
           "filePath": "images/שכבה 32.png",
           "filters": {}
         }
@@ -2935,6 +3007,8 @@
           "height": 78,
           "x": 0,
           "y": 0,
+          "pivotX": 40,
+          "pivotY": 39,
           "filePath": "images/שכבה 31.png",
           "filters": {}
         }
@@ -2951,6 +3025,8 @@
           "height": 72,
           "x": 0,
           "y": 0,
+          "pivotX": 45.5,
+          "pivotY": 36,
           "filePath": "images/שכבה 29.png",
           "filters": {}
         }
@@ -2967,6 +3043,8 @@
           "height": 96,
           "x": 0,
           "y": 0,
+          "pivotX": 34.5,
+          "pivotY": 48,
           "filePath": "images/שכבה 19.png",
           "filters": {}
         }
@@ -2983,6 +3061,8 @@
           "height": 47,
           "x": 0,
           "y": 0,
+          "pivotX": 21,
+          "pivotY": 23.5,
           "filePath": "images/shield.png",
           "filters": {}
         }
@@ -2999,6 +3079,8 @@
           "height": 38,
           "x": 0,
           "y": 0,
+          "pivotX": 18,
+          "pivotY": 19,
           "filePath": "images/magnet.png",
           "filters": {}
         }
@@ -3015,6 +3097,8 @@
           "height": 16,
           "x": 0,
           "y": 0,
+          "pivotX": 16,
+          "pivotY": 8,
           "filePath": "images/fireRate.png",
           "filters": {}
         }
@@ -3031,6 +3115,8 @@
           "height": 24,
           "x": 0,
           "y": 0,
+          "pivotX": 12,
+          "pivotY": 12,
           "filePath": "images/coin.png",
           "filters": {}
         }
@@ -3047,6 +3133,8 @@
           "height": 22,
           "x": 0,
           "y": 0,
+          "pivotX": 19,
+          "pivotY": 11,
           "filePath": "images/fireAngles.png",
           "filters": {}
         }
@@ -3063,6 +3151,8 @@
           "height": 32,
           "x": 0,
           "y": 0,
+          "pivotX": 16,
+          "pivotY": 16,
           "filePath": "images/health.png",
           "filters": {}
         }
@@ -3079,6 +3169,8 @@
           "height": 64,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/explosion.png",
           "filters": {}
         }
@@ -3095,6 +3187,8 @@
           "height": 50,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 42.png",
           "filters": {}
         }
@@ -3111,6 +3205,8 @@
           "height": 42,
           "x": 0,
           "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
           "filePath": "images/שכבה 41.png",
           "filters": {}
         }
@@ -3127,6 +3223,8 @@
           "height": 24,
           "x": 0,
           "y": 0,
+          "pivotX": 12,
+          "pivotY": 12,
           "filePath": "images/bullet.png",
           "filters": {}
         }
@@ -3143,6 +3241,8 @@
           "height": 11,
           "x": 0,
           "y": 0,
+          "pivotX": 3.5,
+          "pivotY": 5.5,
           "filePath": "images/שכבה 26.png",
           "filters": {}
         }
@@ -3159,6 +3259,8 @@
           "height": 34,
           "x": 0,
           "y": 0,
+          "pivotX": 6,
+          "pivotY": 17,
           "filePath": "images/שכבה 23.png",
           "filters": {}
         }
@@ -3175,6 +3277,8 @@
           "height": 34,
           "x": 0,
           "y": 0,
+          "pivotX": 4,
+          "pivotY": 17,
           "filePath": "images/שכבה 22.png",
           "filters": {}
         }
@@ -3191,6 +3295,8 @@
           "height": 28,
           "x": 0,
           "y": 0,
+          "pivotX": 4.5,
+          "pivotY": 14,
           "filePath": "images/שכבה 21.png",
           "filters": {}
         }
@@ -3207,6 +3313,8 @@
           "height": 34,
           "x": 0,
           "y": 0,
+          "pivotX": 5,
+          "pivotY": 17,
           "filePath": "images/שכבה 20.png",
           "filters": {}
         }
@@ -3223,6 +3331,8 @@
           "height": 13,
           "x": 0,
           "y": 0,
+          "pivotX": 3.5,
+          "pivotY": 6.5,
           "filePath": "images/שכבה 18.png",
           "filters": {}
         }
@@ -3239,6 +3349,8 @@
           "height": 13,
           "x": 0,
           "y": 0,
+          "pivotX": 1.5,
+          "pivotY": 6.5,
           "filePath": "images/שכבה 17.png",
           "filters": {}
         }
@@ -3255,6 +3367,8 @@
           "height": 15,
           "x": 0,
           "y": 0,
+          "pivotX": 5.5,
+          "pivotY": 7.5,
           "filePath": "images/שכבה 16.png",
           "filters": {}
         }
@@ -3265,5 +3379,6 @@
   },
   "fonts": [],
   "fps": 60,
-  "cuePoints": {}
+  "cuePoints": {},
+  "atlas": false
 }

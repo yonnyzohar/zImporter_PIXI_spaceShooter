@@ -1,5 +1,5 @@
 import { Entity } from "../../core/Entity";
-import { Pool } from "../../core/Pool";
+import { Pool, PoolsManager } from "../../core/Pool";
 import { Model, WeaponObj } from "../Model";
 import { Bullet } from "./Bullet";
 import { Cannon } from "./Cannon";
@@ -7,7 +7,6 @@ import { Cannon } from "./Cannon";
 
 
 export class TripleCannonSpread extends Entity {
-    private bulletsPool: Pool<Entity>;
     private fireCounter: number = 0;
     private fireRate: number;
     private numTurrets: number;
@@ -16,14 +15,8 @@ export class TripleCannonSpread extends Entity {
     constructor(params: WeaponObj) {
         super(params);
         // Assuming allPools is a global object
-        if (!Model.allPools) {
-            Model.allPools = {};
-        }
-        const AllPools = Model.allPools;
 
         // Pool initialization logic
-        this.bulletsPool = AllPools["bullet"];
-        AllPools["bullet"] = this.bulletsPool;
 
         this.fireRate = params.fireRate;
         this.numTurrets = params.numTurrets;
@@ -31,6 +24,7 @@ export class TripleCannonSpread extends Entity {
     }
 
     updateFire(dt: number, spawnX: number, spawnY: number) {
+
         // Assuming Model.movement.space is a boolean indicating fire
         const fire = Model.movement.space;
         this.fireCounter += dt;
@@ -38,14 +32,17 @@ export class TripleCannonSpread extends Entity {
         if (this.fireCounter >= this.fireRate) {
             // Fire three bullets with spread
             const upAngle = (Math.PI * 2) - (Math.PI / 2);
+            let weaponParams: WeaponObj = this.params as WeaponObj;
+            let bulletObj = Model.bullets[weaponParams.bullet!];
+            let pool = PoolsManager.getPool(bulletObj.ClassName!, bulletObj);
 
-            let bullet: Bullet = this.bulletsPool.get() as unknown as Bullet;
+            let bullet: Bullet = pool!.get() as unknown as Bullet;
             bullet.fire(spawnX, spawnY, upAngle - this.spreadAngle);
 
-            bullet = this.bulletsPool.get() as unknown as Bullet;
+            bullet = pool!.get() as unknown as Bullet;
             bullet.fire(spawnX, spawnY, upAngle);
 
-            bullet = this.bulletsPool.get() as unknown as Bullet;;
+            bullet = pool!.get() as unknown as Bullet;
             bullet.fire(spawnX, spawnY, upAngle + this.spreadAngle);
 
             this.fireCounter = 0;

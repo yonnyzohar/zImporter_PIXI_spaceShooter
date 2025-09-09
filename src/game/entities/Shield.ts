@@ -3,6 +3,7 @@ import { Updatables } from "../../core/Updatables";
 import { Model, ShieldObj } from "../Model";
 import { Entity } from "../../core/Entity";
 import { Ship } from "./Ship";
+import { EventsManager, Utils } from "../../core";
 
 interface ShieldObject {
     degree: number;
@@ -27,13 +28,11 @@ export class Shield {
 
         for (let i = 0; i < params.numShields; i++) {
 
-            let asset = scene?.spawn(params.assetName);
             let s = new Entity(params);
             s.grid = Model.enemiesGrid;
-            s.asset = asset;
-            Model.stage?.addChild(asset!);
-            this.w = asset!.width;
-            this.h = asset!.height;
+            Model.stage?.addChild(s.asset!);
+
+            Updatables.add(s);
             this.shields.push({ degree: curr, entity: s! });
             curr += increment;
         }
@@ -56,6 +55,15 @@ export class Shield {
             obj.entity!.x = x + shipCenter.x!;
             obj.entity!.y = y + shipCenter.y!;
             obj.entity!.render();
+            const collisions = Utils.getCollisions(obj.entity, obj.entity.radius!, Model.enemiesGrid, Model.gridSize);
+
+            if (collisions) {
+                for (let i = 0; i < collisions.length; i++) {
+                    let collision = collisions[i];
+                    collision.destroyEntity();
+                    EventsManager.emit("ENEMY_DESTROYED", { x: collision.x, y: collision.y });
+                }
+            }
         }
     }
 

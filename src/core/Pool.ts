@@ -1,26 +1,37 @@
 // Assuming you have a base class system, but in TypeScript we use classes directly.
 
-import { PoolsObj } from "../game/Model";
+import { BaseObj } from "../game/Model";
+import { Entity } from "./Entity";
+
+
+export class PoolsManager {
+    static allPools: Record<string, Pool<Entity>> = {};
+    public static getPool(name: string, params: BaseObj): Pool<Entity> | undefined {
+        if (!this.allPools[name]) {
+            this.allPools[name] = new Pool(params);
+        }
+        return this.allPools[name];
+    }
+}
 
 
 export class Pool<T> {
+
     private arr: T[];
     private curIndex: number;
     private params: any;
 
-    constructor(params: PoolsObj) {
-        const numElements = params.numElements;
-        const p = params.params;
-        this.params = p;
+    constructor(obj: BaseObj) {
+        const numElements = 100;
         // So the entity can place itself back inside
-        (p as any).pool = this;
-        const CLS_STR = this.params.ClassName as unknown as string;
+        (obj as any).pool = this;
+        const CLS_STR = obj.ClassName as unknown as string;
         const CLS = (window as any).SpaceGame[CLS_STR]
         this.arr = [];
         this.curIndex = 1;
 
         for (let i = 0; i < numElements; i++) {
-            const e = new (CLS)(p);
+            const e = new (CLS)(obj);
             this.arr[i] = e;
         }
     }

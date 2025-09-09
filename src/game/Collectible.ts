@@ -17,15 +17,14 @@ export class Collectible extends Entity {
 
         this.pool = params.pool;
         this.speed = params.speed ?? 50;
-        let scene = ZScene.getSceneById("game-scene");
-        this.asset = scene?.spawn(params.assetName);
-        this.w = this.asset!.width;
-        this.h = this.asset!.height;
+
         this.rnd = Math.random();
-        this.radius = Math.min(this.w, this.h) / 2;
+
         this.time = params.time;
 
     }
+
+
 
     spawn(_x: number, _y: number) {
         this.x = _x;
@@ -33,6 +32,7 @@ export class Collectible extends Entity {
         Model.stage?.addChild(this.asset!);
         Updatables.add(this);
         this.currTime = 0;
+        this.asset!.alpha = 1;
 
     }
 
@@ -49,7 +49,12 @@ export class Collectible extends Entity {
         this.currTime += (dt * 1000);
 
         if (this.y! > dimensions.height || this.currTime > this.time) {
-            this.destroyEntity();
+            this.asset!.alpha -= 0.02;
+            if (this.asset!.alpha <= 0) {
+                this.asset!.alpha = 0;
+                this.destroyEntity();
+            }
+
         }
     }
 

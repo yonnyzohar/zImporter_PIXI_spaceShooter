@@ -1,7 +1,8 @@
 import * as PIXI from 'pixi.js';
 import { BaseObj, EntityObj, Model } from '../game/Model';
 import { Pool } from './Pool';
-import { ZContainer } from 'zimporter-pixi';
+import { ZContainer, ZScene } from 'zimporter-pixi';
+import { Updatables } from './Updatables';
 
 
 export class Entity {
@@ -18,7 +19,9 @@ export class Entity {
     h?: number
     radius?: number;
     private type: string;
-
+    protected circle: PIXI.Graphics;
+    private greenColor = 0x00FF00;
+    private redColor = 0xFF0000
 
     constructor(params: BaseObj) {
         this.params = params;
@@ -27,6 +30,26 @@ export class Entity {
         }
 
         this.type = params.type;
+        this.setView(params);
+    }
+
+    setView(params: BaseObj) {
+        let scene = ZScene.getSceneById("game-scene");
+        this.asset = scene?.spawn(params.assetName);
+        this.w = this.asset!.width;
+        this.h = this.asset!.height;
+        this.radius = Math.min(this.w, this.h) / 2;
+        this.circle = new PIXI.Graphics();
+        this.drawCircle(false);
+        this.asset?.addChild(this.circle);
+    }
+
+    public drawCircle(collision: boolean) {
+        return;
+        this.circle.clear();
+        this.circle.lineStyle(2, collision ? this.redColor : this.greenColor, 0.5);
+        this.circle.drawCircle(0, 0, this.radius!);
+        this.circle.endFill();
     }
 
     public getType(): string {
@@ -42,12 +65,12 @@ export class Entity {
             if (this.prevRow !== undefined && this.prevCol !== undefined && grid) {
                 const oldDictName = `${this.prevRow}_${this.prevCol}`;
                 const block = grid[oldDictName];
-                if (block) {
+                if (block && this.params.isAddedToGrid) {
                     const map: Map<Entity, boolean> = grid[oldDictName];
                     map.delete(this);
                 }
             }
-            if (grid) {
+            if (grid && this.params.isAddedToGrid) {
                 const newDictName = `${row}_${col}`;
                 if (!grid[newDictName]) {
                     grid[newDictName] = new Map<Entity, boolean>();
@@ -88,5 +111,6 @@ export class Entity {
         if (this.asset && this.asset.parent) {
             this.asset.parent.removeChild(this.asset);
         }
+        Updatables.remove(this);
     }
 }

@@ -5,8 +5,10 @@ import { ZScene } from "zimporter-pixi";
 import { Entity } from "../../core/Entity";
 import { Pool } from "../../core/Pool";
 import { Updatables } from "../../core/Updatables";
-import { EntityObj, Model } from "../Model";
+import { EnemyObj, EntityObj, Model, WeaponObj } from "../Model";
 import { EventsManager } from "../../core/EventsManager";
+import { Cannon } from "./Cannon";
+import { Utils } from "../../core/Utils";
 
 export class Enemy extends Entity {
     pool: Pool<Entity>;
@@ -14,20 +16,28 @@ export class Enemy extends Entity {
     private fireRate: number;
     private speed: number;
     radius: number;
+    public static globalId = 0;
+    private ship: Entity | null = null;
+    cannon: Cannon | null = null;
+    private fireRadius: number = 0;
 
-    constructor(params: EntityObj) {
+    constructor(params: EnemyObj) {
         super(params);
 
         this.pool = params.pool!;
-        let scene: ZScene = ZScene.getSceneById("game-scene")!;
-        this.asset = scene?.spawn(params.assetName);
-        this.asset!.pivotX = this.asset!.width / 2;
-        this.asset!.pivotY = this.asset!.height / 2;
-        this.fireRate = params.cannonObj?.fireRate || 0;
+
         this.speed = params.speed!;
-        this.w = this.asset!.width;
-        this.h = this.asset!.height;
-        this.radius = Math.min(this.w!, this.h!) / 2;
+
+        if (params.cannonName) {
+            params.cannonObj = Model.weapons[params.cannonName];
+            this.fireRate = params.cannonObj?.fireRate || 0;
+            this.fireRadius = params?.cannonObj.fireRadius || 0;
+            this.setCannon(params.cannonObj);
+        }
+    }
+
+    public setShip(ship: Entity | null) {
+        this.ship = ship;
     }
 
     spawn(_x: number, _y: number) {
@@ -36,6 +46,7 @@ export class Enemy extends Entity {
         this.initialXOffset = Math.random() * 6.24;
         Updatables.add(this);
         Model.stage?.addChild(this.asset!);
+        this.asset!.name = "enemy_" + (Enemy.globalId++);
     }
 
     update(dt: number) {
@@ -43,6 +54,7 @@ export class Enemy extends Entity {
         let dimensions = scene.getInnerDimensions();
         super.update(dt);
         this.x! += Math.cos(performance.now() / 1000 + this.initialXOffset) * 50 * dt;
+        //scaleX ossilation
         this.y! += this.speed * dt;
         const newX = this.x!;
         const newY = this.y!;
@@ -53,6 +65,29 @@ export class Enemy extends Entity {
             this.destroyEntity();
         }
         this.fixBounds();
+
+        if (this.cannon && this.ship) {
+            let collisions = Utils.getCollisionsAllScreen(this, this.fireRadius, Model.enemiesGrid, Model.gridSize, this.ship.constructor.name);
+            if (collisions.length > 0) {
+                let ship = collisions[0];
+
+                let angleToShip = Math.atan2(ship.y! - this.y!, ship.x! - this.x!);
+                let x = this.x! + Math.cos(angleToShip) * this.radius!;
+                let y = this.y! + Math.sin(angleToShip) * this.radius!;
+                this.cannon.updateFire(dt, x, y, angleToShip);
+            }
+        }
+    }
+
+    setCannon(cannonParams: WeaponObj | null) {
+        if (this.cannon) {
+            this.cannon.destroyEntity();
+            this.cannon = null;
+        }
+        if (cannonParams) {
+            const CannonClass = (window as any).SpaceGame[cannonParams.ClassName!];
+            this.cannon = new CannonClass(cannonParams);
+        }
     }
 
     fixBounds() {

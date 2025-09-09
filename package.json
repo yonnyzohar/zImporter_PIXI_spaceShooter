@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --mode development --open --hot",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,7 +18,8 @@
     "ts-loader": "^9.4.4",
     "typescript": "^5.1.6",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.2"
   },
   "ignore": [
     "node_modules",
@@ -25,10 +28,6 @@
     ".vscode"
   ],
   "dependencies": {
-    "class-transformer": "^0.5.1",
-    "class-validator": "^0.14.1",
-    "gsap": "^3.12.7",
-    "reflect-metadata": "^0.2.2",
     "@pixi-spine/all-4.0": "^4.0.4",
     "@pixi-spine/base": "^4.0.5",
     "@pixi-spine/loader-base": "^4.0.5",
@@ -38,6 +37,10 @@
     "@pixi-spine/runtime-4.1": "^4.0.5",
     "@pixi/filter-drop-shadow": "^5.2.0",
     "@pixi/particle-emitter": "^5.0.8",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "gsap": "^3.12.7",
+    "reflect-metadata": "^0.2.2",
     "zimporter-pixi": "latest"
   }
 }

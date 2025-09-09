@@ -1,21 +1,17 @@
 import { ZScene } from "zimporter-pixi/dist/ZScene";
 import { EventsManager } from "../core/EventsManager";
-import { Model, ScoreHolderParams } from "./Model";
+import { Model } from "./Model";
 import * as PIXI from 'pixi.js';
 
 
 
 export class ScoreHolder {
     private score: number = 0;
-    private enemyVal: number;
-    private collectibleVal: number;
     private view: PIXI.Text = new PIXI.Text('');
 
-    constructor(params: ScoreHolderParams) {
+    constructor() {
         let scene: ZScene = ZScene.getSceneById("game-scene")!;
         let dimensions = scene.getInnerDimensions();
-        this.enemyVal = params.enemyVal;
-        this.collectibleVal = params.collectibleVal;
         EventsManager.addListener("COIN_COLLECTED", this.onCoinCollected);
         EventsManager.addListener("ENEMY_DESTROYED", this.onEnemyDestroyed);
         Model.stage?.addChild(this.view);
@@ -33,13 +29,13 @@ export class ScoreHolder {
         EventsManager.removeListener("ENEMY_DESTROYED", this.onEnemyDestroyed);
     }
 
-    private onEnemyDestroyed = () => {
-        this.score += this.enemyVal;
+    private onEnemyDestroyed = (enemyVal: number = 0) => {
+        this.score += enemyVal;
         this.view.text = `Score : ${this.score}`;
     };
 
-    private onCoinCollected = () => {
-        this.score += this.collectibleVal;
+    private onCoinCollected = (collectibleVal: number = 0) => {
+        this.score += collectibleVal;
         this.view.text = `Score : ${this.score}`;
     };
 
