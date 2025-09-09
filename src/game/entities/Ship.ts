@@ -66,6 +66,7 @@ export class Ship extends Entity {
         if (magnetParams) {
             let MagnetClass = (window as any).SpaceGame[magnetParams.ClassName!];
             this.magnet = new MagnetClass(magnetParams);
+            this.magnet!.grid = Model.collectiblesGrid;
             this.magnet!.setShip(this);
         }
     }

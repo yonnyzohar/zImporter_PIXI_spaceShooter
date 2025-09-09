@@ -57,7 +57,7 @@ export class Bullet extends Entity {
             return;
         }
 
-        const collisions = Utils.getCollisions(this, this.radius!, Model.enemiesGrid, Model.gridSize);
+        const collisions = Utils.getCollisions(this, this.radius!, this.grid!, Model.gridSize);
 
         if (collisions) {
             for (let i = 0; i < collisions.length; i++) {
@@ -80,8 +80,6 @@ export class Bullet extends Entity {
     destroyEntity() {
         this.pool!.putBack(this);
         Updatables.remove(this);
-        if (this.asset) {
-            Model.stage?.removeChild(this.asset);
-        }
+        super.destroyEntity();
     }
 }

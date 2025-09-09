@@ -1,4 +1,4 @@
-import { ZScene } from "zimporter-pixi";
+import { ZContainer, ZScene } from "zimporter-pixi";
 import { Updatables } from "../../core/Updatables";
 import { Model, ShieldObj } from "../Model";
 import { Entity } from "../../core/Entity";
@@ -6,11 +6,10 @@ import { Ship } from "./Ship";
 
 interface ShieldObject {
     degree: number;
-    x?: number;
-    y?: number;
+    entity: Entity;
 }
 
-export class Shield extends Entity {
+export class Shield {
     speed: number;
     radius: number;
     shields: ShieldObject[] = [];
@@ -19,20 +18,23 @@ export class Shield extends Entity {
     ship: Ship;
 
     constructor(params: ShieldObj) {
-        super(params);
         this.speed = params.speed;
         this.radius = params.radius;
         let scene = ZScene.getSceneById("game-scene");
-        this.asset = scene?.spawn(params.assetName);
-        Model.stage?.addChild(this.asset!);
-        this.w = this.asset!.width;
-        this.h = this.asset!.height;
 
         const increment = 360 / params.numShields;
         let curr = 0;
 
         for (let i = 0; i < params.numShields; i++) {
-            this.shields.push({ degree: curr });
+
+            let asset = scene?.spawn(params.assetName);
+            let s = new Entity(params);
+            s.grid = Model.enemiesGrid;
+            s.asset = asset;
+            Model.stage?.addChild(asset!);
+            this.w = asset!.width;
+            this.h = asset!.height;
+            this.shields.push({ degree: curr, entity: s! });
             curr += increment;
         }
 
@@ -51,17 +53,16 @@ export class Shield extends Entity {
             const y = Math.sin(rad) * this.radius;
 
             obj.degree += this.speed * dt;
-            obj.x = x + shipCenter.x!;
-            obj.y = y + shipCenter.y!;
-            this.asset!.x = obj.x!;
-            this.asset!.y = obj.y!;
+            obj.entity!.x = x + shipCenter.x!;
+            obj.entity!.y = y + shipCenter.y!;
+            obj.entity!.render();
         }
     }
 
     destroyEntity() {
         Updatables.remove(this);
-        if (this.asset) {
-            Model.stage?.removeChild(this.asset!);
+        for (const obj of this.shields) {
+            obj.entity!.destroyEntity();
         }
     }
 }
