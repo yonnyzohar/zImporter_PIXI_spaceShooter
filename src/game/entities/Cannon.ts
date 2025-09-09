@@ -21,7 +21,6 @@ export class Cannon extends Entity {
         this.numTurrets = params.numTurrets;
         this.cannonSpacing = params.cannonSpacing;
     }
-
     public updateFire(dt: number, spawnX: number, spawnY: number, direction: number = (Math.PI * 2) - (Math.PI / 2)) {
         // const fire = Model.movement.space; // Uncomment if needed
         if (!this.bulletsPool) {
@@ -37,6 +36,7 @@ export class Cannon extends Entity {
             for (let i = 0; i < this.numTurrets; i++) {
                 const bullet: Bullet = this.bulletsPool.get() as unknown as Bullet;
                 bullet.fire(startX, spawnY, direction);
+                bullet.setGrid(this.getGrid()!);
                 startX += this.cannonSpacing;
             }
 

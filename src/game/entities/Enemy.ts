@@ -36,6 +36,13 @@ export class Enemy extends Entity {
         }
     }
 
+    override setGrid(grid: Record<string, Map<Entity, boolean>>): void {
+        super.setGrid(grid);
+        if (this.cannon) {
+            this.cannon.setGrid(grid);
+        }
+    }
+
     public setShip(ship: Entity | null) {
         this.ship = ship;
     }

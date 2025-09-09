@@ -226,7 +226,7 @@ export const Model: ModelInterface = {
         }
     },
     enemies: {
-        defaultEnemy: {
+        enemy1: {
             assetName: "Enemy1",
             ClassName: "Enemy",
             speed: 100,
@@ -234,8 +234,24 @@ export const Model: ModelInterface = {
             type: "entity",
             cannonName: "alienCannon",
             isAddedToGrid: true
-
-
+        },
+        enemy2: {
+            assetName: "Enemy2",
+            ClassName: "Enemy",
+            speed: 80,
+            value: 5,
+            type: "entity",
+            cannonName: "alienCannon",
+            isAddedToGrid: true
+        },
+        enemy3: {
+            assetName: "Enemy3",
+            ClassName: "Enemy",
+            speed: 80,
+            value: 5,
+            type: "entity",
+            cannonName: "alienCannon",
+            isAddedToGrid: true
         },
     },
     bullets: {
@@ -338,9 +354,9 @@ Model.levels = [
         shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
-            spawnRate: 2,
+            spawnRate: .5,
             totalEnemies: 100,
-            enemies: ["defaultEnemy"]
+            enemies: ["enemy1", "enemy2", "enemy3"]
 
         },
         healthParams: {
@@ -356,7 +372,7 @@ Model.levels = [
         enemyManagerParams: {
             spawnRate: .2,
             totalEnemies: 300,
-            enemies: ["defaultEnemy"]
+            enemies: ["enemy1"]
         },
         healthParams: {
             numLives: 7,

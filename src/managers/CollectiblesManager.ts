@@ -51,7 +51,7 @@ export class CollectiblesManager {
                 let pool = PoolsManager.getPool(collectibleObj.ClassName!, collectibleObj);
                 const prize = pool!.get() as unknown as Collectible;
                 prize.id = obj.name; // this is the magic connection!
-                prize.grid = Model.collectiblesGrid;
+                prize.setGrid(Model.collectiblesGrid);
                 prize.spawn(_x, _y);
                 // type = "collectible"
                 // type = "health"
