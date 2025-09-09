@@ -7,7 +7,6 @@ import { CollectibleObj, Model } from "./Model";
 
 export class Collectible extends Entity {
     speed: number;
-    type: string;
     rnd: number;
     time: number;
     currTime: number = 0;
@@ -20,7 +19,6 @@ export class Collectible extends Entity {
         this.speed = params.speed ?? 50;
         let scene = ZScene.getSceneById("game-scene");
         this.asset = scene?.spawn(params.assetName);
-        this.type = params.type;
         this.w = this.asset!.width;
         this.h = this.asset!.height;
         this.rnd = Math.random();

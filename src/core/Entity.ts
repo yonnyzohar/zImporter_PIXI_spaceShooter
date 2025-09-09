@@ -5,7 +5,7 @@ import { ZContainer } from 'zimporter-pixi';
 
 
 export class Entity {
-    grid?: Record<string, Record<string, Entity>>;
+    grid?: Record<string, Map<Entity, boolean>>;
     prevRow?: number;
     prevCol?: number;
     id: string;
@@ -17,11 +17,17 @@ export class Entity {
     w?: number;
     h?: number
     radius?: number;
+    private type: string;
 
 
     constructor(params: BaseObj) {
         this.params = params;
         this.grid = params.grid;
+        this.type = params.type;
+    }
+
+    public getType(): string {
+        return this.type;
     }
 
     public update(dt: number) {
@@ -34,15 +40,16 @@ export class Entity {
                 const oldDictName = `${this.prevRow}_${this.prevCol}`;
                 const block = grid[oldDictName];
                 if (block) {
-                    delete block[this.id];
+                    const map: Map<Entity, boolean> = grid[oldDictName];
+                    map.delete(this);
                 }
             }
             if (grid) {
                 const newDictName = `${row}_${col}`;
                 if (!grid[newDictName]) {
-                    grid[newDictName] = {};
+                    grid[newDictName] = new Map<Entity, boolean>();
                 }
-                grid[newDictName][this.id] = this;
+                grid[newDictName].set(this, true);
             }
             this.prevRow = row;
             this.prevCol = col;
@@ -57,10 +64,12 @@ export class Entity {
         const newDictName = `${row}_${col}`;
         const oldDictName = `${this.prevRow}_${this.prevCol}`;
         if (grid[oldDictName]) {
-            delete grid[oldDictName][this.id];
+            const map: Map<Entity, boolean> = grid[oldDictName];
+            map.delete(this);
         }
         if (grid[newDictName]) {
-            delete grid[newDictName][this.id];
+            const map: Map<Entity, boolean> = grid[newDictName];
+            map.delete(this);
         }
         this.prevRow = undefined;
         this.prevCol = undefined;

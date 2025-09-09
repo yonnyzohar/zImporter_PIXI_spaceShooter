@@ -41,20 +41,4 @@ export class Cannon extends Entity {
         }
     }
 
-    destroyEntity() {
-        const grid = this.grid;
-        if (!grid) return;
-        const col = Math.floor(this.x! / Model.gridSize);
-        const row = Math.floor(this.y! / Model.gridSize);
-        const newDictName = `${row}_${col}`;
-        const oldDictName = `${this.prevRow}_${this.prevCol}`;
-        if (grid[oldDictName]) {
-            delete grid[oldDictName][this.id];
-        }
-        if (grid[newDictName]) {
-            delete grid[newDictName][this.id];
-        }
-        this.prevRow = undefined;
-        this.prevCol = undefined;
-    }
 }

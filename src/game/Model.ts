@@ -46,8 +46,8 @@ export interface ModelInterface {
     movement: Movement;
     level: number;
     levels: LevelConfig[];
-    enemiesGrid: Record<string, Record<string, Entity>>;
-    collectiblesGrid: Record<string, Record<string, Entity>>;
+    enemiesGrid: Record<string, Map<Entity, boolean>>;
+    collectiblesGrid: Record<string, Map<Entity, boolean>>;
     magnets: Record<string, MagnetObj>;
     shields: Record<string, ShieldObj>;
     weapons: Record<string, WeaponObj>;
@@ -80,7 +80,7 @@ export interface BaseObj {
     assetName: string;
     ClassName?: string;
     type: string;
-    grid?: Record<string, Record<string, Entity>>;
+    grid?: Record<string, Map<Entity, boolean>>;
     pool?: Pool<Entity>;
     radius?: number;
 }
@@ -152,7 +152,7 @@ export const Model: ModelInterface = {
     },
     magnets: {
         defaultMagnet: {
-            time: 10,
+            time: 30000,
             radius: 500,
             assetName: "MagnetTemplate",
             type: "magnet",

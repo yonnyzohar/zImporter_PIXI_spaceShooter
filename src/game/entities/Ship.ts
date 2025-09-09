@@ -171,44 +171,52 @@ export class Ship extends Entity {
             this.cannon.updateFire(dt, this.x!, this.y! - this.h! / 2);
         }
 
-        let collision = Utils.getCollision(this, this.radius, Model.collectiblesGrid, Model.gridSize);
+        let collisions = Utils.getCollisions(this, this.radius, Model.collectiblesGrid, Model.gridSize);
 
-        if (collision) {
-            if (collision.params.type === 'collecible') {
-                EventsManager.emit('COIN_COLLECTED');
-            } else if (collision.params.type === 'health') {
-                EventsManager.emit('HEALTHPACK_PICKUP');
-            } else if (collision.params.type === 'weapon') {
-                const newWeapon = Model.weapons[collision.id];
-                this.setCannon(newWeapon);
-                if (newWeapon.time) {
-                    EventsManager.emit('WEAPON_PICKUP', newWeapon);
+        if (collisions) {
+            for (let i = 0; i < collisions.length; i++) {
+                let collision = collisions[i];
+                if (collision.params.type === 'collecible') {
+                    EventsManager.emit('COIN_COLLECTED');
+                } else if (collision.params.type === 'health') {
+                    EventsManager.emit('HEALTHPACK_PICKUP');
+                } else if (collision.params.type === 'weapon') {
+                    const newWeapon = Model.weapons[collision.id];
+                    this.setCannon(newWeapon);
+                    if (newWeapon.time) {
+                        EventsManager.emit('WEAPON_PICKUP', newWeapon);
+                    }
+                } else if (collision.params.type === 'shield') {
+                    const newShield = Model.shields[collision.id];
+                    this.setShield(newShield);
+                    if (newShield.time) {
+                        EventsManager.emit('SHIELD_PICKUP', newShield);
+                    }
+                } else if (collision.params.type === 'magnet') {
+                    const newMagnet = Model.magnets[collision.id];
+                    this.setMagnet(newMagnet);
+                    if (newMagnet.time) {
+                        EventsManager.emit('MAGNET_PICKUP', newMagnet);
+                    }
                 }
-            } else if (collision.params.type === 'shield') {
-                const newShield = Model.shields[collision.id];
-                this.setShield(newShield);
-                if (newShield.time) {
-                    EventsManager.emit('SHIELD_PICKUP', newShield);
-                }
-            } else if (collision.params.type === 'magnet') {
-                const newMagnet = Model.magnets[collision.id];
-                this.setMagnet(newMagnet);
-                if (newMagnet.time) {
-                    EventsManager.emit('MAGNET_PICKUP', newMagnet);
-                }
+                collision.destroyEntity();
             }
-            collision.destroyEntity();
+
         }
 
-        collision = Utils.getCollision(this, this.radius, Model.enemiesGrid, Model.gridSize);
-        if (collision) {
-            collision.destroyEntity();
-            EventsManager.emit('ENEMY_DESTROYED', { x: collision.x, y: collision.y });
-            if (!this.shield) {
-                this.shock = true;
-                this.shockVal = 0;
-                EventsManager.emit('SHIP_COLISSION', { x: this.x, y: this.y });
+        collisions = Utils.getCollisions(this, this.radius, Model.enemiesGrid, Model.gridSize);
+        if (collisions) {
+            for (let i = 0; i < collisions.length; i++) {
+                let collision = collisions[i];
+                collision.destroyEntity();
+                EventsManager.emit('ENEMY_DESTROYED', { x: collision.x, y: collision.y });
+                if (!this.shield) {
+                    this.shock = true;
+                    this.shockVal = 0;
+                    EventsManager.emit('SHIP_COLISSION', { x: this.x, y: this.y });
+                }
             }
+
         }
         this.draw();
     }
