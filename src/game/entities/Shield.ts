@@ -39,7 +39,7 @@ export class Shield extends Entity {
         Updatables.add(this);
     }
 
-    setShip(ship: any) {
+    setShip(ship: Ship) {
         this.ship = ship;
     }
 

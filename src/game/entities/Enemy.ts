@@ -18,7 +18,6 @@ export class Enemy extends Entity {
     constructor(params: EntityObj) {
         super(params);
 
-        console.log("Enemy init!");
         this.pool = params.pool!;
         let scene: ZScene = ZScene.getSceneById("game-scene")!;
         this.asset = scene?.spawn(params.assetName);

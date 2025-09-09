@@ -20,7 +20,7 @@ export class Main {
 
 
         let loadPath = (window as any).loadPath || "./scene/";
-        console.log("Game constructor " + loadPath);
+        //console.log("Game constructor " + loadPath);
         let scene: ZScene = new ZScene("game-scene");
         scene.load(loadPath, () => {
             ZSceneStack.push(scene);

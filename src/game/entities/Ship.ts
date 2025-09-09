@@ -1,6 +1,6 @@
 import * as PIXI from 'pixi.js';
 import { Entity } from './../../core/Entity';
-import { Model, ShieldObj, WeaponObj } from './../Model';
+import { MagnetObj, Model, ShieldObj, WeaponObj } from './../Model';
 import { Updatables } from './../../core/Updatables';
 import { Utils } from './../../core/Utils';
 import { EventsManager } from './../../core/EventsManager';
@@ -8,11 +8,13 @@ import { EntityObj } from '../Model';
 import { Shield } from './Shield';
 import { ZScene } from 'zimporter-pixi';
 import { Cannon } from './Cannon';
+import { Magnet } from './Magnet';
 
 
 export class Ship extends Entity {
     cannon: Cannon | null = null;
     shield: Shield | null = null;
+    private magnet: Magnet | null = null;
     speed: number;
     defaultCannonName: string;
     radius: number;
@@ -55,6 +57,17 @@ export class Ship extends Entity {
 
     disable() {
         this.disabled = true;
+    }
+
+    setMagnet(magnetParams: MagnetObj | undefined) {
+        if (this.magnet) {
+            this.magnet.destroyEntity();
+        }
+        if (magnetParams) {
+            let MagnetClass = (window as any).SpaceGame[magnetParams.ClassName!];
+            this.magnet = new MagnetClass(magnetParams);
+            this.magnet!.setShip(this);
+        }
     }
 
     setShield(shieldParams: ShieldObj | undefined) {
@@ -178,7 +191,11 @@ export class Ship extends Entity {
                     EventsManager.emit('SHIELD_PICKUP', newShield);
                 }
             } else if (collision.params.type === 'magnet') {
-
+                const newMagnet = Model.magnets[collision.id];
+                this.setMagnet(newMagnet);
+                if (newMagnet.time) {
+                    EventsManager.emit('MAGNET_PICKUP', newMagnet);
+                }
             }
             collision.destroyEntity();
         }
