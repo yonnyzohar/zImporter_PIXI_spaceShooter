@@ -57,12 +57,21 @@ export class Bullet extends Entity {
             return;
         }
 
-        const collision = Utils.getCollision(this, this.radius!, Model.enemiesGrid, Model.gridSize);
+        const collisions = Utils.getCollisions(this, this.radius!, Model.enemiesGrid, Model.gridSize);
 
-        if (collision) {
-            collision.destroyEntity();
-            this.destroyEntity();
-            EventsManager.emit("ENEMY_DESTROYED", { x: collision.x, y: collision.y });
+        if (collisions) {
+            for (let i = 0; i < collisions.length; i++) {
+                let collision = collisions[i];
+                collision.destroyEntity();
+                this.destroyEntity();
+                EventsManager.emit("ENEMY_DESTROYED", { x: collision.x, y: collision.y });
+            }
+
+            //if (!this.shield) {
+            //    this.shock = true;
+            //    this.shockVal = 0;
+            //    EventsManager.emit("SHIP_COLISSION", { x: this.x, y: this.y });
+            //}
         }
 
 
