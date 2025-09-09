@@ -73,7 +73,7 @@ export class Game {
 
         levelsObj.shipParams.grid = Model.enemiesGrid;
         this.ship = new Ship(levelsObj.shipParams);
-        //this.ship.setCannon(Model.weapons.defaultCannon);
+        this.ship.setCannon(Model.weapons.defaultCannon);
 
         this.enemyManager = new EnemyManager(levelsObj.enemyManagerParams);
         this.enemyManager.setShip(this.ship);

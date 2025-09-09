@@ -6,7 +6,7 @@ import { Updatables } from './Updatables';
 
 
 export class Entity {
-    grid?: Record<string, Map<Entity, boolean>>;
+    private grid?: Record<string, Map<Entity, boolean>>;
     prevRow?: number;
     prevCol?: number;
     id: string;
@@ -31,6 +31,14 @@ export class Entity {
 
         this.type = params.type;
         this.setView(params);
+    }
+
+    setGrid(grid: Record<string, Map<Entity, boolean>>) {
+        this.grid = grid;
+    }
+
+    getGrid(): Record<string, Map<Entity, boolean>> | undefined {
+        return this.grid;
     }
 
     setView(params: BaseObj) {

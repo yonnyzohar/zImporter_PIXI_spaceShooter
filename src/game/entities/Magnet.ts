@@ -26,7 +26,7 @@ export class Magnet extends Entity {
 
     update(dt: number) {
         const shipCenter = this.ship.getCenter();
-        let collisions: Entity[] = Utils.getCollisions(this.ship, this.radius!, this.grid!, Model.gridSize);
+        let collisions: Entity[] = Utils.getCollisions(this.ship, this.radius!, this.getGrid()!, Model.gridSize);
         for (let i = 0; i < collisions.length; i++) {
             let collision = collisions[i];
             //console.log('Magnet pulling collectible:', collision.getType());

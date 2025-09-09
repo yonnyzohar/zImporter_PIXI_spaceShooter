@@ -53,7 +53,7 @@ export class Bullet extends Entity {
             return;
         }
 
-        const collisions = Utils.getCollisions(this, this.radius!, this.grid!, Model.gridSize);
+        const collisions = Utils.getCollisions(this, this.radius!, this.getGrid()!, Model.gridSize);
 
         if (collisions) {
             for (let i = 0; i < collisions.length; i++) {

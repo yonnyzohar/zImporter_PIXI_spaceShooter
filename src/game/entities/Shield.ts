@@ -29,7 +29,7 @@ export class Shield {
         for (let i = 0; i < params.numShields; i++) {
 
             let s = new Entity(params);
-            s.grid = Model.enemiesGrid;
+            s.setGrid(Model.enemiesGrid);
             Model.stage?.addChild(s.asset!);
 
             Updatables.add(s);

@@ -69,7 +69,7 @@ export class Ship extends Entity {
         if (magnetParams) {
             let MagnetClass = (window as any).SpaceGame[magnetParams.ClassName!];
             this.magnet = new MagnetClass(magnetParams);
-            this.magnet!.grid = Model.collectiblesGrid;
+            this.magnet!.setGrid(Model.collectiblesGrid);
             this.magnet!.setShip(this);
         }
     }
@@ -94,6 +94,7 @@ export class Ship extends Entity {
         if (cannonParams) {
             const CannonClass = (window as any).SpaceGame[cannonParams.ClassName!];
             this.cannon = new CannonClass(cannonParams);
+            this.cannon?.setGrid(this.getGrid()!)
         }
     }
 

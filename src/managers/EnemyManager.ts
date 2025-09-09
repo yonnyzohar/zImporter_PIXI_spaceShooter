@@ -40,7 +40,7 @@ export class EnemyManager {
             let randomObj = this.enemyObjects[Math.floor(Math.random() * this.enemyObjects.length)];
             let pool = PoolsManager.getPool(randomObj.ClassName!, randomObj);
             const enemy = pool!.get() as Enemy;
-            enemy.grid = Model.enemiesGrid;
+            enemy.setGrid(Model.enemiesGrid);
             let scene: ZScene = ZScene.getSceneById("game-scene")!;
             let dimensions = scene.getInnerDimensions();
 
