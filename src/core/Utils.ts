@@ -21,6 +21,7 @@ export class Utils {
         matrix: Record<string, Map<Entity, boolean>>,
         gridSize: number
     ): Entity[] {
+        if (!matrix) return [];
         const collisions: Entity[] = [];
         const col = Math.floor(entity.x! / gridSize);
         const row = Math.floor(entity.y! / gridSize);

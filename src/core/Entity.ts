@@ -22,7 +22,10 @@ export class Entity {
 
     constructor(params: BaseObj) {
         this.params = params;
-        this.grid = params.grid;
+        if (params.grid) {
+            this.grid = params.grid;
+        }
+
         this.type = params.type;
     }
 
@@ -56,6 +59,15 @@ export class Entity {
         }
     }
 
+    render() {
+        if (this.asset && typeof this.x === 'number') {
+            this.asset.x = this.x;
+        }
+        if (this.asset && typeof this.y === 'number') {
+            this.asset.y = this.y;
+        }
+    }
+
     destroyEntity() {
         const grid = this.grid;
         if (!grid) return;
@@ -73,5 +85,8 @@ export class Entity {
         }
         this.prevRow = undefined;
         this.prevCol = undefined;
+        if (this.asset && this.asset.parent) {
+            this.asset.parent.removeChild(this.asset);
+        }
     }
 }

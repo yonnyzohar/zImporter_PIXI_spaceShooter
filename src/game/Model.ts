@@ -163,8 +163,8 @@ export const Model: ModelInterface = {
     shields: {
         defaultShield: {
             time: 5,
-            speed: 30,
-            radius: 80,
+            speed: 100,
+            radius: 120,
             numShields: 3,
             assetName: "ShieldTemplate",
             type: "shield",
