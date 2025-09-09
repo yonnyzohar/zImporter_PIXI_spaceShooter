@@ -1,31 +1,45 @@
 
-import { Pool } from "../core/Pool";
+import { Pool, PoolsManager } from "../core/Pool";
 import { Entity } from "../core/Entity";
-import { EnemyManagerParams, Model } from "../game/Model";
+import { EnemyManagerParams, EnemyObj, Model } from "../game/Model";
 import { EventsManager } from "../core/EventsManager";
 import { Enemy } from "../game/entities/Enemy";
 import { ZScene } from "zimporter-pixi/dist/ZScene";
+import { Utils } from "../core/Utils";
 
 
 
 
 export class EnemyManager {
-    private pool: Pool<Entity>;
     private spawnRate: number;
     private totalEnemies: number;
     private count: number = 0;
+    private ship!: Entity;
+    private enemyObjects: EnemyObj[] = [];
 
     constructor(params: EnemyManagerParams) {
-        this.pool = params.pool!;
         this.spawnRate = params.spawnRate;
         this.totalEnemies = params.totalEnemies;
+        for (let i = 0; i < params.enemies.length; i++) {
+            let enemyName = params.enemies[i];
+            this.enemyObjects.push(Model.enemies[enemyName]);
+        }
+    }
+
+
+
+    setShip(ship: Entity) {
+        this.ship = ship;
     }
 
     update(dt: number) {
 
         this.count += dt;
         if (this.count >= this.spawnRate && this.totalEnemies > 0) {
-            const enemy = this.pool.get() as Enemy;
+
+            let randomObj = this.enemyObjects[Math.floor(Math.random() * this.enemyObjects.length)];
+            let pool = PoolsManager.getPool(randomObj.ClassName!, randomObj);
+            const enemy = pool!.get() as Enemy;
             enemy.grid = Model.enemiesGrid;
             let scene: ZScene = ZScene.getSceneById("game-scene")!;
             let dimensions = scene.getInnerDimensions();
@@ -35,6 +49,7 @@ export class EnemyManager {
             const rndInRange = eightyPerStage * Math.random();
 
             enemy.spawn(tenPerStage + rndInRange, -20);
+            enemy.setShip(this.ship);
             this.count = 0;
             this.totalEnemies -= 1;
 

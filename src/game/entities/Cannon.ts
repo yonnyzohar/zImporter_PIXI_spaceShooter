@@ -1,5 +1,5 @@
 import { Entity } from "../../core/Entity";
-import { Pool } from "../../core/Pool";
+import { Pool, PoolsManager } from "../../core/Pool";
 import { Model, WeaponObj } from "../Model";
 import { Bullet } from "./Bullet";
 
@@ -15,26 +15,28 @@ export class Cannon extends Entity {
 
     constructor(params: WeaponObj) {
         super(params);
-        this.bulletsPool = Model.allPools["bullet"];
-        Model.allPools["bullet"] = this.bulletsPool;
+
+
         this.fireRate = params.fireRate;
         this.numTurrets = params.numTurrets;
         this.cannonSpacing = params.cannonSpacing;
     }
 
-    public updateFire(dt: number, spawnX: number, spawnY: number) {
+    public updateFire(dt: number, spawnX: number, spawnY: number, direction: number = (Math.PI * 2) - (Math.PI / 2)) {
         // const fire = Model.movement.space; // Uncomment if needed
+        if (!this.bulletsPool) {
+            let weaponParams: WeaponObj = this.params as WeaponObj;
+            let bulletObj = Model.bullets[weaponParams.bullet!];
+            this.bulletsPool = PoolsManager.getPool(bulletObj.ClassName!, bulletObj)!;
+        }
         this.fireCounter += dt;
 
         if (this.fireCounter >= this.fireRate) {
-            const upAngle = (Math.PI * 2) - (Math.PI / 2);
             let startX = spawnX - (((this.numTurrets - 1) / 2) * this.cannonSpacing);
 
             for (let i = 0; i < this.numTurrets; i++) {
                 const bullet: Bullet = this.bulletsPool.get() as unknown as Bullet;
-                bullet.grid = Model.enemiesGrid;
-                //console.log('Firing bullet from cannon at position:', startX, spawnY);
-                bullet.fire(startX, spawnY, upAngle);
+                bullet.fire(startX, spawnY, direction);
                 startX += this.cannonSpacing;
             }
 

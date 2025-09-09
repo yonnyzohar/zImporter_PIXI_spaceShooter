@@ -23,13 +23,13 @@ export interface EnemyManagerParams {
     pool?: Pool<Entity>;
     spawnRate: number;
     totalEnemies: number;
+    enemies: string[];
 }
 
 export interface LevelConfig {
     explosionParams: EntityObj;
-    shipParams: EntityObj;
+    shipParams: ShipObj;
     starsParams: StarObj;
-    enemyParams: EntityObj;
     enemyManagerParams: EnemyManagerParams;
     healthParams: any;
 }
@@ -39,6 +39,7 @@ export interface MagnetObj extends BaseObj {
     radius: number;
     color: [number, number, number];
 }
+
 
 export interface ModelInterface {
     stage: PIXI.Container | null;
@@ -51,29 +52,15 @@ export interface ModelInterface {
     magnets: Record<string, MagnetObj>;
     shields: Record<string, ShieldObj>;
     weapons: Record<string, WeaponObj>;
-    entities: Record<string, EntityObj>;
-    collectibles: Record<string, CollectibleObj | Record<string, number>>;
-    pools?: {
-        explosion?: PoolsObj;
-        bullet?: PoolsObj;
-        enemy?: PoolsObj;
-        coin?: PoolsObj;
-        tripleCannon?: PoolsObj;
-        tripleCannonSpread?: PoolsObj;
-        health?: PoolsObj;
-        defaultShield?: PoolsObj;
-        defaultMagnet?: PoolsObj;
-    },
+    ships: Record<string, ShipObj>;
+    enemies: Record<string, EnemyObj>;
+    bullets: Record<string, EntityObj>;
+    explosions: Record<string, EntityObj>;
+    collectibles: Record<string, CollectibleObj>;
     stars: Record<string, StarObj>;
-    spawnProbabilities: SpawnProbabilities;
-    allPools: Record<string, Pool<Entity>>;
-}
+    spawnProbabilities: Record<string, number>;
 
-export interface ScoreHolderParams {
-    enemyVal: number;
-    collectibleVal: number;
 }
-
 
 
 export interface BaseObj {
@@ -83,6 +70,7 @@ export interface BaseObj {
     grid?: Record<string, Map<Entity, boolean>>;
     pool?: Pool<Entity>;
     radius?: number;
+    isAddedToGrid: boolean;
 }
 
 export interface EntityObj extends BaseObj {
@@ -91,9 +79,18 @@ export interface EntityObj extends BaseObj {
     value?: number;
     duration?: number;
     numStars?: number;
-    acceleration?: number;
-    deceleration?: number;
-    cannonName?: string;
+
+}
+
+export interface ShipObj extends EntityObj {
+    acceleration: number;
+    deceleration: number;
+    cannonName: string;
+    cannonObj?: WeaponObj;
+}
+
+export interface EnemyObj extends EntityObj {
+    cannonName: string;
     cannonObj?: WeaponObj;
 
 }
@@ -104,6 +101,7 @@ export interface ShieldObj extends BaseObj {
     radius: number;
     numShields: number;
     color: PIXI.ColorSource;
+
 }
 
 export interface WeaponObj extends BaseObj {
@@ -114,6 +112,7 @@ export interface WeaponObj extends BaseObj {
     bullet: string;
     time?: number;
     color?: PIXI.ColorSource;
+    fireRadius: number;
 }
 
 
@@ -124,21 +123,6 @@ export interface CollectibleObj extends BaseObj {
     time: number;
 }
 
-export interface PoolsObj {
-    numElements: number;
-    params: EntityObj;
-}
-
-export interface SpawnProbabilities {
-    coin: number;
-    tripleCannon: number;
-    tripleCannonSpread: number;
-    health: number;
-    defaultShield: number;
-    defaultMagnet: number;
-}
-
-
 export const Model: ModelInterface = {
     stage: null,
     gridSize: 32,
@@ -147,17 +131,15 @@ export const Model: ModelInterface = {
     levels: [],
     enemiesGrid: {},
     collectiblesGrid: {},
-    allPools: {
-
-    },
     magnets: {
         defaultMagnet: {
-            time: 30000,
-            radius: 500,
+            time: 5,
+            radius: 200,
             assetName: "MagnetTemplate",
             type: "magnet",
             ClassName: "Magnet",
-            color: [255, 255, 0]
+            color: [255, 255, 0],
+            isAddedToGrid: true
         }
     },
     shields: {
@@ -169,7 +151,8 @@ export const Model: ModelInterface = {
             assetName: "ShieldTemplate",
             type: "shield",
             ClassName: "Shield",
-            color: [0, 255, 255]
+            color: [0, 255, 255],
+            isAddedToGrid: false
         }
     },
     stars: {
@@ -184,11 +167,24 @@ export const Model: ModelInterface = {
         defaultCannon: {
             numTurrets: 1,
             cannonSpacing: 10,//-- in pixels
-            fireRate: 0.2, //-- in seconds,
+            fireRate: 0.1, //-- in seconds,
             ClassName: "Cannon",
             bullet: "defaultBullet",
             assetName: "FireRateTemplate",
-            type: "bullet"
+            type: "bullet",
+            isAddedToGrid: false,
+            fireRadius: -1
+        },
+        alienCannon: {
+            numTurrets: 1,
+            cannonSpacing: 10,//-- in pixels
+            fireRate: 1, //-- in seconds,
+            ClassName: "Cannon",
+            bullet: "alienBullet",
+            assetName: "FireRateTemplate",
+            type: "bullet",
+            isAddedToGrid: false,
+            fireRadius: 600
         },
         tripleCannon: {
             numTurrets: 3,
@@ -199,7 +195,9 @@ export const Model: ModelInterface = {
             assetName: "FireRateTemplate",
             type: "weapon",
             time: 5,
-            color: [0, 255, 0]
+            color: [0, 255, 0],
+            isAddedToGrid: false,
+            fireRadius: -1
         },
         tripleCannonSpread: {
             numTurrets: 3,
@@ -211,64 +209,93 @@ export const Model: ModelInterface = {
             type: "weapon",
             time: 5,
             color: [0, 0, 255],
-            cannonSpacing: 0
+            cannonSpacing: 0,
+            isAddedToGrid: false,
+            fireRadius: -1
         }
     },
-    entities: {
-        defaultEnemy: {
-            assetName: "Enemy1",
-            ClassName: "Enemy",
-            speed: 200,
-            value: 5,
-            type: "entity"
-        },
+    ships: {
         defaultShip: {
             assetName: "Ship1",
             speed: 300,
             acceleration: 0.06,
             deceleration: 0.05,
             type: "entity",
-            cannonName: "defaultCannon"
+            cannonName: "defaultCannon",
+            isAddedToGrid: true
+        }
+    },
+    enemies: {
+        defaultEnemy: {
+            assetName: "Enemy1",
+            ClassName: "Enemy",
+            speed: 100,
+            value: 5,
+            type: "entity",
+            cannonName: "alienCannon",
+            isAddedToGrid: true
+
+
         },
+    },
+    bullets: {
+
+
         defaultBullet: {
             assetName: "Bullet1",
             ClassName: "Bullet",
             speed: 400,
-            type: "weapon"
+            type: "weapon",
+            isAddedToGrid: true
         },
+        alienBullet: {
+            assetName: "Bullet6",
+            ClassName: "Bullet",
+            speed: 150,
+            type: "weapon",
+            isAddedToGrid: true
+        }
+
+
+    },
+    explosions: {
         defaultExplosion: {
             assetName: "Explosion1",
             duration: .5,
             ClassName: "Explosion",
-            type: "explosion"
+            type: "explosion",
+            isAddedToGrid: false
         }
-
     },
     collectibles: {
         magnet: {
             ClassName: "Collectible",
             assetName: "MagnetTemplate",
             type: "magnet",
-            time: 5000
+            time: 5000,
+            isAddedToGrid: true
         },
         tripleCannon: {
             ClassName: "Collectible",
             assetName: "FireRateTemplate",
             type: "weapon",
-            time: 5000
+            time: 5000,
+            isAddedToGrid: true
         },
         tripleCannonSpread: {
             ClassName: "Collectible",
             assetName: "FireAnglesTemplate",
             type: "weapon",
-            time: 5000
+            time: 5000,
+            isAddedToGrid: true
         },
         health: {
             assetName: "HealthPackTemplate",
             numLives: 1,
             ClassName: "Collectible",
             type: "health",
-            time: 5000
+            time: 5000,
+            isAddedToGrid: true
         },
         coin: {
             assetName: "CoinTemplate",
@@ -276,41 +303,45 @@ export const Model: ModelInterface = {
             value: 10,
             speed: 10,
             type: "collectible",
-            time: 5000
+            time: 5000,
+            isAddedToGrid: true
         },
         defaultShield: {
             assetName: "ShieldTemplate",
             ClassName: "Collectible",
             type: "shield",
-            time: 5000
+            time: 5000,
+            isAddedToGrid: true
         },
         defaultMagnet: {
             assetName: "MagnetTemplate",
             ClassName: "Collectible",
             type: "magnet",
-            time: 5000
+            time: 5000,
+            isAddedToGrid: true
         }
     },
     spawnProbabilities: {
-        coin: 10,
-        tripleCannon: 10,
-        tripleCannonSpread: 10,
-        health: 10,
-        defaultShield: 10,
-        defaultMagnet: 10
+        coin: 100,
+        tripleCannon: 0,
+        tripleCannonSpread: 0,
+        health: 0,
+        defaultShield: 0,
+        defaultMagnet: 0
     }
 
 };
 
 Model.levels = [
     {
-        explosionParams: Utils.deepcopy(Model.entities.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.entities.defaultShip) as EntityObj,
+        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
-        enemyParams: Utils.deepcopy(Model.entities.defaultEnemy) as EntityObj,
         enemyManagerParams: {
-            spawnRate: 1,
-            totalEnemies: 100
+            spawnRate: 2,
+            totalEnemies: 100,
+            enemies: ["defaultEnemy"]
+
         },
         healthParams: {
             numLives: 5,
@@ -318,14 +349,14 @@ Model.levels = [
         }
     },
     {
-        explosionParams: Utils.deepcopy(Model.entities.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.entities.defaultShip) as EntityObj,
+        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
-        enemyParams: Utils.deepcopy(Model.entities.defaultEnemy) as EntityObj,
 
         enemyManagerParams: {
             spawnRate: .2,
-            totalEnemies: 300
+            totalEnemies: 300,
+            enemies: ["defaultEnemy"]
         },
         healthParams: {
             numLives: 7,
@@ -333,22 +364,6 @@ Model.levels = [
         }
     }
 ];
-
-
-Model.pools = {
-    explosion: {
-        numElements: 100,
-        params: Model.entities.defaultExplosion
-    },
-    bullet: {
-        numElements: 1000,
-        params: Model.entities.defaultBullet
-    },
-    enemy: {
-        numElements: 100,
-        params: Model.entities.defaultEnemy
-    }
-}
 
 
 

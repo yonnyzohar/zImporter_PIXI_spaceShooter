@@ -19,12 +19,7 @@ export class Bullet extends Entity {
     constructor(params: EntityObj) {
         super(params);
         this.speed = params.speed!;
-        let scene = ZScene.getSceneById("game-scene");
-        this.asset = scene?.spawn(params.assetName);
         this.pool = params.pool!;
-        this.w = this.asset!.width;
-        this.h = this.asset!.height;
-        this.radius = Math.min(this.w, this.h) / 2;
     }
 
     fire(_x: number, _y: number, initialAngle: number) {
@@ -36,6 +31,7 @@ export class Bullet extends Entity {
         this.asset!.y = this.y;
         this.asset!.pivotX = this.asset!.width / 2;
         this.asset!.pivotY = this.asset!.height / 2;
+        this.asset!.rotation = initialAngle + Math.PI / 2;
         Updatables.add(this);
     }
 

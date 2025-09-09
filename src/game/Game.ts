@@ -1,7 +1,7 @@
 import * as PIXI from 'pixi.js';
 import { MagnetObj, Model, ShieldObj, WeaponObj } from './Model';
 import { EventsManager } from './../core/EventsManager';
-import { Pool } from './../core/Pool';
+import { Pool, PoolsManager } from './../core/Pool';
 import { Updatables } from './../core/Updatables';
 import { TimerService } from './../managers/TimerService';
 import { Ship } from './entities/Ship';
@@ -53,29 +53,34 @@ export class Game {
 
         Model.enemiesGrid = {};
         Model.collectiblesGrid = {};
+        let dimensions = ZScene.getSceneById("game-scene")?.getInnerDimensions();
+        Model.gridSize = Math.min(dimensions!.width, dimensions!.height) / 5;
+        //console.log('Grid size:', Model.gridSize);
 
         const levelsObj = Model.levels[Model.level];
 
-        Model.allPools['enemy'] = new Pool(Model.pools!.enemy!);
-        Model.allPools['explosion'] = new Pool(Model.pools!.explosion!);
-        Model.allPools["bullet"] = new Pool(Model.pools!.bullet!);
+        //Model.pools!.enemy!.params.grid = Model.enemiesGrid;
+        //Model.pools!.explosion!.params.grid = undefined;
+        //Model.pools!.bullet!.params.grid = Model.enemiesGrid;
+
+
+        //Model.allPools['enemy'] = new Pool(Model.pools!.enemy!);
+        //Model.allPools['explosion'] = new Pool(Model.pools!.explosion!);
+        //Model.allPools["bullet"] = new Pool(Model.pools!.bullet!);
 
         this.healthbar = new Healthbar(levelsObj.healthParams);
         this.stars = new Stars(levelsObj.starsParams, Model.stage!);
 
         levelsObj.shipParams.grid = Model.enemiesGrid;
         this.ship = new Ship(levelsObj.shipParams);
-        this.ship.setCannon(Model.weapons.defaultCannon);
+        //this.ship.setCannon(Model.weapons.defaultCannon);
 
-        levelsObj.enemyManagerParams.pool = Model.allPools['enemy'];
         this.enemyManager = new EnemyManager(levelsObj.enemyManagerParams);
+        this.enemyManager.setShip(this.ship);
 
         this.collectiblesManager = new CollectiblesManager();
 
-        this.scoreHolder = new ScoreHolder({
-            enemyVal: levelsObj.enemyParams.value!,
-            collectibleVal: Model.collectibles.coin.value!,
-        });
+        this.scoreHolder = new ScoreHolder();
 
         EventsManager.addListener('ENEMY_DESTROYED', this.onEnemyDestroyed.bind(this));
         EventsManager.addListener('WEAPON_PICKUP', this.onWeaponPickup.bind(this));
@@ -117,7 +122,7 @@ export class Game {
             obj.time!,
             () => {
                 this.weaponRect.clear();
-                this.ship.setCannon(undefined);
+                this.ship.setCannon(null);
             },
             (per: number) => {
                 let dimensions = scene.getInnerDimensions();
@@ -149,7 +154,9 @@ export class Game {
     }
 
     onEnemyDestroyed(obj: { x: number; y: number }) {
-        const explosion = Model.allPools['explosion'].get() as unknown as Explosion;
+
+        let pool = PoolsManager.getPool(Model.explosions.defaultExplosion.ClassName!, Model.explosions.defaultExplosion);
+        const explosion = pool!.get() as unknown as Explosion;
         explosion.spawn(obj.x, obj.y);
         this.collectiblesManager.spawn(obj.x, obj.y);
     }
@@ -183,9 +190,6 @@ export class Game {
         EventsManager.removeListener('SHIELD_PICKUP', this.onShieldPickup.bind(this));
         EventsManager.removeListener('ENEMY_DESTROYED', this.onEnemyDestroyed.bind(this));
         this.timerService.start(5, () => {
-            for (const k in Model.allPools) {
-                // Model.allPools[k].reset();
-            }
             this.ship.destroyEntity();
             this.healthbar.destroy();
             this.scoreHolder.destroy();

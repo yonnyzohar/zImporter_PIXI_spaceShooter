@@ -1,6 +1,6 @@
 import * as PIXI from 'pixi.js';
 import { Entity } from './../../core/Entity';
-import { MagnetObj, Model, ShieldObj, WeaponObj } from './../Model';
+import { MagnetObj, Model, ShieldObj, ShipObj, WeaponObj } from './../Model';
 import { Updatables } from './../../core/Updatables';
 import { Utils } from './../../core/Utils';
 import { EventsManager } from './../../core/EventsManager';
@@ -16,7 +16,7 @@ export class Ship extends Entity {
     shield: Shield | null = null;
     private magnet: Magnet | null = null;
     speed: number;
-    defaultCannonName: string;
+    currCannonName: string;
     radius: number;
     velX = 0;
     velY = 0;
@@ -27,28 +27,31 @@ export class Ship extends Entity {
     shock = false;
     shockVal = 0;
 
-    constructor(params: EntityObj) {
+    constructor(params: ShipObj) {
         super(params);
         this.speed = params.speed!;
-        this.defaultCannonName = params.cannonName!;
-        let scene: ZScene = ZScene.getSceneById("game-scene")!;
-        let dimensions = scene.getInnerDimensions();
-        this.asset = scene?.spawn(params.assetName);
+        this.currCannonName = params.cannonName!;
+        let dimensions = ZScene.getSceneById("game-scene")?.getInnerDimensions();
 
         Model.stage?.addChild(this.asset!);
-        this.x = dimensions.width / 2;
-        this.y = dimensions.height / 2;
+        this.x = dimensions!.width / 2;
+        this.y = dimensions!.height / 2;
         this.asset!.x = this.x;
         this.asset!.y = this.y;
-        this.asset!.pivotX = this.asset!.width / 2;
-        this.asset!.pivotY = this.asset!.height / 2;
-        this.w = this.asset!.width;
-        this.h = this.asset!.height;
-        this.radius = Math.min(this.w, this.h!) / 2;
+        this.asset!.name = "ship";
+
         this.decelaration = params.deceleration!;
         this.acceleration = params.acceleration!;
         Updatables.add(this);
         EventsManager.addListener('CANNON_COLLECTED', this.setCannon.bind(this));
+
+
+        ///test!!
+        //const newShield = Model.shields["defaultShield"];
+        //this.setShield(newShield);
+
+        //this.setCannon(Model.weapons[this.currCannonName]);
+        //this.setMagnet(Model.magnets["defaultMagnet"]);
     }
 
     getCenter() {
@@ -83,15 +86,15 @@ export class Ship extends Entity {
         }
     }
 
-    setCannon(cannonParams?: WeaponObj) {
+    setCannon(cannonParams: WeaponObj | null) {
         if (this.cannon) {
             this.cannon.destroyEntity();
+            this.cannon = null;
         }
-        if (!cannonParams) {
-            cannonParams = Model.weapons[this.defaultCannonName];
+        if (cannonParams) {
+            const CannonClass = (window as any).SpaceGame[cannonParams.ClassName!];
+            this.cannon = new CannonClass(cannonParams);
         }
-        const CannonClass = (window as any).SpaceGame[cannonParams.ClassName!];
-        this.cannon = new CannonClass(cannonParams);
     }
 
     fixBounds() {
@@ -121,12 +124,18 @@ export class Ship extends Entity {
 
         if (left) {
             moving = true;
+            if (this.asset!.scale.x > 0.7) {
+                this.asset!.scale.x -= 0.01;
+            }
             this.velX -= this.acceleration;
             if (this.velX < -1) this.velX = -1;
         }
         if (right) {
             moving = true;
             this.velX += this.acceleration;
+            if (this.asset!.scale.x > 0.7) {
+                this.asset!.scale.x -= 0.01;
+            }
             if (this.velX > 1) this.velX = 1;
         }
         if (up) {
@@ -141,6 +150,7 @@ export class Ship extends Entity {
         }
 
         if (!moving) {
+            this.asset!.scale.x += (1 - this.asset!.scale.x) * 0.1;
             if (this.velX !== 0) {
                 if (this.velX < 0) {
                     this.velX += this.decelaration;
@@ -209,13 +219,15 @@ export class Ship extends Entity {
         if (collisions) {
             for (let i = 0; i < collisions.length; i++) {
                 let collision = collisions[i];
+                collision.drawCircle(true);
+
                 collision.destroyEntity();
                 EventsManager.emit('ENEMY_DESTROYED', { x: collision.x, y: collision.y });
                 if (!this.shield) {
                     this.shock = true;
                     this.shockVal = 0;
                     EventsManager.emit('SHIP_COLISSION', { x: this.x, y: this.y });
-                }
+                }/**/
             }
 
         }
