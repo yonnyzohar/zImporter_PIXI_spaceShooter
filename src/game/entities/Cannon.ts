@@ -32,7 +32,7 @@ export class Cannon extends Entity {
 
             for (let i = 0; i < this.numTurrets; i++) {
                 const bullet: Bullet = this.bulletsPool.get() as unknown as Bullet;
-                console.log('Firing bullet from cannon at position:', startX, spawnY);
+                //console.log('Firing bullet from cannon at position:', startX, spawnY);
                 bullet.fire(startX, spawnY, upAngle);
                 startX += this.cannonSpacing;
             }

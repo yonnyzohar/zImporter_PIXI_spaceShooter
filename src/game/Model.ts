@@ -34,6 +34,12 @@ export interface LevelConfig {
     healthParams: any;
 }
 
+export interface MagnetObj extends BaseObj {
+    time: number;
+    radius: number;
+    color: [number, number, number];
+}
+
 export interface ModelInterface {
     stage: PIXI.Container | null;
     gridSize: number;
@@ -42,6 +48,7 @@ export interface ModelInterface {
     levels: LevelConfig[];
     enemiesGrid: Record<string, Record<string, Entity>>;
     collectiblesGrid: Record<string, Record<string, Entity>>;
+    magnets: Record<string, MagnetObj>;
     shields: Record<string, ShieldObj>;
     weapons: Record<string, WeaponObj>;
     entities: Record<string, EntityObj>;
@@ -55,6 +62,7 @@ export interface ModelInterface {
         tripleCannonSpread?: PoolsObj;
         health?: PoolsObj;
         defaultShield?: PoolsObj;
+        defaultMagnet?: PoolsObj;
     },
     stars: Record<string, StarObj>;
     spawnProbabilities: SpawnProbabilities;
@@ -127,6 +135,7 @@ export interface SpawnProbabilities {
     tripleCannonSpread: number;
     health: number;
     defaultShield: number;
+    defaultMagnet: number;
 }
 
 
@@ -140,6 +149,16 @@ export const Model: ModelInterface = {
     collectiblesGrid: {},
     allPools: {
 
+    },
+    magnets: {
+        defaultMagnet: {
+            time: 10,
+            radius: 500,
+            assetName: "MagnetTemplate",
+            type: "magnet",
+            ClassName: "Magnet",
+            color: [255, 255, 0]
+        }
     },
     shields: {
         defaultShield: {
@@ -206,7 +225,7 @@ export const Model: ModelInterface = {
         defaultShip: {
             assetName: "Ship1",
             speed: 300,
-            acceleration: 0.03,
+            acceleration: 0.06,
             deceleration: 0.05,
             type: "entity",
             cannonName: "defaultCannon"
@@ -264,14 +283,21 @@ export const Model: ModelInterface = {
             ClassName: "Collectible",
             type: "shield",
             time: 5000
+        },
+        defaultMagnet: {
+            assetName: "MagnetTemplate",
+            ClassName: "Collectible",
+            type: "magnet",
+            time: 5000
         }
     },
     spawnProbabilities: {
-        coin: 100,
-        tripleCannon: 5,
-        tripleCannonSpread: 5,
-        health: 1,
-        defaultShield: 2
+        coin: 10,
+        tripleCannon: 10,
+        tripleCannonSpread: 10,
+        health: 10,
+        defaultShield: 10,
+        defaultMagnet: 10
     }
 
 };

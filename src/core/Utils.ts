@@ -30,7 +30,7 @@ export class Utils {
                         if (entity === k) continue;
                         const dist = Math.abs(Utils.distance(k.x!, k.y!, entity.x!, entity.y!));
                         if (dist < (radius + k.radius!)) {
-                            console.log('Collision detected between entities:', k, 'and', { x: entity.x!, y: entity.y!, radius });
+                            //console.log('Collision detected between entities:', k, 'and', { x: entity.x!, y: entity.y!, radius });
                             return k;
                         }
                     }
@@ -39,4 +39,32 @@ export class Utils {
         }
         return null;
     }
+
+    static getCollisions(
+        entity: Entity,
+        radius: number,
+        matrix: Record<string, Record<string, Entity>>,
+        gridSize: number
+    ): Entity[] {
+        const collisions: Entity[] = [];
+        const col = Math.floor(entity.x! / gridSize);
+        const row = Math.floor(entity.y! / gridSize);
+        for (let r = -1; r <= 1; r++) {
+            for (let c = -1; c <= 1; c++) {
+                const dictName = `${row + r}_${col + c}`;
+                if (matrix[dictName]) {
+                    for (const k of Object.values(matrix[dictName])) {
+                        if (entity === k) continue;
+                        const dist = Math.abs(Utils.distance(k.x!, k.y!, entity.x!, entity.y!));
+                        if (dist < (radius + k.radius!)) {
+                            console.log('Collision detected between entities:', k, 'and', { x: entity.x!, y: entity.y!, radius });
+                            collisions.push(k);
+                        }
+                    }
+                }
+            }
+        }
+        return collisions;
+    }
+
 }

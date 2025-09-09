@@ -5,3 +5,4 @@ export * from "./Explosion";
 export * from "./Shield";
 export * from "./Ship";
 export * from "./TripleCannonSpread";
+export * from "./Magnet";

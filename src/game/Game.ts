@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import { Model, ShieldObj, WeaponObj } from './Model';
+import { MagnetObj, Model, ShieldObj, WeaponObj } from './Model';
 import { EventsManager } from './../core/EventsManager';
 import { Pool } from './../core/Pool';
 import { Updatables } from './../core/Updatables';
@@ -38,6 +38,8 @@ export class Game {
 
     private weaponRect: PIXI.Graphics = new PIXI.Graphics();
     private shieldRect: PIXI.Graphics = new PIXI.Graphics();
+    private magnetRect: PIXI.Graphics = new PIXI.Graphics();
+
     private gameOver = false;
     private win = false;
     private callback?: () => void;
@@ -78,6 +80,28 @@ export class Game {
         EventsManager.addListener('ENEMY_DESTROYED', this.onEnemyDestroyed.bind(this));
         EventsManager.addListener('WEAPON_PICKUP', this.onWeaponPickup.bind(this));
         EventsManager.addListener('SHIELD_PICKUP', this.onShieldPickup.bind(this));
+        EventsManager.addListener('MAGNET_PICKUP', this.onMagnetPickup.bind(this));
+    }
+
+    onMagnetPickup(obj: MagnetObj) {
+        let scene: ZScene = ZScene.getSceneById("game-scene")!;
+        let dimensions = scene.getInnerDimensions();
+        this.magnetRect.beginFill(obj.color);
+        this.magnetRect.drawRect(0, dimensions.height - 60, dimensions.width, 60);
+        this.magnetRect.endFill();
+        Model.stage!.addChild(this.magnetRect);
+
+        this.shieldTimerService.start(
+            obj.time,
+            () => {
+                this.magnetRect.clear();
+                this.ship.setMagnet(undefined);
+            },
+            (per: number) => {
+                let dimensions = scene.getInnerDimensions();
+                this.magnetRect.width = dimensions.width * per;
+            }
+        );
     }
 
     onWeaponPickup(obj: WeaponObj) {

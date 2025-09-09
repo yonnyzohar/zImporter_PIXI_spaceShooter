@@ -29,7 +29,7 @@ export class Entity {
         const row = Math.floor(this.y! / Model.gridSize);
         const grid = this.grid;
 
-        if (row !== this.prevRow || col !== this.prevCol) {
+        if (grid && row !== this.prevRow || col !== this.prevCol) {
             if (this.prevRow !== undefined && this.prevCol !== undefined && grid) {
                 const oldDictName = `${this.prevRow}_${this.prevCol}`;
                 const block = grid[oldDictName];
