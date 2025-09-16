@@ -74,15 +74,25 @@ export class Enemy extends Entity {
         this.fixBounds();
 
         if (this.cannon && this.ship) {
-            let collisions = Utils.getCollisionsAllScreen(this, this.fireRadius, Model.enemiesGrid, Model.gridSize, this.ship.constructor.name);
-            if (collisions.length > 0) {
-                let ship = collisions[0];
-
-                let angleToShip = Math.atan2(ship.y! - this.y!, ship.x! - this.x!);
+            if (this.fireRadius == -1) {
+                //down in radians
+                let angleToShip = Math.PI / 2;
                 let x = this.x! + Math.cos(angleToShip) * this.radius!;
                 let y = this.y! + Math.sin(angleToShip) * this.radius!;
                 this.cannon.updateFire(dt, x, y, angleToShip);
             }
+            else {
+                let collisions = Utils.getCollisionsAllScreen(this, this.fireRadius, Model.enemiesGrid, Model.gridSize, this.ship.constructor.name);
+                if (collisions.length > 0) {
+                    let ship = collisions[0];
+
+                    let angleToShip = Math.atan2(ship.y! - this.y!, ship.x! - this.x!);
+                    let x = this.x! + Math.cos(angleToShip) * this.radius!;
+                    let y = this.y! + Math.sin(angleToShip) * this.radius!;
+                    this.cannon.updateFire(dt, x, y, angleToShip);
+                }
+            }
+
         }
     }
 
