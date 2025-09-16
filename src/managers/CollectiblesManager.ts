@@ -4,7 +4,7 @@
 // First, this class parses the probabilities table to determine what will be spawned.
 // Then, when an enemy dies, it spawns according to that probability - a coin, health pack, or weapon.
 
-import { Model } from "../game/Model";
+import { CollectibleObj, Model } from "../game/Model";
 import { Utils } from "../core/Utils";
 import { Collectible } from "../game/Collectible";
 import { Pool, PoolsManager } from "../core/Pool";
@@ -47,7 +47,7 @@ export class CollectiblesManager {
         for (let i = 0; i < this.probabilitiesArr.length; i++) {
             const obj = this.probabilitiesArr[i];
             if (rnd >= obj.startVal && rnd <= obj.endVal) {
-                let collectibleObj = Model.collectibles[obj.name];
+                let collectibleObj: CollectibleObj = Model.collectibles[obj.name];
                 let pool = PoolsManager.getPool(collectibleObj.assetName!, collectibleObj);
                 const prize = pool!.get() as unknown as Collectible;
                 prize.id = obj.name; // this is the magic connection!

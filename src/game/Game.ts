@@ -137,7 +137,6 @@ export class Game {
                 let dimensions = scene.getInnerDimensions();
                 this.weaponRect.width = dimensions.width * per;
             }
-
         );
     }
 

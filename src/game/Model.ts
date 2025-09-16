@@ -241,7 +241,7 @@ export const Model: ModelInterface = {
             speed: 80,
             value: 5,
             type: "entity",
-            cannonName: "alienCannon",
+            cannonName: "tripleCannon",
             isAddedToGrid: true
         },
         enemy3: {

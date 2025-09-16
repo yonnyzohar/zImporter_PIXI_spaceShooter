@@ -39,7 +39,8 @@ export class Pool<T> {
     get(): T {
         const e = this.arr[this.curIndex - 1];
         if (!e) {
-            throw new Error(`pool limit exceeded ${this.curIndex} ${this.params.assetName}`);
+            let assetName = this.params ? this.params.assetName : "unknown";
+            throw new Error(`pool limit exceeded ${this.curIndex} ${assetName}`);
         }
         this.curIndex += 1;
         return e;
@@ -48,7 +49,8 @@ export class Pool<T> {
     putBack(e: T): void {
         this.curIndex -= 1;
         if (this.curIndex < 1) {
-            throw new Error(`pool less than 1 ${this.curIndex} ${this.params.assetName}`);
+            let assetName = this.params ? this.params.assetName : "unknown";
+            throw new Error(`pool less than 1 ${this.curIndex} ${assetName}`);
         }
         this.arr[this.curIndex - 1] = e;
     }

@@ -48,7 +48,7 @@ export class Bullet extends Entity {
         this.asset!.x = newX;
         this.asset!.y = newY;
 
-        if (this.y < 0 || this.x < 0 || this.x > dimensions.width) {
+        if (this.y < 0 || this.y > dimensions.height || this.x < 0 || this.x > dimensions.width) {
             this.destroyEntity();
             return;
         }
