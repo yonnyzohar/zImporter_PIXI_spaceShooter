@@ -13,7 +13,7 @@ export class ScoreHolder {
         let scene: ZScene = ZScene.getSceneById("game-scene")!;
         let dimensions = scene.getInnerDimensions();
         EventsManager.addListener("COIN_COLLECTED", this.onCoinCollected);
-        EventsManager.addListener("ENEMY_DESTROYED", this.onEnemyDestroyed);
+
         Model.stage?.addChild(this.view);
         this.view.style = new PIXI.TextStyle({
             fill: '#ffffff',
@@ -26,7 +26,6 @@ export class ScoreHolder {
 
     destroy() {
         EventsManager.removeListener("COIN_COLLECTED", this.onCoinCollected);
-        EventsManager.removeListener("ENEMY_DESTROYED", this.onEnemyDestroyed);
     }
 
     private onEnemyDestroyed = (enemyVal: number = 0) => {

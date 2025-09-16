@@ -26,7 +26,7 @@ export class Cannon extends Entity {
         if (!this.bulletsPool) {
             let weaponParams: WeaponObj = this.params as WeaponObj;
             let bulletObj = Model.bullets[weaponParams.bullet!];
-            this.bulletsPool = PoolsManager.getPool(bulletObj.ClassName!, bulletObj)!;
+            this.bulletsPool = PoolsManager.getPool(bulletObj.assetName!, bulletObj)!;
         }
         this.fireCounter += dt;
 

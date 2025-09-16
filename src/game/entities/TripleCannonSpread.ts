@@ -34,7 +34,7 @@ export class TripleCannonSpread extends Entity {
             const upAngle = (Math.PI * 2) - (Math.PI / 2);
             let weaponParams: WeaponObj = this.params as WeaponObj;
             let bulletObj = Model.bullets[weaponParams.bullet!];
-            let pool = PoolsManager.getPool(bulletObj.ClassName!, bulletObj);
+            let pool = PoolsManager.getPool(bulletObj.assetName!, bulletObj);
 
             let bullet: Bullet = pool!.get() as unknown as Bullet;
             bullet.fire(spawnX, spawnY, upAngle - this.spreadAngle);

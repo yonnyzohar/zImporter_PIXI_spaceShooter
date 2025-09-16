@@ -338,12 +338,12 @@ export const Model: ModelInterface = {
         }
     },
     spawnProbabilities: {
-        coin: 100,
-        tripleCannon: 0,
-        tripleCannonSpread: 0,
-        health: 0,
-        defaultShield: 0,
-        defaultMagnet: 0
+        coin: 1,
+        tripleCannon: 1,
+        tripleCannonSpread: 1,
+        health: 1,
+        defaultShield: 1,
+        defaultMagnet: 1
     }
 
 };

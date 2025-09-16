@@ -60,8 +60,7 @@ export class Shield {
             if (collisions) {
                 for (let i = 0; i < collisions.length; i++) {
                     let collision = collisions[i];
-                    collision.destroyEntity();
-                    EventsManager.emit("ENEMY_DESTROYED", { x: collision.x, y: collision.y });
+                    EventsManager.emit("TARGET_HIT", { target: collision });
                 }
             }
         }
