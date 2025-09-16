@@ -38,7 +38,7 @@ export class EnemyManager {
         if (this.count >= this.spawnRate && this.totalEnemies > 0) {
 
             let randomObj = this.enemyObjects[Math.floor(Math.random() * this.enemyObjects.length)];
-            let pool = PoolsManager.getPool(randomObj.ClassName!, randomObj);
+            let pool = PoolsManager.getPool(randomObj.assetName!, randomObj);
             const enemy = pool!.get() as Enemy;
             enemy.setGrid(Model.enemiesGrid);
             let scene: ZScene = ZScene.getSceneById("game-scene")!;

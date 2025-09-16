@@ -194,24 +194,30 @@ export class Ship extends Entity {
                     EventsManager.emit('HEALTHPACK_PICKUP');
                 } else if (collision.params.type === 'weapon') {
                     const newWeapon = Model.weapons[collision.id];
-                    this.setCannon(newWeapon);
-                    if (newWeapon.time) {
-                        EventsManager.emit('WEAPON_PICKUP', newWeapon);
+                    if (newWeapon) {
+                        this.setCannon(newWeapon);
+                        if (newWeapon.time) {
+                            EventsManager.emit('WEAPON_PICKUP', newWeapon);
+                        }
                     }
                 } else if (collision.params.type === 'shield') {
                     const newShield = Model.shields[collision.id];
-                    this.setShield(newShield);
-                    if (newShield.time) {
-                        EventsManager.emit('SHIELD_PICKUP', newShield);
+                    if (newShield) {
+                        this.setShield(newShield);
+                        if (newShield.time) {
+                            EventsManager.emit('SHIELD_PICKUP', newShield);
+                        }
                     }
                 } else if (collision.params.type === 'magnet') {
                     const newMagnet = Model.magnets[collision.id];
-                    this.setMagnet(newMagnet);
-                    if (newMagnet.time) {
-                        EventsManager.emit('MAGNET_PICKUP', newMagnet);
+                    if (newMagnet) {
+                        this.setMagnet(newMagnet);
+                        if (newMagnet.time) {
+                            EventsManager.emit('MAGNET_PICKUP', newMagnet);
+                        }
                     }
                 }
-                collision.destroyEntity();
+                collision?.destroyEntity();
             }
 
         }

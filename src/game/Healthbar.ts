@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js';
+import { Model } from './Model';
 
 export class Healthbar extends PIXI.Container {
     private bar: PIXI.Graphics;
@@ -27,5 +28,6 @@ export class Healthbar extends PIXI.Container {
         this.bar.beginFill(0x00ff00);
         this.bar.drawRect(0, 0, 100 * (this.currentHealth / this.maxHealth), 10);
         this.bar.endFill();
+        Model.stage!.addChild(this);
     }
 }

@@ -13,6 +13,7 @@ import { ScoreHolder } from './ScoreHolder';
 import { Entity } from '../core/Entity';
 import { Explosion } from './entities/Explosion';
 import { ZScene } from 'zimporter-pixi';
+import { Enemy } from './entities';
 
 type Rect = {
     x: number;
@@ -86,6 +87,14 @@ export class Game {
         EventsManager.addListener('WEAPON_PICKUP', this.onWeaponPickup.bind(this));
         EventsManager.addListener('SHIELD_PICKUP', this.onShieldPickup.bind(this));
         EventsManager.addListener('MAGNET_PICKUP', this.onMagnetPickup.bind(this));
+        EventsManager.addListener("TARGET_HIT", this.onTargetHit.bind(this));
+    }
+
+    private onTargetHit(obj: { target: Entity }) {
+        const target = obj.target;
+        if (target instanceof Enemy) {
+            target.destroyEntity();
+        }
     }
 
     onMagnetPickup(obj: MagnetObj) {
@@ -122,7 +131,7 @@ export class Game {
             obj.time!,
             () => {
                 this.weaponRect.clear();
-                this.ship.setCannon(null);
+                this.ship.setCannon(Model.weapons.defaultCannon);
             },
             (per: number) => {
                 let dimensions = scene.getInnerDimensions();
@@ -155,7 +164,7 @@ export class Game {
 
     onEnemyDestroyed(obj: { x: number; y: number }) {
 
-        let pool = PoolsManager.getPool(Model.explosions.defaultExplosion.ClassName!, Model.explosions.defaultExplosion);
+        let pool = PoolsManager.getPool(Model.explosions.defaultExplosion.assetName!, Model.explosions.defaultExplosion);
         const explosion = pool!.get() as unknown as Explosion;
         explosion.spawn(obj.x, obj.y);
         this.collectiblesManager.spawn(obj.x, obj.y);
