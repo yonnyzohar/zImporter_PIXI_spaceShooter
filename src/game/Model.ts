@@ -170,7 +170,7 @@ export const Model: ModelInterface = {
             fireRate: 0.1, //-- in seconds,
             ClassName: "Cannon",
             bullet: "defaultBullet",
-            assetName: "FireRateTemplate",
+            assetName: "Bullet9",
             type: "bullet",
             isAddedToGrid: false,
             fireRadius: -1
