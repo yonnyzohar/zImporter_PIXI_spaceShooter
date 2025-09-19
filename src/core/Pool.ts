@@ -22,13 +22,13 @@ export class Pool<T> {
     private params: any;
 
     constructor(obj: BaseObj) {
-        const numElements = 100;
+        const numElements = 1000;
         // So the entity can place itself back inside
         (obj as any).pool = this;
         const CLS_STR = obj.ClassName as unknown as string;
         const CLS = (window as any).SpaceGame[CLS_STR]
         this.arr = [];
-        this.curIndex = 1;
+        this.curIndex = 0;
 
         for (let i = 0; i < numElements; i++) {
             const e = new (CLS)(obj);
@@ -37,26 +37,26 @@ export class Pool<T> {
     }
 
     get(): T {
-        const e = this.arr[this.curIndex - 1];
-        if (!e) {
+        if (this.curIndex >= this.arr.length) {
             let assetName = this.params ? this.params.assetName : "unknown";
             throw new Error(`pool limit exceeded ${this.curIndex} ${assetName}`);
         }
+        const e = this.arr[this.curIndex];
         this.curIndex += 1;
         return e;
     }
 
     putBack(e: T): void {
-        this.curIndex -= 1;
-        if (this.curIndex < 1) {
+        if (this.curIndex < 0) {
             let assetName = this.params ? this.params.assetName : "unknown";
-            throw new Error(`pool less than 1 ${this.curIndex} ${assetName}`);
+            throw new Error(`pool less than 0 ${this.curIndex} ${assetName}`);
         }
-        this.arr[this.curIndex - 1] = e;
+        this.curIndex -= 1;
+        this.arr[this.curIndex] = e;
     }
 
     reset(): void {
-        this.curIndex = 1;
+        this.curIndex = 0;
     }
 
     destroy(): void {

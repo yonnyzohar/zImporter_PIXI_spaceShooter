@@ -181,46 +181,6 @@
       },
       {
         "type": "asset",
-        "name": "Templateby12",
-        "template": true,
-        "guide": false,
-        "instanceName": "instance_r38y",
-        "filters": {},
-        "portrait": {
-          "x": -318.7708635918847,
-          "y": 543.097245391123,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        "landscape": {
-          "x": -318.7708635918847,
-          "y": 543.097245391123,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        }
-      },
-      {
-        "type": "asset",
         "name": "Templatecsvb",
         "template": true,
         "guide": false,
@@ -1938,6 +1898,46 @@
             "y": 0
           }
         }
+      },
+      {
+        "portrait": {
+          "x": 320,
+          "y": 568,
+          "rotation": 0,
+          "scaleX": 2,
+          "scaleY": 2,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 568,
+          "y": 320,
+          "rotation": 0,
+          "scaleX": 2,
+          "scaleY": 2,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "type": "btn",
+        "name": "PlayBTNTemplate",
+        "guide": false,
+        "template": true,
+        "instanceName": "playBTN",
+        "filters": {}
       }
     ],
     "type": "Container",
@@ -2015,24 +2015,6 @@
       ],
       "type": "asset",
       "name": "Templatetpmm"
-    },
-    "Templateby12": {
-      "children": [
-        {
-          "type": "img",
-          "name": "Templateby12_IMG",
-          "width": 79,
-          "height": 22,
-          "x": 0,
-          "y": 0,
-          "pivotX": 0,
-          "pivotY": 0,
-          "filePath": "images/שכבה 11.png",
-          "filters": {}
-        }
-      ],
-      "type": "asset",
-      "name": "Templateby12"
     },
     "Templatecsvb": {
       "children": [
@@ -3375,10 +3357,114 @@
       ],
       "type": "asset",
       "name": "Bullet1"
+    },
+    "PlayBTNTemplate": {
+      "type": "btn",
+      "name": "PlayBTNTemplate",
+      "children": [
+        {
+          "type": "asset",
+          "name": "DownStateTemplate",
+          "template": true,
+          "guide": false,
+          "instanceName": "upState",
+          "filters": {},
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 39.5,
+            "pivotY": 22,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 39.5,
+            "pivotY": 22,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "name": "DownStateTemplate",
+          "template": true,
+          "guide": false,
+          "instanceName": "downState",
+          "filters": {},
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 0.9056901347778816,
+            "scaleY": 0.9056901347778816,
+            "alpha": 1,
+            "pivotX": 39.5,
+            "pivotY": 22,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 0.9056901347778816,
+            "scaleY": 0.9056901347778816,
+            "alpha": 1,
+            "pivotX": 39.5,
+            "pivotY": 22,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ]
+    },
+    "DownStateTemplate": {
+      "children": [
+        {
+          "type": "img",
+          "name": "DownStateTemplate_IMG",
+          "width": 79,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
+          "filePath": "images/שכבה 11.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "DownStateTemplate"
     }
   },
   "fonts": [],
   "fps": 60,
   "cuePoints": {},
-  "atlas": false
+  "atlas": true
 }
