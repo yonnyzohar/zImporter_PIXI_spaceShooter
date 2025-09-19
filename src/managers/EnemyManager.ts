@@ -24,6 +24,8 @@ export class EnemyManager {
             let enemyName = params.enemies[i];
             this.enemyObjects.push(Model.enemies[enemyName]);
         }
+
+        EventsManager.addListener('ENEMY_DESTROYED', this.onEnemyDestroyed.bind(this));
     }
 
 
@@ -52,11 +54,17 @@ export class EnemyManager {
             enemy.spawn(tenPerStage + rndInRange, -20);
             enemy.setShip(this.ship);
             this.count = 0;
-            this.totalEnemies -= 1;
+            this.totalEnemies--;
 
-            if (this.totalEnemies <= 0) {
-                EventsManager.emit("GAME_OVER", { win: true });
-            }
+
+        }
+    }
+
+    private onEnemyDestroyed() {
+        this.totalEnemies--;
+        console.log('Enemies left:', this.totalEnemies);
+        if (this.totalEnemies <= 0) {
+            EventsManager.emit("GAME_OVER", { win: true });
         }
     }
 }

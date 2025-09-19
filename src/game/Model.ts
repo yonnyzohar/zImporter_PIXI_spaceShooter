@@ -354,8 +354,8 @@ Model.levels = [
         shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
-            spawnRate: .5,
-            totalEnemies: 100,
+            spawnRate: 1,
+            totalEnemies: 20,
             enemies: ["enemy1", "enemy2", "enemy3"]
 
         },

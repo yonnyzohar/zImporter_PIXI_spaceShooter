@@ -42,28 +42,32 @@ export class Game {
     private callback?: () => void;
 
     constructor(params?: any) {
-        this.init(params);
+        this.init();
     }
 
-    init(params?: any) {
-
-
+    public reset() {
         Model.enemiesGrid = {};
         Model.collectiblesGrid = {};
+        this.gameOver = false;
+        this.win = false;
+        this.callback = undefined;
+
+        this.healthbar?.removeFromParent();
+        this.scoreHolder?.destroy();
+        this.ship?.destroyEntity();
+        this.enemyManager = undefined!;
+        this.collectiblesManager = undefined!;
+        Updatables.clear();
+    }
+
+    init() {
+
+        this.reset();
+
         let dimensions = ZScene.getSceneById("game-scene")?.getInnerDimensions();
         Model.gridSize = Math.min(dimensions!.width, dimensions!.height) / 5;
-        //console.log('Grid size:', Model.gridSize);
 
         const levelsObj = Model.levels[Model.level];
-
-        //Model.pools!.enemy!.params.grid = Model.enemiesGrid;
-        //Model.pools!.explosion!.params.grid = undefined;
-        //Model.pools!.bullet!.params.grid = Model.enemiesGrid;
-
-
-        //Model.allPools['enemy'] = new Pool(Model.pools!.enemy!);
-        //Model.allPools['explosion'] = new Pool(Model.pools!.explosion!);
-        //Model.allPools["bullet"] = new Pool(Model.pools!.bullet!);
 
         this.healthbar = new Healthbar(levelsObj.healthParams);
         this.stars = new Stars(levelsObj.starsParams, Model.stage!);

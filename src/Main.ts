@@ -34,7 +34,7 @@ export class Main {
         });
         //EventsManager.addListener('MENU_SPACE_PRESSED', game, onMenuSpacePressed);
 
-        //EventsManager.addListener('GAME_OVER', game, onGameOver);
+        EventsManager.addListener('GAME_OVER', this.onGameOver.bind(this));
 
 
 
@@ -84,14 +84,12 @@ export class Main {
 
 
 
-    onGameOver(_caller: any, winObj: { win: boolean }) {
-        if (winObj.win) {
-            Model.level = Model.level + 1;
-            if (!Model.levels[Model.level]) {
-                Model.level = 1;
-            }
+    onGameOver() {
+        Model.level = Model.level + 1;
+        if (!Model.levels[Model.level]) {
+            Model.level = 1;
         }
-        //this.game.onGameOver(loadMenu, winObj.win);
+        this.game.init();
     }
 
     update(dt: number) {
