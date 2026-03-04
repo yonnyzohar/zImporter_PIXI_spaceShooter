@@ -186,6 +186,51 @@ export const Model: ModelInterface = {
             isAddedToGrid: false,
             fireRadius: 600
         },
+        fastAlienCannon: {
+            numTurrets: 1,
+            cannonSpacing: 10,
+            fireRate: 0.5,
+            ClassName: "Cannon",
+            bullet: "bullet3",
+            assetName: "FireRateTemplate",
+            type: "bullet",
+            isAddedToGrid: false,
+            fireRadius: 600
+        },
+        heavyAlienCannon: {
+            numTurrets: 1,
+            cannonSpacing: 10,
+            fireRate: 1.5,
+            ClassName: "Cannon",
+            bullet: "bullet5",
+            assetName: "FireRateTemplate",
+            type: "bullet",
+            isAddedToGrid: false,
+            fireRadius: 800
+        },
+        tripleAlienCannon: {
+            numTurrets: 3,
+            cannonSpacing: 12,
+            fireRate: 1.2,
+            ClassName: "Cannon",
+            bullet: "bullet4",
+            assetName: "FireRateTemplate",
+            type: "bullet",
+            isAddedToGrid: false,
+            fireRadius: 600
+        },
+        spreadAlienCannon: {
+            numTurrets: 3,
+            spreadAngle: 0.35,
+            fireRate: 0.8,
+            ClassName: "TripleCannonSpread",
+            bullet: "alienBullet",
+            assetName: "FireAnglesTemplate",
+            type: "bullet",
+            cannonSpacing: 0,
+            isAddedToGrid: false,
+            fireRadius: 700
+        },
         tripleCannon: {
             numTurrets: 3,
             cannonSpacing: 10,// in pixels
@@ -241,7 +286,7 @@ export const Model: ModelInterface = {
             speed: 80,
             value: 5,
             type: "entity",
-            cannonName: "tripleCannon",
+            cannonName: "tripleAlienCannon",
             isAddedToGrid: true
         },
         enemy3: {
@@ -251,6 +296,24 @@ export const Model: ModelInterface = {
             value: 5,
             type: "entity",
             cannonName: "alienCannon",
+            isAddedToGrid: true
+        },
+        enemy4: {
+            assetName: "Enemy4",
+            ClassName: "Enemy",
+            speed: 130,
+            value: 10,
+            type: "entity",
+            cannonName: "fastAlienCannon",
+            isAddedToGrid: true
+        },
+        enemy5: {
+            assetName: "Enemy5",
+            ClassName: "Enemy",
+            speed: 55,
+            value: 15,
+            type: "entity",
+            cannonName: "heavyAlienCannon",
             isAddedToGrid: true
         },
     },
@@ -270,7 +333,49 @@ export const Model: ModelInterface = {
             speed: 150,
             type: "weapon",
             isAddedToGrid: true
-        }
+        },
+        bullet2: {
+            assetName: "Bullet2",
+            ClassName: "Bullet",
+            speed: 180,
+            type: "weapon",
+            isAddedToGrid: true
+        },
+        bullet3: {
+            assetName: "Bullet3",
+            ClassName: "Bullet",
+            speed: 220,
+            type: "weapon",
+            isAddedToGrid: true
+        },
+        bullet4: {
+            assetName: "Bullet4",
+            ClassName: "Bullet",
+            speed: 160,
+            type: "weapon",
+            isAddedToGrid: true
+        },
+        bullet5: {
+            assetName: "Bullet5",
+            ClassName: "Bullet",
+            speed: 120,
+            type: "weapon",
+            isAddedToGrid: true
+        },
+        bullet7: {
+            assetName: "Bullet7",
+            ClassName: "Bullet",
+            speed: 200,
+            type: "weapon",
+            isAddedToGrid: true
+        },
+        bullet8: {
+            assetName: "Bullet8",
+            ClassName: "Bullet",
+            speed: 250,
+            type: "weapon",
+            isAddedToGrid: true
+        },
 
 
     },
@@ -349,36 +454,127 @@ export const Model: ModelInterface = {
 };
 
 Model.levels = [
+    // Level 0 — Tutorial: slow trickle, single enemy type, gentle introduction
     {
         explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
         shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
-            spawnRate: 1,
-            totalEnemies: 20,
-            enemies: ["enemy1", "enemy2", "enemy3"]
-
-        },
-        healthParams: {
-            numLives: 5,
-            assetName: "HealthPackTemplate",
-        }
-    },
-    {
-        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
-        starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
-
-        enemyManagerParams: {
-            spawnRate: .2,
-            totalEnemies: 300,
+            spawnRate: 2.0,
+            totalEnemies: 12,
             enemies: ["enemy1"]
         },
-        healthParams: {
-            numLives: 7,
-            assetName: "HealthPackTemplate",
-        }
-    }
+        healthParams: { numLives: 6, assetName: "HealthPackTemplate" }
+    },
+    // Level 1 — Scout Wave: two enemy types, moderate pace
+    {
+        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
+        enemyManagerParams: {
+            spawnRate: 1.2,
+            totalEnemies: 20,
+            enemies: ["enemy1", "enemy2"]
+        },
+        healthParams: { numLives: 5, assetName: "HealthPackTemplate" }
+    },
+    // Level 2 — Mixed Assault: three enemy types, tighter spacing
+    {
+        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
+        enemyManagerParams: {
+            spawnRate: 0.9,
+            totalEnemies: 30,
+            enemies: ["enemy1", "enemy2", "enemy3"]
+        },
+        healthParams: { numLives: 5, assetName: "HealthPackTemplate" }
+    },
+    // Level 3 — Speed Run: fast movers, frequent triple-shot enemies
+    {
+        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
+        enemyManagerParams: {
+            spawnRate: 0.7,
+            totalEnemies: 35,
+            enemies: ["enemy2", "enemy3", "enemy4"]
+        },
+        healthParams: { numLives: 5, assetName: "HealthPackTemplate" }
+    },
+    // Level 4 — Heavy Hitters: fast cannons enter the mix
+    {
+        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
+        enemyManagerParams: {
+            spawnRate: 0.65,
+            totalEnemies: 40,
+            enemies: ["enemy1", "enemy3", "enemy4"]
+        },
+        healthParams: { numLives: 5, assetName: "HealthPackTemplate" }
+    },
+    // Level 5 — Swarm: rapid spawns, lots of weak enemies
+    {
+        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
+        enemyManagerParams: {
+            spawnRate: 0.4,
+            totalEnemies: 60,
+            enemies: ["enemy1", "enemy2", "enemy1", "enemy2", "enemy3"]
+        },
+        healthParams: { numLives: 5, assetName: "HealthPackTemplate" }
+    },
+    // Level 6 — Elite Squad: spread-shot enemies, slower but deadly
+    {
+        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
+        enemyManagerParams: {
+            spawnRate: 0.55,
+            totalEnemies: 45,
+            enemies: ["enemy3", "enemy4", "enemy5"]
+        },
+        healthParams: { numLives: 4, assetName: "HealthPackTemplate" }
+    },
+    // Level 7 — Blitz: fast spawn mix of all serious enemies
+    {
+        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
+        enemyManagerParams: {
+            spawnRate: 0.3,
+            totalEnemies: 70,
+            enemies: ["enemy2", "enemy3", "enemy4", "enemy5"]
+        },
+        healthParams: { numLives: 4, assetName: "HealthPackTemplate" }
+    },
+    // Level 8 — All Hands: every enemy type, high pressure
+    {
+        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
+        enemyManagerParams: {
+            spawnRate: 0.25,
+            totalEnemies: 90,
+            enemies: ["enemy1", "enemy2", "enemy3", "enemy4", "enemy5"]
+        },
+        healthParams: { numLives: 4, assetName: "HealthPackTemplate" }
+    },
+    // Level 9 — Apocalypse: maximum chaos, everything at once
+    {
+        explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
+        enemyManagerParams: {
+            spawnRate: 0.18,
+            totalEnemies: 120,
+            enemies: ["enemy1", "enemy2", "enemy3", "enemy4", "enemy5",
+                      "enemy4", "enemy5", "enemy3"]
+        },
+        healthParams: { numLives: 3, assetName: "HealthPackTemplate" }
+    },
 ];
 
 
