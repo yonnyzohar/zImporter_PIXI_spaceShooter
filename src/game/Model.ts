@@ -571,7 +571,7 @@ Model.levels = [
             spawnRate: 0.18,
             totalEnemies: 120,
             enemies: ["enemy1", "enemy2", "enemy3", "enemy4", "enemy5",
-                      "enemy4", "enemy5", "enemy3"]
+                "enemy4", "enemy5", "enemy3"]
         },
         healthParams: { numLives: 3, assetName: "HealthPackTemplate" }
     },
