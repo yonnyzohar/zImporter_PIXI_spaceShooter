@@ -148,7 +148,7 @@ export class Game {
         this.draw();
     }
 
-    draw() {}
+    draw() { }
 
     onGameOver(callback: () => void, win: boolean) {
         EventsManager.removeListener('WEAPON_PICKUP', this.onWeaponPickup.bind(this));
