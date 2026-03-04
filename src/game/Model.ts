@@ -48,6 +48,7 @@ export interface ModelInterface {
     level: number;
     levels: LevelConfig[];
     enemiesGrid: Record<string, Map<Entity, boolean>>;
+    shipGrid: Record<string, Map<Entity, boolean>>;
     collectiblesGrid: Record<string, Map<Entity, boolean>>;
     magnets: Record<string, MagnetObj>;
     shields: Record<string, ShieldObj>;
@@ -130,6 +131,7 @@ export const Model: ModelInterface = {
     level: 0,
     levels: [],
     enemiesGrid: {},
+    shipGrid: {},
     collectiblesGrid: {},
     magnets: {
         defaultMagnet: {

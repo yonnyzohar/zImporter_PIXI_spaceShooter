@@ -39,7 +39,7 @@ export class Enemy extends Entity {
     override setGrid(grid: Record<string, Map<Entity, boolean>>): void {
         super.setGrid(grid);
         if (this.cannon) {
-            this.cannon.setGrid(grid);
+            this.cannon.setGrid(Model.shipGrid); // enemy bullets target ship only
         }
     }
 
@@ -84,7 +84,7 @@ export class Enemy extends Entity {
                 this.cannon.updateFire(dt, x, y, angleToShip);
             }
             else {
-                let collisions = Utils.getCollisionsAllScreen(this, this.fireRadius, Model.enemiesGrid, Model.gridSize, this.ship.constructor.name);
+                let collisions = Utils.getCollisionsAllScreen(this, this.fireRadius, Model.shipGrid, Model.gridSize, this.ship.constructor.name);
                 if (collisions.length > 0) {
                     let ship = collisions[0];
 

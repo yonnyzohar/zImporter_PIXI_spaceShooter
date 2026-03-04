@@ -34,6 +34,8 @@ export class Game {
     private gameOver = false;
     private win = false;
     private callback?: () => void;
+    private winMsgCooldown = 0;
+    private static readonly WIN_MSG_COOLDOWN = 1; // seconds
 
     constructor(params?: any) {
         this.init();
@@ -44,10 +46,12 @@ export class Game {
         this.collectiblesManager?.clear();
         this.enemyManager?.clear();
         Model.enemiesGrid = {};
+        Model.shipGrid = {};
         Model.collectiblesGrid = {};
         this.gameOver = false;
         this.win = false;
         this.callback = undefined;
+        this.winMsgCooldown = Game.WIN_MSG_COOLDOWN; // start ready after first kill
         PoolsManager.resetAllPools();
         this.healthbar?.removeFromParent();
         this.scoreHolder?.destroy();
@@ -76,7 +80,7 @@ export class Game {
             this.planetsManager = new PlanetsManager(Model.stage!);
         }
 
-        levelsObj.shipParams.grid = Model.enemiesGrid;
+        levelsObj.shipParams.grid = Model.shipGrid;
         this.ship = new Ship(levelsObj.shipParams);
         this.ship.setCannon(Model.weapons.defaultCannon);
 
@@ -151,28 +155,32 @@ export class Game {
         this.collectiblesManager.spawn(obj.x, obj.y);
 
         const scene: ZScene = ZScene.getSceneById("game-scene")!;
-        const anim: ZTimeline = scene.spawn("WinMsg") as ZTimeline;
-        if (anim) {
-            const textContainer = anim.get("textContainer") as ZContainer;
-            if (textContainer) {
-                const msg = Game.KILL_MESSAGES[Math.floor(Math.random() * Game.KILL_MESSAGES.length)];
-                textContainer.setText(msg);
+        if (this.winMsgCooldown >= Game.WIN_MSG_COOLDOWN) {
+            this.winMsgCooldown = 0;
+            const anim: ZTimeline = scene.spawn("WinMsg") as ZTimeline;
+            if (anim) {
+                const textContainer = anim.get("textContainer") as ZContainer;
+                if (textContainer) {
+                    const msg = Game.KILL_MESSAGES[Math.floor(Math.random() * Game.KILL_MESSAGES.length)];
+                    textContainer.setText(msg);
+                }
+                anim.x = obj.x;
+                anim.y = obj.y;
+                Model.stage!.addChild(anim);
+                anim.play();
+                anim.addStateEndEventListener(() => {
+                    anim.stop();
+                    anim.removeStateEndEventListener();
+                    Model.stage!.removeChild(anim);
+                });
             }
-            anim.x = obj.x;
-            anim.y = obj.y;
-            Model.stage!.addChild(anim);
-            anim.play();
-            anim.addStateEndEventListener(() => {
-                anim.stop();
-                anim.removeStateEndEventListener();
-                Model.stage!.removeChild(anim);
-            });
         }
     }
 
     update(dt: number) {
         this.stars.update(dt);
         this.planetsManager.update(dt);
+        this.winMsgCooldown += dt;
         this.enemyManager.update(dt);
         Updatables.update(dt);
         this.draw();

@@ -94,7 +94,7 @@ export class Ship extends Entity {
         if (cannonParams) {
             const CannonClass = (window as any).SpaceGame[cannonParams.ClassName!];
             this.cannon = new CannonClass(cannonParams);
-            this.cannon?.setGrid(this.getGrid()!)
+            this.cannon?.setGrid(Model.enemiesGrid); // player bullets target enemies
         }
     }
 
