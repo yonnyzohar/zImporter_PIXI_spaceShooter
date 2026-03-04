@@ -12,7 +12,7 @@ import { CollectiblesManager } from './../managers/CollectiblesManager';
 import { ScoreHolder } from './ScoreHolder';
 import { Entity } from '../core/Entity';
 import { Explosion } from './entities/Explosion';
-import { ZScene } from 'zimporter-pixi';
+import { ZContainer, ZScene, ZTimeline } from 'zimporter-pixi';
 import { Enemy } from './entities';
 import { PlanetsManager } from '../managers/PlanetsManager';
 
@@ -34,7 +34,6 @@ export class Game {
     private gameOver = false;
     private win = false;
     private callback?: () => void;
-    private gameOverText?: PIXI.Text;
 
     constructor(params?: any) {
         this.init();
@@ -52,11 +51,6 @@ export class Game {
         this.healthbar?.removeFromParent();
         this.scoreHolder?.destroy();
         this.ship?.destroyEntity();
-        if (this.gameOverText) {
-            this.gameOverText.removeFromParent();
-            this.gameOverText.destroy();
-            this.gameOverText = undefined;
-        }
         this.enemyManager?.destroy();
         this.enemyManager = undefined!;
         this.collectiblesManager = undefined!;
@@ -165,33 +159,44 @@ export class Game {
         EventsManager.removeListener('WEAPON_PICKUP', this.onWeaponPickup.bind(this));
         EventsManager.removeListener('SHIELD_PICKUP', this.onShieldPickup.bind(this));
         EventsManager.removeListener('ENEMY_DESTROYED', this.onEnemyDestroyed.bind(this));
-        this.timersManager.addTime("", 5, 0x000000, () => {
+
+        this.gameOver = true;
+        this.win = win;
+        const scene: ZScene = ZScene.getSceneById("game-scene")!;
+        const anim: ZTimeline = scene.spawn("GameOverTemplate") as ZTimeline;
+        let textContainer = anim.get("textContainer") as ZContainer;
+        if (textContainer) {
+            if (win) {
+                textContainer.setText("LEVEL COMPLETE");
+            }
+            else {
+                textContainer.setText("GAME OVER");
+            }
+        }
+
+        const dimensions = scene.getInnerDimensions();
+
+        anim.x = dimensions.width / 2;
+        anim.y = dimensions.height / 2;
+        Model.stage!.addChild(anim);
+        anim.play();
+        anim.addStateEndEventListener(() => {
             this.ship.destroyEntity();
             this.healthbar.destroy();
             this.scoreHolder.destroy();
             Updatables.clear();
+            anim.stop();
+            anim.removeStateEndEventListener();
+            Model.stage!.removeChild(anim);
             if (callback) callback();
         });
-        this.gameOver = true;
-        this.win = win;
-
-        const text = new PIXI.Text(
-            win ? 'LEVEL COMPLETE' : 'GAME OVER',
-            { fill: 0xffffff, fontSize: 32 }
-        );
-        const scene: ZScene = ZScene.getSceneById("game-scene")!;
-        const dimensions = scene.getInnerDimensions();
-        text.anchor.set(0.5);
-        text.x = dimensions.width / 2;
-        text.y = dimensions.height / 2;
-        Model.stage!.addChild(text);
-        this.gameOverText = text;
 
         this.ship.disable();
 
         if (!win) {
             this.ship.setRender(false);
         }
+
     }
 
 

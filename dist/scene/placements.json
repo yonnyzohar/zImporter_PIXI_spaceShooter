@@ -3,11 +3,200 @@
     "x": 1136,
     "y": 640
   },
-  "animTracks": {},
+  "animTracks": {
+    "textContainer_GameOverTemplate": [
+      {
+        "chilName": "textContainer",
+        "parentTemplate": "GameOverTemplate",
+        "x": 0,
+        "y": 0,
+        "alpha": 0.19,
+        "keyFrame": true,
+        "currentFrame": 0,
+        "endFrame": 29,
+        "pivotX": 0,
+        "pivotY": 0,
+        "rotation": 0,
+        "scaleX": 0.4469862347149722,
+        "scaleY": 0.44698623471497234,
+        "easing": "easeOut"
+      },
+      {
+        "alpha": 0.24309999999999998,
+        "scaleX": 0.48323935932810175,
+        "scaleY": 0.4832393593281019
+      },
+      {
+        "alpha": 0.2944,
+        "scaleX": 0.5182635644628202,
+        "scaleY": 0.5182635644628204
+      },
+      {
+        "alpha": 0.3439,
+        "scaleX": 0.5520588501191275,
+        "scaleY": 0.5520588501191276
+      },
+      {
+        "alpha": 0.3916,
+        "scaleX": 0.5846252162970236,
+        "scaleY": 0.5846252162970237
+      },
+      {
+        "alpha": 0.4375,
+        "scaleX": 0.6159626629965085,
+        "scaleY": 0.6159626629965086
+      },
+      {
+        "alpha": 0.48160000000000003,
+        "scaleX": 0.6460711902175822,
+        "scaleY": 0.6460711902175823
+      },
+      {
+        "alpha": 0.5239,
+        "scaleX": 0.6749507979602447,
+        "scaleY": 0.6749507979602448
+      },
+      {
+        "alpha": 0.5644,
+        "scaleX": 0.7026014862244961,
+        "scaleY": 0.7026014862244963
+      },
+      {
+        "alpha": 0.6031,
+        "scaleX": 0.7290232550103364,
+        "scaleY": 0.7290232550103364
+      },
+      {
+        "alpha": 0.6400000000000001,
+        "scaleX": 0.7542161043177653,
+        "scaleY": 0.7542161043177655
+      },
+      {
+        "alpha": 0.6751,
+        "scaleX": 0.7781800341467833,
+        "scaleY": 0.7781800341467833
+      },
+      {
+        "alpha": 0.7084000000000001,
+        "scaleX": 0.80091504449739,
+        "scaleY": 0.80091504449739
+      },
+      {
+        "alpha": 0.7399,
+        "scaleX": 0.8224211353695854,
+        "scaleY": 0.8224211353695856
+      },
+      {
+        "alpha": 0.7696000000000001,
+        "scaleX": 0.8426983067633698,
+        "scaleY": 0.8426983067633699
+      },
+      {
+        "alpha": 0.7975000000000001,
+        "scaleX": 0.861746558678743,
+        "scaleY": 0.8617465586787431
+      },
+      {
+        "alpha": 0.8236000000000001,
+        "scaleX": 0.879565891115705,
+        "scaleY": 0.8795658911157052
+      },
+      {
+        "alpha": 0.8479000000000001,
+        "scaleX": 0.8961563040742558,
+        "scaleY": 0.896156304074256
+      },
+      {
+        "alpha": 0.8704000000000001,
+        "scaleX": 0.9115177975543955,
+        "scaleY": 0.9115177975543955
+      },
+      {
+        "alpha": 0.8911,
+        "scaleX": 0.925650371556124,
+        "scaleY": 0.9256503715561241
+      },
+      {
+        "alpha": 0.9100000000000001,
+        "scaleX": 0.9385540260794414,
+        "scaleY": 0.9385540260794414
+      },
+      {
+        "alpha": 0.9271,
+        "scaleX": 0.9502287611243474,
+        "scaleY": 0.9502287611243475
+      },
+      {
+        "alpha": 0.9423999999999999,
+        "scaleX": 0.9606745766908424,
+        "scaleY": 0.9606745766908424
+      },
+      {
+        "alpha": 0.9559000000000002,
+        "scaleX": 0.9698914727789263,
+        "scaleY": 0.9698914727789264
+      },
+      {
+        "alpha": 0.9676,
+        "scaleX": 0.9778794493885987,
+        "scaleY": 0.9778794493885988
+      },
+      {
+        "alpha": 0.9775,
+        "scaleX": 0.9846385065198602,
+        "scaleY": 0.9846385065198603
+      },
+      {
+        "alpha": 0.9856,
+        "scaleX": 0.9901686441727107,
+        "scaleY": 0.9901686441727107
+      },
+      {
+        "alpha": 0.9919000000000002,
+        "scaleX": 0.9944698623471497,
+        "scaleY": 0.9944698623471497
+      },
+      {
+        "alpha": 0.9964,
+        "scaleX": 0.9975421610431776,
+        "scaleY": 0.9975421610431776
+      },
+      {
+        "alpha": 0.9991000000000001,
+        "scaleX": 0.9993855402607943,
+        "scaleY": 0.9993855402607944
+      },
+      {
+        "alpha": 1,
+        "scaleX": 1,
+        "scaleY": 1,
+        "keyFrame": true,
+        "currentFrame": 30,
+        "endFrame": 39,
+        "easing": "none"
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "keyFrame": true,
+        "currentFrame": 40,
+        "endFrame": 40,
+        "easing": "none"
+      }
+    ]
+  },
   "stage": {
     "children": [
       {
         "type": "fullScreen",
+        "editorOnly": false,
         "name": "BGTemplate",
         "template": true,
         "guide": false,
@@ -56,6 +245,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Templatefvz3",
         "template": true,
         "guide": true,
@@ -96,6 +286,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Templatetpg2",
         "template": true,
         "guide": true,
@@ -136,6 +327,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Templatetpmm",
         "template": true,
         "guide": true,
@@ -176,6 +368,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Templatecsvb",
         "template": true,
         "guide": true,
@@ -216,6 +409,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Templatehh1u",
         "template": true,
         "guide": true,
@@ -256,6 +450,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Templateifoi",
         "template": true,
         "guide": true,
@@ -296,6 +491,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Template3ujb",
         "template": true,
         "guide": true,
@@ -336,6 +532,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Templatexil9",
         "template": true,
         "guide": true,
@@ -376,6 +573,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Template5kj7",
         "template": true,
         "guide": true,
@@ -416,6 +614,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Templatetqgi",
         "template": true,
         "guide": true,
@@ -456,6 +655,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Templateucm5",
         "template": true,
         "guide": true,
@@ -496,6 +696,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Template4wpi",
         "template": true,
         "guide": true,
@@ -536,6 +737,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Template9hlf",
         "template": true,
         "guide": true,
@@ -576,6 +778,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Planet1",
         "template": true,
         "guide": true,
@@ -616,6 +819,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Planet3",
         "template": true,
         "guide": true,
@@ -656,6 +860,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Planet2",
         "template": true,
         "guide": true,
@@ -696,6 +901,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Template3o9d",
         "template": true,
         "guide": true,
@@ -736,6 +942,7 @@
       },
       {
         "type": "state",
+        "editorOnly": false,
         "name": "StarTemplate",
         "template": true,
         "guide": true,
@@ -776,6 +983,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Ship5",
         "template": true,
         "guide": true,
@@ -816,6 +1024,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Ship2",
         "template": true,
         "guide": true,
@@ -856,6 +1065,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Sip3",
         "template": true,
         "guide": true,
@@ -896,6 +1106,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Ship4",
         "template": true,
         "guide": true,
@@ -936,6 +1147,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Ship1",
         "template": true,
         "guide": true,
@@ -976,6 +1188,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Enemy3",
         "template": true,
         "guide": true,
@@ -1016,6 +1229,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Enemy4",
         "template": true,
         "guide": true,
@@ -1056,6 +1270,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Enemy5",
         "template": true,
         "guide": true,
@@ -1096,6 +1311,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Enemy2",
         "template": true,
         "guide": true,
@@ -1136,6 +1352,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Enemy1",
         "template": true,
         "guide": true,
@@ -1176,6 +1393,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "ShieldTemplate",
         "template": true,
         "guide": true,
@@ -1216,6 +1434,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "MagnetTemplate",
         "template": true,
         "guide": true,
@@ -1256,6 +1475,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "FireRateTemplate",
         "template": true,
         "guide": true,
@@ -1296,6 +1516,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "CoinTemplate",
         "template": true,
         "guide": true,
@@ -1336,6 +1557,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "FireAnglesTemplate",
         "template": true,
         "guide": true,
@@ -1376,6 +1598,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "HealthPackTemplate",
         "template": true,
         "guide": true,
@@ -1416,6 +1639,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Explosion1",
         "template": true,
         "guide": true,
@@ -1456,6 +1680,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Explosion2",
         "template": true,
         "guide": true,
@@ -1496,6 +1721,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Explosion3",
         "template": true,
         "guide": true,
@@ -1536,6 +1762,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Bullet9",
         "template": true,
         "guide": true,
@@ -1576,6 +1803,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Bullet8",
         "template": true,
         "guide": true,
@@ -1616,6 +1844,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Bullet7",
         "template": true,
         "guide": true,
@@ -1656,6 +1885,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Bullet6",
         "template": true,
         "guide": true,
@@ -1696,6 +1926,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Bullet5",
         "template": true,
         "guide": true,
@@ -1736,6 +1967,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Bullet4",
         "template": true,
         "guide": true,
@@ -1776,6 +2008,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Bullet2",
         "template": true,
         "guide": true,
@@ -1816,6 +2049,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Bullet3",
         "template": true,
         "guide": true,
@@ -1856,6 +2090,7 @@
       },
       {
         "type": "asset",
+        "editorOnly": false,
         "name": "Bullet1",
         "template": true,
         "guide": true,
@@ -1880,6 +2115,47 @@
         "landscape": {
           "x": -121,
           "y": 329,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "animation",
+        "editorOnly": false,
+        "name": "GameOverTemplate",
+        "template": true,
+        "guide": true,
+        "instanceName": "instance_8ia5",
+        "filters": {},
+        "portrait": {
+          "x": 589,
+          "y": 296,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 589.6325166827681,
+          "y": 296.7741702849741,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -2227,6 +2503,7 @@
       "children": [
         {
           "type": "asset",
+          "editorOnly": false,
           "name": "Star4",
           "template": true,
           "guide": false,
@@ -2267,6 +2544,7 @@
         },
         {
           "type": "asset",
+          "editorOnly": false,
           "name": "Star5",
           "template": true,
           "guide": false,
@@ -2307,6 +2585,7 @@
         },
         {
           "type": "asset",
+          "editorOnly": false,
           "name": "Star1",
           "template": true,
           "guide": false,
@@ -2347,6 +2626,7 @@
         },
         {
           "type": "asset",
+          "editorOnly": false,
           "name": "Star6",
           "template": true,
           "guide": false,
@@ -2387,6 +2667,7 @@
         },
         {
           "type": "asset",
+          "editorOnly": false,
           "name": "Star2",
           "template": true,
           "guide": false,
@@ -2427,6 +2708,7 @@
         },
         {
           "type": "asset",
+          "editorOnly": false,
           "name": "Star7",
           "template": true,
           "guide": false,
@@ -2467,6 +2749,7 @@
         },
         {
           "type": "asset",
+          "editorOnly": false,
           "name": "Star8",
           "template": true,
           "guide": false,
@@ -2507,6 +2790,7 @@
         },
         {
           "type": "asset",
+          "editorOnly": false,
           "name": "Star9",
           "template": true,
           "guide": false,
@@ -2547,6 +2831,7 @@
         },
         {
           "type": "asset",
+          "editorOnly": false,
           "name": "Star10",
           "template": true,
           "guide": false,
@@ -2587,6 +2872,7 @@
         },
         {
           "type": "asset",
+          "editorOnly": false,
           "name": "Star3",
           "template": true,
           "guide": false,
@@ -3312,6 +3598,97 @@
       ],
       "type": "asset",
       "name": "Bullet1"
+    },
+    "GameOverTemplate": {
+      "children": [
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Templater6de",
+          "template": true,
+          "guide": false,
+          "instanceName": "textContainer",
+          "filters": {},
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 0.45,
+            "scaleY": 0.45,
+            "alpha": 0.19,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 0.45,
+            "scaleY": 0.45,
+            "alpha": 0.19,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ],
+      "type": "animation",
+      "name": "GameOverTemplate"
+    },
+    "Templater6de": {
+      "children": [
+        {
+          "text": "GAME OVER",
+          "type": "textField",
+          "name": "label",
+          "x": 0,
+          "y": 0,
+          "rotation": 0,
+          "width": 429,
+          "height": 135,
+          "alpha": 1,
+          "size": 90,
+          "align": "center",
+          "fontName": "Apple LiGothic",
+          "z": 1,
+          "stroke": "#042895",
+          "strokeThickness": 12,
+          "wordWrap": false,
+          "wordWrapWidth": 100,
+          "breakWords": false,
+          "leading": 0,
+          "letterSpacing": 0,
+          "padding": 0,
+          "textAnchorX": 0.5,
+          "textAnchorY": 0.5,
+          "lineHeight": 0,
+          "pivotX": 0,
+          "pivotY": 0,
+          "lineJoin": "miter",
+          "fontWeight": "bolder",
+          "dropShadow": true,
+          "dropShadowAngle": 1.43,
+          "dropShadowBlur": 0,
+          "dropShadowColor": "#1a1919",
+          "dropShadowDistance": 9,
+          "fillType": "solid",
+          "filters": {},
+          "color": "#ffffff"
+        }
+      ],
+      "type": "asset",
+      "name": "Templater6de"
     }
   },
   "fonts": [],
