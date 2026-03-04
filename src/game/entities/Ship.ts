@@ -185,7 +185,7 @@ export class Ship extends Entity {
 
         let collisions = Utils.getCollisions(this, this.radius, Model.collectiblesGrid, Model.gridSize);
 
-        if (collisions) {
+        if (collisions && collisions.length > 0) {
             for (let i = 0; i < collisions.length; i++) {
                 let collision = collisions[i];
                 if (collision.params.type === 'collecible') {
@@ -223,7 +223,7 @@ export class Ship extends Entity {
         }
 
         collisions = Utils.getCollisions(this, this.radius, Model.enemiesGrid, Model.gridSize);
-        if (collisions) {
+        if (collisions && collisions.length > 0) {
             for (let i = 0; i < collisions.length; i++) {
                 let collision = collisions[i];
                 collision.drawCircle(true);

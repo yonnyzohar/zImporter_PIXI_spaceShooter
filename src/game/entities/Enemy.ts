@@ -48,6 +48,7 @@ export class Enemy extends Entity {
     }
 
     spawn(_x: number, _y: number) {
+        this.isDestroyed = false;
         this.x = _x;
         this.y = _y;
         this.initialXOffset = Math.random() * 6.24;
@@ -70,6 +71,7 @@ export class Enemy extends Entity {
 
         if (this.y! > dimensions.height) {
             this.destroyEntity();
+            return;
         }
         this.fixBounds();
 
@@ -120,9 +122,10 @@ export class Enemy extends Entity {
     }
 
     destroyEntity() {
+        if (this.isDestroyed) return;
+        this.pool.putBack(this);
         this.asset?.removeFromParent();
         EventsManager.emit('ENEMY_DESTROYED', { x: this.x!, y: this.y! });
-        this.pool.putBack(this);
         Updatables.remove(this);
         super.destroyEntity();
 

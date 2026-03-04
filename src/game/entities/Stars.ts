@@ -51,6 +51,13 @@ export class Stars {
         }
     }
 
+    reset() {
+        this.starsArr.forEach(star => {
+            star.gfx.destroy();
+        });
+        this.starsArr = [];
+    }
+
     update(dt: number) {
         let scene: ZScene = ZScene.getSceneById("game-scene")!;
         let dimensions = scene.getInnerDimensions();
