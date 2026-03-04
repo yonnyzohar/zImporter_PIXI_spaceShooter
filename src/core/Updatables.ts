@@ -20,4 +20,17 @@ export class Updatables {
     static clear() {
         this.updatables.clear();
     }
+
+    static clearWithCleanup() {
+        for (const [u] of this.updatables) {
+            const entity = u as unknown as Entity;
+            if (entity.asset && entity.asset.parent) {
+                entity.asset.parent.removeChild(entity.asset);
+            }
+            if (entity.circle && entity.circle.parent) {
+                entity.circle.parent.removeChild(entity.circle);
+            }
+        }
+        this.updatables.clear();
+    }
 }

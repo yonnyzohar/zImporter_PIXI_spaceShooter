@@ -246,6 +246,14 @@ export class Ship extends Entity {
         if (this.cannon) {
             this.cannon.destroyEntity();
         }
+        if (this.magnet) {
+            this.magnet.destroyEntity();
+            this.magnet = null;
+        }
+        if (this.shield) {
+            this.shield.destroyEntity();
+            this.shield = null;
+        }
         super.destroyEntity();
     }
 
