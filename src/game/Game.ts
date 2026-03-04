@@ -14,6 +14,7 @@ import { Entity } from '../core/Entity';
 import { Explosion } from './entities/Explosion';
 import { ZScene } from 'zimporter-pixi';
 import { Enemy } from './entities';
+import { PlanetsManager } from '../managers/PlanetsManager';
 
 
 export class Game {
@@ -24,6 +25,7 @@ export class Game {
     private ship!: Ship;
     private collectiblesManager!: CollectiblesManager;
     private stars!: Stars;
+    private planetsManager!: PlanetsManager;
     private healthbar!: Healthbar;
     private scoreHolder!: ScoreHolder;
 
@@ -47,12 +49,14 @@ export class Game {
         this.win = false;
         this.callback = undefined;
         PoolsManager.resetAllPools();
-        this.stars?.reset();
         this.healthbar?.removeFromParent();
         this.scoreHolder?.destroy();
         this.ship?.destroyEntity();
-        this.gameOverText?.destroy();
-        this.gameOverText = undefined;
+        if (this.gameOverText) {
+            this.gameOverText.removeFromParent();
+            this.gameOverText.destroy();
+            this.gameOverText = undefined;
+        }
         this.enemyManager?.destroy();
         this.enemyManager = undefined!;
         this.collectiblesManager = undefined!;
@@ -69,7 +73,13 @@ export class Game {
         const levelsObj = Model.levels[Model.level];
 
         this.healthbar = new Healthbar(levelsObj.healthParams);
-        this.stars = new Stars(levelsObj.starsParams, Model.stage!);
+        if (!this.stars) {
+            this.stars = new Stars(levelsObj.starsParams, Model.stage!);
+        }
+        // planets layer added right after stars so it renders above stars but below everything else
+        if (!this.planetsManager) {
+            this.planetsManager = new PlanetsManager(Model.stage!);
+        }
 
         levelsObj.shipParams.grid = Model.enemiesGrid;
         this.ship = new Ship(levelsObj.shipParams);
@@ -143,6 +153,7 @@ export class Game {
 
     update(dt: number) {
         this.stars.update(dt);
+        this.planetsManager.update(dt);
         this.enemyManager.update(dt);
         Updatables.update(dt);
         this.draw();
