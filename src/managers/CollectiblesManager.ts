@@ -42,6 +42,17 @@ export class CollectiblesManager {
         this.probabilitiesArr = arr;
     }
 
+    clear() {
+        for (const key in Model.collectiblesGrid) {
+            const map = Model.collectiblesGrid[key];
+            for (const entity of map.keys()) {
+                if (entity.asset && entity.asset.parent) {
+                    entity.asset.parent.removeChild(entity.asset);
+                }
+            }
+        }
+    }
+
     spawn(_x: number, _y: number) {
         const rnd = Math.random();
         for (let i = 0; i < this.probabilitiesArr.length; i++) {

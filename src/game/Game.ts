@@ -15,14 +15,6 @@ import { Explosion } from './entities/Explosion';
 import { ZScene } from 'zimporter-pixi';
 import { Enemy } from './entities';
 
-type Rect = {
-    x: number;
-    y: number;
-    w: number;
-    h: number;
-    per: number;
-    color: [number, number, number];
-};
 
 export class Game {
 
@@ -40,21 +32,28 @@ export class Game {
     private gameOver = false;
     private win = false;
     private callback?: () => void;
+    private gameOverText?: PIXI.Text;
 
     constructor(params?: any) {
         this.init();
     }
 
     public reset() {
+        this.collectiblesManager?.clear();
+        this.enemyManager?.clear();
         Model.enemiesGrid = {};
         Model.collectiblesGrid = {};
         this.gameOver = false;
         this.win = false;
         this.callback = undefined;
-
+        PoolsManager.resetAllPools();
+        this.stars?.reset();
         this.healthbar?.removeFromParent();
         this.scoreHolder?.destroy();
         this.ship?.destroyEntity();
+        this.gameOverText?.destroy();
+        this.gameOverText = undefined;
+        this.enemyManager?.destroy();
         this.enemyManager = undefined!;
         this.collectiblesManager = undefined!;
         Updatables.clear();
@@ -149,22 +148,7 @@ export class Game {
         this.draw();
     }
 
-    draw() {
-
-        if (this.gameOver) {
-            const text = new PIXI.Text(
-                this.win ? 'LEVEL COMPLETE' : 'GAME OVER',
-                { fill: 0xffffff, fontSize: 32 }
-            );
-            let scene: ZScene = ZScene.getSceneById("game-scene")!;
-            let dimensions = scene.getInnerDimensions();
-            text.x = dimensions.width / 2;
-            text.y = dimensions.height / 2;
-            Model.stage!.addChild(text);
-        }
-
-
-    }
+    draw() {}
 
     onGameOver(callback: () => void, win: boolean) {
         EventsManager.removeListener('WEAPON_PICKUP', this.onWeaponPickup.bind(this));
@@ -179,6 +163,18 @@ export class Game {
         });
         this.gameOver = true;
         this.win = win;
+
+        const text = new PIXI.Text(
+            win ? 'LEVEL COMPLETE' : 'GAME OVER',
+            { fill: 0xffffff, fontSize: 32 }
+        );
+        const scene: ZScene = ZScene.getSceneById("game-scene")!;
+        const dimensions = scene.getInnerDimensions();
+        text.anchor.set(0.5);
+        text.x = dimensions.width / 2;
+        text.y = dimensions.height / 2;
+        Model.stage!.addChild(text);
+        this.gameOverText = text;
 
         this.ship.disable();
 

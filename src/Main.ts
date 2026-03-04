@@ -84,12 +84,14 @@ export class Main {
 
 
 
-    onGameOver() {
-        Model.level = Model.level + 1;
-        if (!Model.levels[Model.level]) {
-            Model.level = 1;
-        }
-        this.game.init();
+    onGameOver(obj: { win: boolean }) {
+        this.game.onGameOver(() => {
+            Model.level = Model.level + 1;
+            if (!Model.levels[Model.level]) {
+                Model.level = 1;
+            }
+            this.game.init();
+        }, obj?.win ?? false);
     }
 
     update(dt: number) {

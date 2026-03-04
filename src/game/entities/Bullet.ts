@@ -23,6 +23,7 @@ export class Bullet extends Entity {
     }
 
     fire(_x: number, _y: number, initialAngle: number) {
+        this.isDestroyed = false;
         this.angle = initialAngle;
         this.x = _x - (this.w / 2);
         this.y = _y;
@@ -53,10 +54,10 @@ export class Bullet extends Entity {
 
         const collisions = Utils.getCollisions(this, this.radius!, this.getGrid()!, Model.gridSize);
 
-        if (collisions) {
+        if (collisions && collisions.length > 0) {
+            this.destroyEntity();
             for (let i = 0; i < collisions.length; i++) {
                 let collision = collisions[i];
-                this.destroyEntity();
                 EventsManager.emit("TARGET_HIT", { target: collision });
             }
 
@@ -71,6 +72,7 @@ export class Bullet extends Entity {
     }
 
     destroyEntity() {
+        if (this.isDestroyed) return;
         this.pool!.putBack(this);
         Updatables.remove(this);
         super.destroyEntity();

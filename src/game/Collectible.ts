@@ -27,6 +27,7 @@ export class Collectible extends Entity {
 
 
     spawn(_x: number, _y: number) {
+        this.isDestroyed = false;
         this.x = _x;
         this.y = _y;
         Model.stage?.addChild(this.asset!);
@@ -59,9 +60,10 @@ export class Collectible extends Entity {
     }
 
     destroyEntity() {
-        this.asset?.removeFromParent();
-        super.destroyEntity();
+        if (this.isDestroyed) return;
         this.pool!.putBack(this);
+        this.asset?.removeFromParent();
         Updatables.remove(this);
+        super.destroyEntity();
     }
 }

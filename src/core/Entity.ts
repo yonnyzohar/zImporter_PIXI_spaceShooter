@@ -10,6 +10,7 @@ export class Entity {
     prevRow?: number;
     prevCol?: number;
     id: string;
+    protected isDestroyed: boolean = false;
     params: BaseObj;
     pool?: Pool<Entity>;
     asset: ZContainer | undefined;
@@ -100,6 +101,8 @@ export class Entity {
     }
 
     destroyEntity() {
+        if (this.isDestroyed) return;
+        this.isDestroyed = true;
         const grid = this.grid;
         if (!grid) return;
         const col = Math.floor(this.x! / Model.gridSize);
