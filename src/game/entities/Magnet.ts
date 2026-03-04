@@ -49,8 +49,11 @@ export class Magnet extends Entity {
     }
 
     destroyEntity() {
+        if (this.isDestroyed) return;
         super.destroyEntity();
-        Model.stage?.removeChild(this.circle);
-        this.circle = null!;
+        if (this.circle) {
+            Model.stage?.removeChild(this.circle);
+            this.circle = null!;
+        }
     }
 }

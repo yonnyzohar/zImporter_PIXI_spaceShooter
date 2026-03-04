@@ -190,6 +190,168 @@
         "endFrame": 40,
         "easing": "none"
       }
+    ],
+    "textContainer_WinMsg": [
+      {
+        "chilName": "textContainer",
+        "parentTemplate": "WinMsg",
+        "x": 0,
+        "y": 0,
+        "alpha": 1,
+        "keyFrame": true,
+        "currentFrame": 0,
+        "endFrame": 34,
+        "pivotX": 0,
+        "pivotY": 0,
+        "rotation": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "easing": "easeOut"
+      },
+      {
+        "y": -8.276151806167446,
+        "alpha": 0.9436734693877551
+      },
+      {
+        "y": -16.31241515418511,
+        "alpha": 0.8889795918367347
+      },
+      {
+        "y": -24.108790044052995,
+        "alpha": 0.8359183673469388
+      },
+      {
+        "y": -31.665276475771098,
+        "alpha": 0.7844897959183673
+      },
+      {
+        "y": -38.98187444933942,
+        "alpha": 0.7346938775510203
+      },
+      {
+        "y": -46.05858396475796,
+        "alpha": 0.686530612244898
+      },
+      {
+        "y": -52.89540502202673,
+        "alpha": 0.6399999999999999
+      },
+      {
+        "y": -59.492337621145694,
+        "alpha": 0.5951020408163266
+      },
+      {
+        "y": -65.8493817621149,
+        "alpha": 0.5518367346938775
+      },
+      {
+        "y": -71.96653744493432,
+        "alpha": 0.5102040816326531
+      },
+      {
+        "y": -77.84380466960395,
+        "alpha": 0.47020408163265304
+      },
+      {
+        "y": -83.4811834361238,
+        "alpha": 0.4318367346938776
+      },
+      {
+        "y": -88.87867374449388,
+        "alpha": 0.3951020408163265
+      },
+      {
+        "y": -94.03627559471418,
+        "alpha": 0.3599999999999999
+      },
+      {
+        "y": -98.95398898678468,
+        "alpha": 0.326530612244898
+      },
+      {
+        "y": -103.63181392070541,
+        "alpha": 0.2946938775510204
+      },
+      {
+        "y": -108.06975039647635,
+        "alpha": 0.2644897959183674
+      },
+      {
+        "y": -112.26779841409753,
+        "alpha": 0.23591836734693883
+      },
+      {
+        "y": -116.22595797356892,
+        "alpha": 0.20897959183673465
+      },
+      {
+        "y": -119.94422907489053,
+        "alpha": 0.18367346938775508
+      },
+      {
+        "y": -123.42261171806234,
+        "alpha": 0.16000000000000003
+      },
+      {
+        "y": -126.66110590308439,
+        "alpha": 0.13795918367346938
+      },
+      {
+        "y": -129.65971162995666,
+        "alpha": 0.11755102040816323
+      },
+      {
+        "y": -132.41842889867914,
+        "alpha": 0.0987755102040816
+      },
+      {
+        "y": -134.93725770925184,
+        "alpha": 0.08163265306122458
+      },
+      {
+        "y": -137.21619806167476,
+        "alpha": 0.06612244897959185
+      },
+      {
+        "y": -139.25524995594793,
+        "alpha": 0.05224489795918352
+      },
+      {
+        "y": -141.05441339207124,
+        "alpha": 0.040000000000000036
+      },
+      {
+        "y": -142.61368837004483,
+        "alpha": 0.029387755102040836
+      },
+      {
+        "y": -143.9330748898686,
+        "alpha": 0.020408163265306256
+      },
+      {
+        "y": -145.01257295154264,
+        "alpha": 0.013061224489795964
+      },
+      {
+        "y": -145.8521825550669,
+        "alpha": 0.00734693877551007
+      },
+      {
+        "y": -146.45190370044133,
+        "alpha": 0.0032653061224490187
+      },
+      {
+        "y": -146.81173638766597,
+        "alpha": 0.0008163265306123657
+      },
+      {
+        "y": -146.9316806167409,
+        "alpha": 0,
+        "keyFrame": true,
+        "currentFrame": 35,
+        "endFrame": 35,
+        "easing": "none"
+      }
     ]
   },
   "stage": {
@@ -2138,8 +2300,8 @@
         "instanceName": "instance_8ia5",
         "filters": {},
         "portrait": {
-          "x": 589,
-          "y": 296,
+          "x": 533,
+          "y": -117,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -2154,8 +2316,49 @@
           }
         },
         "landscape": {
-          "x": 589.6325166827681,
-          "y": 296.7741702849741,
+          "x": 533.2175493471992,
+          "y": -116.93559017586318,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "animation",
+        "editorOnly": false,
+        "name": "WinMsg",
+        "template": true,
+        "guide": true,
+        "instanceName": "instance_afwh",
+        "filters": {},
+        "portrait": {
+          "x": 0,
+          "y": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 0,
+          "y": 0,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -3689,6 +3892,107 @@
       ],
       "type": "asset",
       "name": "Templater6de"
+    },
+    "WinMsg": {
+      "children": [
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Templatexd48",
+          "template": true,
+          "guide": false,
+          "instanceName": "textContainer",
+          "filters": {},
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ],
+      "type": "animation",
+      "name": "WinMsg"
+    },
+    "Templatexd48": {
+      "children": [
+        {
+          "text": "AMAZING",
+          "type": "textField",
+          "name": "label",
+          "x": 0,
+          "y": 0,
+          "rotation": 0,
+          "width": 171,
+          "height": 71,
+          "alpha": 1,
+          "size": 31,
+          "align": "center",
+          "fontName": "Avenir",
+          "z": 1,
+          "stroke": "#2b1a0d",
+          "strokeThickness": 12,
+          "wordWrap": false,
+          "wordWrapWidth": 100,
+          "breakWords": false,
+          "leading": 0,
+          "letterSpacing": 0,
+          "padding": 0,
+          "textAnchorX": 0.5,
+          "textAnchorY": 0.5,
+          "lineHeight": 0,
+          "pivotX": 0,
+          "pivotY": 0,
+          "lineJoin": "miter",
+          "fontWeight": "Bold",
+          "dropShadow": true,
+          "dropShadowAngle": 0,
+          "dropShadowBlur": 10,
+          "dropShadowColor": "#1a1919",
+          "dropShadowDistance": 9,
+          "fillType": "gradient",
+          "filters": {},
+          "gradientData": {
+            "colors": [
+              16774912,
+              14749198
+            ],
+            "percentages": [
+              0.52,
+              0.64
+            ],
+            "fillGradientType": 0
+          }
+        }
+      ],
+      "type": "asset",
+      "name": "Templatexd48"
     }
   },
   "fonts": [],

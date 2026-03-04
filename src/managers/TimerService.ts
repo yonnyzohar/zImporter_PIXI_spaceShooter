@@ -6,6 +6,12 @@ import { Model } from '../game';
 
 export class TimersManager {
     private timers: Map<string, TimerService> = new Map();
+
+    destroyAll() {
+        this.timers.forEach((timer) => timer.destroy());
+        this.timers.clear();
+    }
+
     addTime(timerId: string, time: number, color: PIXI.ColorSource, completeCallback: Function) {
 
         if (this.timers.has(timerId)) {

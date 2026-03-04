@@ -40,6 +40,7 @@ export class Game {
     }
 
     public reset() {
+        this.timersManager.destroyAll();
         this.collectiblesManager?.clear();
         this.enemyManager?.clear();
         Model.enemiesGrid = {};
@@ -54,7 +55,7 @@ export class Game {
         this.enemyManager?.destroy();
         this.enemyManager = undefined!;
         this.collectiblesManager = undefined!;
-        Updatables.clear();
+        Updatables.clearWithCleanup();
     }
 
     init() {
@@ -137,12 +138,36 @@ export class Game {
         );
     }
 
+    private static readonly KILL_MESSAGES = [
+        'AMAZING!', 'AWESOME!', 'NICE SHOT!', 'BOOM!', 'OBLITERATED!',
+        'GOOD JOB!', 'EXCELLENT!', 'SPECTACULAR!', 'DESTROYED!', 'NAILED IT!'
+    ];
+
     onEnemyDestroyed(obj: { x: number; y: number }) {
 
         let pool = PoolsManager.getPool(Model.explosions.defaultExplosion.assetName!, Model.explosions.defaultExplosion);
         const explosion = pool!.get() as unknown as Explosion;
         explosion.spawn(obj.x, obj.y);
         this.collectiblesManager.spawn(obj.x, obj.y);
+
+        const scene: ZScene = ZScene.getSceneById("game-scene")!;
+        const anim: ZTimeline = scene.spawn("WinMsg") as ZTimeline;
+        if (anim) {
+            const textContainer = anim.get("textContainer") as ZContainer;
+            if (textContainer) {
+                const msg = Game.KILL_MESSAGES[Math.floor(Math.random() * Game.KILL_MESSAGES.length)];
+                textContainer.setText(msg);
+            }
+            anim.x = obj.x;
+            anim.y = obj.y;
+            Model.stage!.addChild(anim);
+            anim.play();
+            anim.addStateEndEventListener(() => {
+                anim.stop();
+                anim.removeStateEndEventListener();
+                Model.stage!.removeChild(anim);
+            });
+        }
     }
 
     update(dt: number) {
@@ -184,7 +209,7 @@ export class Game {
             this.ship.destroyEntity();
             this.healthbar.destroy();
             this.scoreHolder.destroy();
-            Updatables.clear();
+            Updatables.clearWithCleanup();
             anim.stop();
             anim.removeStateEndEventListener();
             Model.stage!.removeChild(anim);

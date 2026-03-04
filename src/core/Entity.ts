@@ -20,7 +20,7 @@ export class Entity {
     h?: number
     radius?: number;
     private type: string;
-    protected circle: PIXI.Graphics;
+    public circle: PIXI.Graphics;
     private greenColor = 0x00FF00;
     private redColor = 0xFF0000
 
