@@ -34,9 +34,9 @@ var main = new Main(app.stage, resizeCanvas);
 document.body.appendChild(app.view as any);
 ZUpdatables.init(targetFPS);
 
-const fpsText = new PIXI.Text('FPS: 0', { fontSize: 24, fill: 'white' });
-fpsText.position.set(10, 10);
-app.stage.addChild(fpsText);
+//const fpsText = new PIXI.Text('FPS: 0', { fontSize: 24, fill: 'white' });
+//fpsText.position.set(10, 10);
+//app.stage.addChild(fpsText);
 
 // Update FPS every frame
 let lastTime = performance.now();
@@ -65,8 +65,8 @@ app.ticker.add(() => {
 
   // Update FPS counter once per second
   if (frameCount >= targetFPS) {
-    fpsText.text = `FPS: ${targetFPS}`;
-    fpsText.parent?.addChild(fpsText);
+    //fpsText.text = `FPS: ${targetFPS}`;
+    //fpsText.parent?.addChild(fpsText);
     frameCount = 0;
   }
 });

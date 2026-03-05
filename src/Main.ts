@@ -14,6 +14,7 @@ const DOWN_KEY = 'ArrowDown';
 export class Main {
 
     private game: Game;
+    private frame: PIXI.DisplayObject | null = null;
 
 
     constructor(appStage: PIXI.Container, resizeCanvas: () => void) {
@@ -27,6 +28,9 @@ export class Main {
             let stage = scene.sceneStage;
             scene.loadStage(appStage);
             Model.stage = stage;
+
+            // Find the "frame" container and keep a reference so it stays on top
+            this.frame = stage.get("hud");
 
             resizeCanvas?.();
             this.game = new Game();
@@ -86,8 +90,14 @@ export class Main {
 
     onGameOver(obj: { win: boolean }) {
         this.game.onGameOver(() => {
-            Model.level = Model.level + 1;
-            if (!Model.levels[Model.level]) {
+            if (obj?.win) {
+                Model.level = Model.level + 1;
+                if (!Model.levels[Model.level]) {
+                    // finished all levels — restart from the beginning
+                    Model.level = 0;
+                }
+            } else {
+                // lost — restart from level 0
                 Model.level = 0;
             }
             this.game.init();
@@ -97,6 +107,10 @@ export class Main {
     update(dt: number) {
         if (this.game) {
             this.game.update(dt);
+        }
+        // Keep "frame" always on top
+        if (this.frame && this.frame.parent) {
+            this.frame.parent.addChild(this.frame);
         }
     }
 }

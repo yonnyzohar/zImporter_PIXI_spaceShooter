@@ -4,6 +4,7 @@ import { Utils } from '../core/Utils';
 import { Entity } from '../core/Entity';
 import { Pool } from '../core/Pool';
 import { Enemy } from './entities/Enemy';
+import { ZContainer } from 'zimporter-pixi';
 
 export interface Movement {
     left: boolean;
@@ -42,7 +43,7 @@ export interface MagnetObj extends BaseObj {
 
 
 export interface ModelInterface {
-    stage: PIXI.Container | null;
+    stage: ZContainer | null;
     gridSize: number;
     movement: Movement;
     level: number;

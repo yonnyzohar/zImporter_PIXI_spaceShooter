@@ -13,14 +13,13 @@ export class ScoreHolder {
         let scene: ZScene = ZScene.getSceneById("game-scene")!;
         let dimensions = scene.getInnerDimensions();
         EventsManager.addListener("COIN_COLLECTED", this.onCoinCollected);
+        let scoreContainer = Model.stage?.get("scoreContainer")!;
 
-        Model.stage?.addChild(this.view);
+        scoreContainer?.addChild(this.view);
         this.view.style = new PIXI.TextStyle({
             fill: '#ffffff',
             fontSize: 14,
         });
-        this.view.x = dimensions.width - 100;
-        this.view.y = 10;
         this.view.text = `Score : ${this.score}`;
     }
 

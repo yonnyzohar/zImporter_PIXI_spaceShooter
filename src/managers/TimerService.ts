@@ -30,11 +30,8 @@ export class TimersManager {
 
     reorganizeTimers() {
         let index = 0;
-        let scene: ZScene = ZScene.getSceneById("game-scene")!;
-        let dimensions = scene.getInnerDimensions();
         this.timers.forEach((timer) => {
-
-            timer.rect.y = dimensions.height - 30 - (30 * index);
+            timer.rect.y = -30 * index;
             index++;
         });
     }
@@ -63,7 +60,10 @@ export class TimerService {
         this.rect.beginFill(color);
         this.rect.drawRect(0, 0, dimensions.width, 30);
         this.rect.endFill();
-        Model.stage!.addChild(this.rect);
+        this.rect.alpha = 0.6;
+        let meterSpawn = Model.stage!.get("meterSpawn")!;
+        meterSpawn.addChild(this.rect);
+        meterSpawn.scale.set(0.90, 1);
         this.stop();
         Updatables.add(this);
     }
@@ -86,7 +86,9 @@ export class TimerService {
     destroy() {
         Updatables.remove(this);
         this.rect.clear();
-        Model.stage!.removeChild(this.rect);
+        if (this.rect.parent) {
+            this.rect.parent.removeChild(this.rect);
+        }
         this.stopCallback?.();
     }
 
