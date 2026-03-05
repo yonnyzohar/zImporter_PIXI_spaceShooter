@@ -753,8 +753,8 @@
           }
         },
         "landscape": {
-          "x": -326,
-          "y": 505,
+          "x": -319,
+          "y": 543,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -2371,6 +2371,47 @@
       {
         "type": "asset",
         "editorOnly": false,
+        "name": "Template3wzw",
+        "template": true,
+        "guide": false,
+        "instanceName": "gameContainer",
+        "filters": {},
+        "portrait": {
+          "x": 0,
+          "y": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 0,
+          "y": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "editorOnly": false,
         "name": "HudTemplate",
         "template": true,
         "guide": false,
@@ -2401,6 +2442,47 @@
           "alpha": 1,
           "pivotX": 0,
           "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "editorOnly": false,
+        "name": "Templatefzhj",
+        "template": true,
+        "guide": false,
+        "instanceName": "calloutMarker",
+        "filters": {},
+        "portrait": {
+          "x": 332,
+          "y": 580,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 12.5,
+          "pivotY": 12.5,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 568,
+          "y": 320,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 12.5,
+          "pivotY": 12.5,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -4032,6 +4114,11 @@
       "type": "asset",
       "name": "Templatexd48"
     },
+    "Template3wzw": {
+      "children": [],
+      "type": "asset",
+      "name": "Template3wzw"
+    },
     "HudTemplate": {
       "children": [
         {
@@ -4084,8 +4171,8 @@
           "instanceName": "scoreContainer",
           "filters": {},
           "portrait": {
-            "x": 472,
-            "y": 39,
+            "x": 588,
+            "y": 60,
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
@@ -4100,8 +4187,8 @@
             }
           },
           "landscape": {
-            "x": 945,
-            "y": 38,
+            "x": 1094,
+            "y": 61,
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
@@ -4208,17 +4295,103 @@
       "name": "Templateg0go"
     },
     "ScoreTemplate": {
-      "children": [],
+      "children": [
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Templatejkfc",
+          "template": true,
+          "guide": false,
+          "instanceName": "scoreInner",
+          "filters": {},
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 0.62,
+            "scaleY": 0.62,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 0.62,
+            "scaleY": 0.62,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ],
       "type": "asset",
       "name": "ScoreTemplate"
+    },
+    "Templatejkfc": {
+      "children": [
+        {
+          "text": "Score",
+          "type": "textField",
+          "name": "label",
+          "x": 0,
+          "y": 0,
+          "rotation": 0,
+          "width": 116,
+          "height": 69,
+          "alpha": 1,
+          "size": 61,
+          "align": "right",
+          "fontName": "Apple LiGothic",
+          "z": 1,
+          "stroke": "#042895",
+          "strokeThickness": 0,
+          "wordWrap": false,
+          "wordWrapWidth": 100,
+          "breakWords": false,
+          "leading": 0,
+          "letterSpacing": 0,
+          "padding": 0,
+          "textAnchorX": 1,
+          "textAnchorY": 0.5,
+          "lineHeight": 0,
+          "pivotX": 0,
+          "pivotY": 0,
+          "lineJoin": "miter",
+          "fontWeight": "bolder",
+          "dropShadow": false,
+          "dropShadowAngle": 1.43,
+          "dropShadowBlur": 0,
+          "dropShadowColor": "#1a1919",
+          "dropShadowDistance": 9,
+          "fillType": "solid",
+          "filters": {},
+          "color": "#ffae00"
+        }
+      ],
+      "type": "asset",
+      "name": "Templatejkfc"
     },
     "FrameTemplate": {
       "children": [
         {
           "type": "9slice",
           "name": "FrameTemplate_9S",
-          "width": 628.2550497918874,
-          "height": 1122.8987543214369,
+          "width": 1130.6517904425898,
+          "height": 629.805657016118,
           "pivotX": 0,
           "pivotY": 0,
           "origWidth": 360,
@@ -4281,6 +4454,11 @@
       ],
       "type": "asset",
       "name": "FrameTemplate"
+    },
+    "Templatefzhj": {
+      "children": [],
+      "type": "asset",
+      "name": "Templatefzhj"
     }
   },
   "fonts": [

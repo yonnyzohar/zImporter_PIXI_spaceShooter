@@ -20,7 +20,8 @@ export class Magnet extends Entity {
         this.circle.lineStyle(2, 0x00FF00, 0.5);
         this.circle.drawCircle(0, 0, this.radius!);
         this.circle.endFill();
-        Model.stage?.addChild(this.circle);
+        let gameContainer = Model.stage?.get("gameContainer")!;
+        gameContainer.addChild(this.circle);
     }
 
 
@@ -52,7 +53,8 @@ export class Magnet extends Entity {
         if (this.isDestroyed) return;
         super.destroyEntity();
         if (this.circle) {
-            Model.stage?.removeChild(this.circle);
+            let gameContainer = Model.stage?.get("gameContainer")!;
+            gameContainer.removeChild(this.circle);
             this.circle = null!;
         }
     }

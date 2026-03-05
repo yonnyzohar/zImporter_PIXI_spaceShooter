@@ -30,7 +30,8 @@ export class Collectible extends Entity {
         this.isDestroyed = false;
         this.x = _x;
         this.y = _y;
-        Model.stage?.addChild(this.asset!);
+        let gameContainer = Model.stage?.get("gameContainer")!;
+        gameContainer.addChild(this.asset!);
         Updatables.add(this);
         this.currTime = 0;
         this.asset!.alpha = 1;

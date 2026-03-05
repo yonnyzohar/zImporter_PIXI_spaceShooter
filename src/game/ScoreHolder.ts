@@ -2,6 +2,7 @@ import { ZScene } from "zimporter-pixi/dist/ZScene";
 import { EventsManager } from "../core/EventsManager";
 import { Model } from "./Model";
 import * as PIXI from 'pixi.js';
+import { ZContainer } from "zimporter-pixi";
 
 
 
@@ -13,28 +14,30 @@ export class ScoreHolder {
         let scene: ZScene = ZScene.getSceneById("game-scene")!;
         let dimensions = scene.getInnerDimensions();
         EventsManager.addListener("COIN_COLLECTED", this.onCoinCollected);
+        EventsManager.addListener("ENEMY_DESTROYED", this.onEnemyDestroyed);
         let scoreContainer = Model.stage?.get("scoreContainer")!;
+        let scoreInner = scoreContainer.get("scoreInner") as ZContainer;
 
-        scoreContainer?.addChild(this.view);
-        this.view.style = new PIXI.TextStyle({
-            fill: '#ffffff',
-            fontSize: 14,
-        });
-        this.view.text = `Score : ${this.score}`;
+        scoreInner.setText(`Score : ${this.score}`);
     }
 
     destroy() {
         EventsManager.removeListener("COIN_COLLECTED", this.onCoinCollected);
+        EventsManager.removeListener("ENEMY_DESTROYED", this.onEnemyDestroyed);
     }
 
-    private onEnemyDestroyed = (enemyVal: number = 0) => {
-        this.score += enemyVal;
-        this.view.text = `Score : ${this.score}`;
+    private onEnemyDestroyed = (data: { x: number; y: number; value: number }) => {
+        this.score += data?.value || 0;
+        let scoreContainer = Model.stage?.get("scoreContainer")!;
+        let scoreInner = scoreContainer.get("scoreInner") as ZContainer;
+        scoreInner.setText(`Score : ${this.score}`);
     };
 
     private onCoinCollected = (collectibleVal: number = 0) => {
         this.score += collectibleVal;
-        this.view.text = `Score : ${this.score}`;
+        let scoreContainer = Model.stage?.get("scoreContainer")!;
+        let scoreInner = scoreContainer.get("scoreInner") as ZContainer;
+        scoreInner.setText(`Score : ${this.score}`);
     };
 
 

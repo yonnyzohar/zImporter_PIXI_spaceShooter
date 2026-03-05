@@ -75,9 +75,10 @@ export class Game {
         if (!this.stars) {
             this.stars = new Stars(levelsObj.starsParams, Model.stage!);
         }
-        // planets layer added right after stars so it renders above stars but below everything else
+        // planets layer added inside gameContainer at index 0 so it renders below all game entities
         if (!this.planetsManager) {
-            this.planetsManager = new PlanetsManager(Model.stage!);
+            const gameContainer = Model.stage?.get("gameContainer")!;
+            this.planetsManager = new PlanetsManager(gameContainer);
         }
 
         levelsObj.shipParams.grid = Model.shipGrid;
@@ -193,12 +194,13 @@ export class Game {
                 }
                 anim.x = obj.x;
                 anim.y = obj.y;
-                Model.stage!.addChild(anim);
+                let gameContainer = Model.stage?.get("gameContainer")!;
+                gameContainer.addChild(anim);
                 anim.play();
                 anim.addStateEndEventListener(() => {
                     anim.stop();
                     anim.removeStateEndEventListener();
-                    Model.stage!.removeChild(anim);
+                    gameContainer.removeChild(anim);
                 });
             }
         }
@@ -219,7 +221,7 @@ export class Game {
         EventsManager.removeListener('WEAPON_PICKUP', this.onWeaponPickup.bind(this));
         EventsManager.removeListener('SHIELD_PICKUP', this.onShieldPickup.bind(this));
         EventsManager.removeListener('ENEMY_DESTROYED', this.onEnemyDestroyed.bind(this));
-
+        if (this.gameOver) return;
         this.gameOver = true;
         this.win = win;
         const scene: ZScene = ZScene.getSceneById("game-scene")!;
@@ -235,10 +237,8 @@ export class Game {
         }
 
         const dimensions = scene.getInnerDimensions();
-
-        anim.x = dimensions.width / 2;
-        anim.y = dimensions.height / 2;
-        Model.stage!.addChild(anim);
+        let calloutMarker = Model.stage?.get("calloutMarker")!;
+        calloutMarker.addChild(anim);
         anim.scale.set(0.9, 0.9);
         anim.play();
         anim.addStateEndEventListener(() => {
@@ -248,7 +248,7 @@ export class Game {
             Updatables.clearWithCleanup();
             anim.stop();
             anim.removeStateEndEventListener();
-            Model.stage!.removeChild(anim);
+            calloutMarker.removeChild(anim);
             if (callback) callback();
         });
 
