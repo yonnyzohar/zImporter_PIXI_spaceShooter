@@ -30,7 +30,7 @@ export class Main {
             Model.stage = stage;
 
             // Find the "frame" container and keep a reference so it stays on top
-            this.frame = stage.get("hud");
+            this.frame = stage.get("hud") as PIXI.Container;
 
             resizeCanvas?.();
             this.game = new Game();
@@ -107,10 +107,6 @@ export class Main {
     update(dt: number) {
         if (this.game) {
             this.game.update(dt);
-        }
-        // Keep "frame" always on top
-        if (this.frame && this.frame.parent) {
-            this.frame.parent.addChild(this.frame);
         }
     }
 }

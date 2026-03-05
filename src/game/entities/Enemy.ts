@@ -20,6 +20,7 @@ export class Enemy extends Entity {
     private ship: Entity | null = null;
     cannon: Cannon | null = null;
     private fireRadius: number = 0;
+    private value: number = 0;
 
     constructor(params: EnemyObj) {
         super(params);
@@ -27,6 +28,7 @@ export class Enemy extends Entity {
         this.pool = params.pool!;
 
         this.speed = params.speed!;
+        this.value = params.value || 0;
 
         if (params.cannonName) {
             params.cannonObj = Model.weapons[params.cannonName];
@@ -53,7 +55,8 @@ export class Enemy extends Entity {
         this.y = _y;
         this.initialXOffset = Math.random() * 6.24;
         Updatables.add(this);
-        Model.stage?.addChild(this.asset!);
+        let gameContainer = Model.stage?.get("gameContainer")!;
+        gameContainer.addChild(this.asset!);
         this.asset!.name = "enemy_" + (Enemy.globalId++);
     }
 
@@ -125,7 +128,7 @@ export class Enemy extends Entity {
         if (this.isDestroyed) return;
         this.pool.putBack(this);
         this.asset?.removeFromParent();
-        EventsManager.emit('ENEMY_DESTROYED', { x: this.x!, y: this.y! });
+        EventsManager.emit('ENEMY_DESTROYED', { x: this.x!, y: this.y!, value: this.value });
         Updatables.remove(this);
         super.destroyEntity();
 

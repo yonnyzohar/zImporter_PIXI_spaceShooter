@@ -71,7 +71,8 @@ export class Explosion extends Entity {
             asset!.y = obj.y;
             asset!.pivotX = asset!.width / 2;
             asset!.pivotY = asset!.height / 2;
-            Model.stage?.addChild(asset!);
+            let gameContainer = Model.stage?.get("gameContainer")!;
+            gameContainer.addChild(asset!);
         }
         this.num = num;
         Updatables.add(this);
@@ -100,9 +101,10 @@ export class Explosion extends Entity {
     destroyEntity() {
         this.pool!.putBack(this);
         Updatables.remove(this);
+        let gameContainer = Model.stage?.get("gameContainer")!;
         for (let i = 0; i < this.num; i++) {
             const obj = this.smalls[i];
-            Model.stage?.removeChild(obj.asset);
+            gameContainer.removeChild(obj.asset);
         }
     }
 }

@@ -30,7 +30,8 @@ export class Shield {
 
             let s = new Entity(params);
             s.setGrid(Model.enemiesGrid);
-            Model.stage?.addChild(s.asset!);
+            let gameContainer = Model.stage?.get("gameContainer")!;
+            gameContainer.addChild(s.asset!);
 
             Updatables.add(s);
             this.shields.push({ degree: curr, entity: s! });

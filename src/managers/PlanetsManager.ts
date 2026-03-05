@@ -22,7 +22,7 @@ export class PlanetsManager {
 
     constructor(parentStage: PIXI.Container) {
         this.container = new PIXI.Container();
-        parentStage.addChild(this.container);
+        parentStage.addChildAt(this.container, 0);
         this.nextSpawn = this.randomInterval();
     }
 

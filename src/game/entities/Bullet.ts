@@ -27,7 +27,8 @@ export class Bullet extends Entity {
         this.angle = initialAngle;
         this.x = _x - (this.w / 2);
         this.y = _y;
-        Model.stage?.addChild(this.asset!);
+        let gameContainer = Model.stage?.get("gameContainer")!;
+        gameContainer.addChild(this.asset!);
         this.asset!.x = this.x;
         this.asset!.y = this.y;
         this.asset!.rotation = initialAngle + Math.PI / 2;

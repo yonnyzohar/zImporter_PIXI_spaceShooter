@@ -26,14 +26,16 @@ export class Ship extends Entity {
     disableRendering = false;
     shock = false;
     shockVal = 0;
+    private gameContainer: PIXI.Container;
 
     constructor(params: ShipObj) {
         super(params);
         this.speed = params.speed!;
         this.currCannonName = params.cannonName!;
         let dimensions = ZScene.getSceneById("game-scene")?.getInnerDimensions();
-
-        Model.stage?.addChild(this.asset!);
+        let gameContainer = Model.stage?.get("gameContainer")!;
+        gameContainer.addChild(this.asset!);
+        this.gameContainer = gameContainer;
         this.x = dimensions!.width / 2;
         this.y = dimensions!.height / 2;
         this.asset!.x = this.x;
@@ -228,8 +230,7 @@ export class Ship extends Entity {
                 let collision = collisions[i];
                 collision.drawCircle(true);
 
-                collision.destroyEntity();
-                EventsManager.emit('ENEMY_DESTROYED', { x: collision.x, y: collision.y });
+                collision.destroyEntity(); // Enemy.destroyEntity() already emits ENEMY_DESTROYED
                 if (!this.shield) {
                     this.shock = true;
                     this.shockVal = 0;
@@ -275,12 +276,12 @@ export class Ship extends Entity {
             }
         }
         if (render) {
-            if (!Model.stage!.children.includes(this.asset!)) {
-                Model.stage!.addChild(this.asset!);
+            if (!this.gameContainer.children.includes(this.asset!)) {
+                this.gameContainer.addChild(this.asset!);
             }
         } else {
-            if (Model.stage!.children.includes(this.asset!)) {
-                Model.stage!.removeChild(this.asset!);
+            if (this.gameContainer.children.includes(this.asset!)) {
+                this.gameContainer.removeChild(this.asset!);
             }
         }
     }
