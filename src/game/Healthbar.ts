@@ -6,13 +6,27 @@ export class Healthbar extends PIXI.Container {
     private maxHealth: number;
     private currentHealth: number;
 
-    constructor(maxHealth: number) {
+    constructor(params: { numLives: number }) {
         super();
-        this.maxHealth = maxHealth;
-        this.currentHealth = maxHealth;
+        this.maxHealth = params.numLives;
+        this.currentHealth = params.numLives;
         this.bar = new PIXI.Graphics();
         this.addChild(this.bar);
         this.drawBar();
+    }
+
+    damage(amount: number = 1) {
+        this.currentHealth = Math.max(0, this.currentHealth - amount);
+        this.drawBar();
+    }
+
+    heal(amount: number = 1) {
+        this.currentHealth = Math.min(this.maxHealth, this.currentHealth + amount);
+        this.drawBar();
+    }
+
+    isDead(): boolean {
+        return this.currentHealth <= 0;
     }
 
     setHealth(health: number) {
@@ -28,6 +42,7 @@ export class Healthbar extends PIXI.Container {
         this.bar.beginFill(0x00ff00);
         this.bar.drawRect(0, 0, 100 * (this.currentHealth / this.maxHealth), 10);
         this.bar.endFill();
-        Model.stage!.addChild(this);
+        let livesContainer = Model.stage?.get("livesContainer")!;
+        livesContainer.addChild(this);
     }
 }

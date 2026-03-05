@@ -95,6 +95,8 @@ export class Game {
         EventsManager.addListener('WEAPON_PICKUP', this.onWeaponPickup.bind(this));
         EventsManager.addListener('SHIELD_PICKUP', this.onShieldPickup.bind(this));
         EventsManager.addListener('MAGNET_PICKUP', this.onMagnetPickup.bind(this));
+        EventsManager.addListener('HEALTHPACK_PICKUP', this.onHealthpackPickup.bind(this));
+        EventsManager.addListener('SHIP_COLISSION', this.onShipHit.bind(this));
         EventsManager.addListener("TARGET_HIT", this.onTargetHit.bind(this));
     }
 
@@ -102,7 +104,32 @@ export class Game {
         const target = obj.target;
         if (target instanceof Enemy) {
             target.destroyEntity();
+        } else if (target === this.ship) {
+            this.onShipHit();
         }
+    }
+
+    private onShipHit() {
+        if (this.gameOver) return;
+        if (this.ship.shield) return;
+        this.healthbar.damage(0.25);
+        this.ship.shock = true;
+        this.ship.shockVal = 0;
+        if (this.healthbar.isDead()) {
+            // spawn a big explosion at the ship's position
+            const pool = PoolsManager.getPool(Model.explosions.defaultExplosion.assetName!, Model.explosions.defaultExplosion);
+            for (let i = 0; i < 5; i++) {
+                const explosion = pool!.get() as unknown as Explosion;
+                const offsetX = (Math.random() - 0.5) * 60;
+                const offsetY = (Math.random() - 0.5) * 60;
+                explosion.spawn(this.ship.x! + offsetX, this.ship.y! + offsetY);
+            }
+            EventsManager.emit('GAME_OVER', { win: false });
+        }
+    }
+
+    private onHealthpackPickup() {
+        this.healthbar.heal(1);
     }
 
     onMagnetPickup(obj: MagnetObj) {
@@ -212,6 +239,7 @@ export class Game {
         anim.x = dimensions.width / 2;
         anim.y = dimensions.height / 2;
         Model.stage!.addChild(anim);
+        anim.scale.set(0.9, 0.9);
         anim.play();
         anim.addStateEndEventListener(() => {
             this.ship.destroyEntity();

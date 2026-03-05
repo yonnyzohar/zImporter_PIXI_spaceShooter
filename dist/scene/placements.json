@@ -374,13 +374,8 @@
           "pivotX": 0,
           "pivotY": 0,
           "visible": true,
-          "isAnchored": true,
+          "isAnchored": false,
           "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          },
-          "anchorType": "center",
-          "anchorPercentage": {
             "x": 0,
             "y": 0
           }
@@ -391,7 +386,7 @@
           "rotation": 0,
           "scaleX": 0.54,
           "scaleY": 0.54,
-          "alpha": 0.69,
+          "alpha": 0.83,
           "pivotX": 0,
           "pivotY": 0,
           "visible": true,
@@ -2316,8 +2311,8 @@
           }
         },
         "landscape": {
-          "x": 533.22,
-          "y": -116.94,
+          "x": 533,
+          "y": -117,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -2358,7 +2353,48 @@
         },
         "landscape": {
           "x": 0,
-          "y": -0.7831620166421871,
+          "y": -1,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "editorOnly": false,
+        "name": "HudTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "hud",
+        "filters": {},
+        "portrait": {
+          "x": 4,
+          "y": 7,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 4,
+          "y": 7,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -2383,8 +2419,8 @@
         {
           "type": "img",
           "name": "BGTemplate_IMG",
-          "width": 2300,
-          "height": 1190,
+          "width": 1184,
+          "height": 1184,
           "x": 0,
           "y": 0,
           "pivotX": 0,
@@ -3995,6 +4031,256 @@
       ],
       "type": "asset",
       "name": "Templatexd48"
+    },
+    "HudTemplate": {
+      "children": [
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Templateg0go",
+          "template": true,
+          "guide": false,
+          "instanceName": "livesContainer",
+          "filters": {},
+          "portrait": {
+            "x": 37,
+            "y": 37,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 41,
+            "y": 44,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "ScoreTemplate",
+          "template": true,
+          "guide": false,
+          "instanceName": "scoreContainer",
+          "filters": {},
+          "portrait": {
+            "x": 472,
+            "y": 39,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 945,
+            "y": 38,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Templateg0go",
+          "template": true,
+          "guide": false,
+          "instanceName": "meterSpawn",
+          "filters": {},
+          "portrait": {
+            "x": 38,
+            "y": 1060,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 41,
+            "y": 564,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "FrameTemplate",
+          "template": true,
+          "guide": false,
+          "instanceName": "frame",
+          "filters": {},
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ],
+      "type": "asset",
+      "name": "HudTemplate"
+    },
+    "Templateg0go": {
+      "children": [],
+      "type": "asset",
+      "name": "Templateg0go"
+    },
+    "ScoreTemplate": {
+      "children": [],
+      "type": "asset",
+      "name": "ScoreTemplate"
+    },
+    "FrameTemplate": {
+      "children": [
+        {
+          "type": "9slice",
+          "name": "FrameTemplate_9S",
+          "width": 628.2550497918874,
+          "height": 1122.8987543214369,
+          "pivotX": 0,
+          "pivotY": 0,
+          "origWidth": 360,
+          "origHeight": 360,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/pasted_19af5890-5f48-4557-8ca4-a6c78d6dea3b.png",
+          "filters": {},
+          "left": 40,
+          "right": 40,
+          "top": 40,
+          "bottom": 40,
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorType": "none",
+            "anchorPercentage": {
+              "x": 0,
+              "y": 0
+            },
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 628.2550497918874,
+            "height": 1122.8987543214369
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorType": "none",
+            "anchorPercentage": {
+              "x": 0,
+              "y": 0
+            },
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 1130.6517904425898,
+            "height": 629.805657016118
+          }
+        }
+      ],
+      "type": "asset",
+      "name": "FrameTemplate"
     }
   },
   "fonts": [
