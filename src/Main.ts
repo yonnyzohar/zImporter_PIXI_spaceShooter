@@ -6,6 +6,7 @@ import { EventsManager } from './core/EventsManager';
 import { ZScene } from 'zimporter-pixi/dist/ZScene';
 import { ZSceneStack } from 'zimporter-pixi/dist/ZSceneStack';
 import { ZContainer } from 'zimporter-pixi/dist/ZContainer';
+import { MobileControls } from './game/MobileControls';
 
 const LEFT_KEY = 'ArrowLeft';
 const RIGHT_KEY = 'ArrowRight';
@@ -15,6 +16,7 @@ export class Main {
 
     private game: Game;
     private frame: PIXI.DisplayObject | null = null;
+    private mobileControls: MobileControls | null = null;
 
 
 
@@ -37,6 +39,7 @@ export class Main {
 
             resizeCanvas?.();
             this.game = new Game();
+            this.mobileControls = new MobileControls();
 
         });
         //EventsManager.addListener('MENU_SPACE_PRESSED', game, onMenuSpacePressed);
