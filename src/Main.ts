@@ -32,6 +32,7 @@ export class Main {
             // Find the "frame" container and keep a reference so it stays on top
             this.frame = stage.get("hud") as PIXI.Container;
 
+
             resizeCanvas?.();
             this.game = new Game();
 
@@ -39,8 +40,6 @@ export class Main {
         //EventsManager.addListener('MENU_SPACE_PRESSED', game, onMenuSpacePressed);
 
         EventsManager.addListener('GAME_OVER', this.onGameOver.bind(this));
-
-
 
         window.addEventListener('keydown', (e) => {
             switch (e.key) {
@@ -86,8 +85,6 @@ export class Main {
         });
     }
 
-
-
     onGameOver(obj: { win: boolean }) {
         this.game.onGameOver(() => {
             if (obj?.win) {
@@ -110,14 +107,3 @@ export class Main {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 
 
 
-import { ZScene } from "zimporter-pixi";
+import { ZScene, ZTimeline } from "zimporter-pixi";
 import { Entity } from "../../core/Entity";
 import { Pool } from "../../core/Pool";
 import { Updatables } from "../../core/Updatables";
@@ -58,6 +58,9 @@ export class Enemy extends Entity {
         let gameContainer = Model.stage?.get("gameContainer")!;
         gameContainer.addChild(this.asset!);
         this.asset!.name = "enemy_" + (Enemy.globalId++);
+        if (this.asset instanceof ZTimeline) {
+            this.asset.gotoAndPlay(0);
+        }
     }
 
     update(dt: number) {
@@ -128,6 +131,9 @@ export class Enemy extends Entity {
         if (this.isDestroyed) return;
         this.pool.putBack(this);
         this.asset?.removeFromParent();
+        if (this.asset instanceof ZTimeline) {
+            this.asset.stop();
+        }
         EventsManager.emit('ENEMY_DESTROYED', { x: this.x!, y: this.y!, value: this.value });
         Updatables.remove(this);
         super.destroyEntity();

@@ -1,5 +1,5 @@
 
-import { ZScene } from "zimporter-pixi";
+import { ZScene, ZTimeline } from "zimporter-pixi";
 import { Entity } from "../core/Entity";
 import { Updatables } from "../core/Updatables";
 import { CollectibleObj, Model } from "./Model";
@@ -35,6 +35,9 @@ export class Collectible extends Entity {
         Updatables.add(this);
         this.currTime = 0;
         this.asset!.alpha = 1;
+        if (this.asset instanceof ZTimeline) {
+            this.asset.gotoAndPlay(0);
+        }
 
     }
 
@@ -64,6 +67,9 @@ export class Collectible extends Entity {
         if (this.isDestroyed) return;
         this.pool!.putBack(this);
         this.asset?.removeFromParent();
+        if (this.asset instanceof ZTimeline) {
+            this.asset.stop();
+        }
         Updatables.remove(this);
         super.destroyEntity();
     }
