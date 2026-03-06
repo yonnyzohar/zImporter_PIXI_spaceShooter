@@ -38,8 +38,12 @@ export class Main {
 
 
             resizeCanvas?.();
-            this.game = new Game();
-            this.mobileControls = new MobileControls();
+
+            // Show the logo splash and wait for any interaction before starting
+            this.showSplash(() => {
+                this.game = new Game();
+                this.mobileControls = new MobileControls();
+            });
 
         });
         //EventsManager.addListener('MENU_SPACE_PRESSED', game, onMenuSpacePressed);
@@ -110,5 +114,32 @@ export class Main {
         if (this.game) {
             this.game.update(dt);
         }
+    }
+
+    private showSplash(onDismiss: () => void) {
+        const logo = Model.stage?.get('logo') as ZContainer | null;
+        if (!logo) {
+            // No logo asset — start immediately
+            onDismiss();
+            return;
+        }
+
+        logo.visible = true;
+
+        // Make the whole stage interactive so any tap/click dismisses it
+        (logo as any).eventMode = 'static';
+        (logo as any).cursor = 'pointer';
+
+        const dismiss = () => {
+            logo.visible = false;
+            (logo as any).off('pointerdown', dismiss);
+            window.removeEventListener('keydown', onKey);
+            onDismiss();
+        };
+
+        const onKey = () => dismiss();
+
+        logo.on('pointerdown', dismiss);
+        window.addEventListener('keydown', onKey, { once: true });
     }
 }
