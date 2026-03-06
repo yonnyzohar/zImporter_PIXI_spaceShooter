@@ -21,22 +21,80 @@ function resizeCanvas() {
 
 window.addEventListener("resize", () => {
   resizeCanvas();
+  positionPreloader();
 });
 
 
 
 (globalThis as any).__PIXI_APP__ = app;
 
-var main = new Main(app.stage, resizeCanvas);
+// ── Preloader ──────────────────────────────────────────────────────────────
+const preloaderContainer = new PIXI.Container();
+
+const preloaderBg = new PIXI.Graphics();
+preloaderBg.beginFill(0x000000);
+preloaderBg.drawRect(0, 0, window.innerWidth, window.innerHeight);
+preloaderBg.endFill();
+preloaderContainer.addChild(preloaderBg);
+
+const BAR_W = 300;
+const BAR_H = 20;
+const barBg = new PIXI.Graphics();
+barBg.beginFill(0x333333);
+barBg.drawRoundedRect(0, 0, BAR_W, BAR_H, BAR_H / 2);
+barBg.endFill();
+
+const barFill = new PIXI.Graphics();
+
+const loadingLabel = new PIXI.Text('Loading... 0%', {
+  fontSize: 20,
+  fill: 0xffffff,
+  fontFamily: 'Arial'
+});
+
+preloaderContainer.addChild(barBg);
+preloaderContainer.addChild(barFill);
+preloaderContainer.addChild(loadingLabel);
+
+function positionPreloader() {
+  const cx = window.innerWidth / 2;
+  const cy = window.innerHeight / 2;
+  preloaderBg.clear();
+  preloaderBg.beginFill(0x000000);
+  preloaderBg.drawRect(0, 0, window.innerWidth, window.innerHeight);
+  preloaderBg.endFill();
+  barBg.x = cx - BAR_W / 2;
+  barBg.y = cy - BAR_H / 2;
+  barFill.x = barBg.x;
+  barFill.y = barBg.y;
+  loadingLabel.x = cx - loadingLabel.width / 2;
+  loadingLabel.y = cy - BAR_H / 2 - 36;
+}
+positionPreloader();
+
+app.stage.addChild(preloaderContainer);
+
+function updatePreloader(per: number) {
+  const pct = Math.floor(per * 100);
+  loadingLabel.text = `Loading... ${pct}%`;
+  loadingLabel.x = window.innerWidth / 2 - loadingLabel.width / 2;
+  barFill.clear();
+  barFill.beginFill(0x4488ff);
+  barFill.drawRoundedRect(0, 0, BAR_W * per, BAR_H, BAR_H / 2);
+  barFill.endFill();
+}
+
+function hidePreloader() {
+  app.stage.removeChild(preloaderContainer);
+}
+// ───────────────────────────────────────────────────────────────────────────
+
+var main = new Main(app.stage, resizeCanvas, updatePreloader, hidePreloader);
 
 
 // Append the app's view to the DOM
 document.body.appendChild(app.view as any);
 ZUpdatables.init(targetFPS);
-
-//const fpsText = new PIXI.Text('FPS: 0', { fontSize: 24, fill: 'white' });
-//fpsText.position.set(10, 10);
-//app.stage.addChild(fpsText);
 
 // Update FPS every frame
 let lastTime = performance.now();

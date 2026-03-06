@@ -20,14 +20,21 @@ export class Main {
 
 
 
-    constructor(appStage: PIXI.Container, resizeCanvas: () => void) {
+    constructor(
+        appStage: PIXI.Container,
+        resizeCanvas: () => void,
+        updatePreloader?: (per: number) => void,
+        hidePreloader?: () => void
+    ) {
 
 
         let loadPath = (window as any).loadPath || "./scene/";
         //console.log("Game constructor " + loadPath);
         let scene: ZScene = new ZScene("game-scene");
         scene.load(loadPath, () => {
+            hidePreloader?.();
             ZSceneStack.push(scene);
+
             let stage = scene.sceneStage;
             scene.loadStage(appStage);
             Model.stage = stage;
@@ -45,6 +52,8 @@ export class Main {
                 this.mobileControls = new MobileControls();
             });
 
+        }, (progress: number) => {
+            updatePreloader?.(progress);
         });
         //EventsManager.addListener('MENU_SPACE_PRESSED', game, onMenuSpacePressed);
 
@@ -124,14 +133,14 @@ export class Main {
             return;
         }
 
-        logo.visible = true;
+        logo.setVisible(true);
 
         // Make the whole stage interactive so any tap/click dismisses it
         (logo as any).eventMode = 'static';
         (logo as any).cursor = 'pointer';
 
         const dismiss = () => {
-            logo.visible = false;
+            logo.setVisible(false);
             (logo as any).off('pointerdown', dismiss);
             window.removeEventListener('keydown', onKey);
             onDismiss();
