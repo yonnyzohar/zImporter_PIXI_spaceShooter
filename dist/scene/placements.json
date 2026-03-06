@@ -3878,6 +3878,47 @@
             "y": 0
           }
         }
+      },
+      {
+        "type": "asset",
+        "editorOnly": false,
+        "name": "Templateas0l",
+        "template": true,
+        "guide": false,
+        "instanceName": "logo",
+        "filters": {},
+        "portrait": {
+          "x": 101,
+          "y": 306,
+          "rotation": 0,
+          "scaleX": 0.42,
+          "scaleY": 0.42,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 347,
+          "y": 94,
+          "rotation": 0,
+          "scaleX": 0.42,
+          "scaleY": 0.42,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
       }
     ],
     "type": "Container",
@@ -6163,8 +6204,8 @@
         {
           "type": "9slice",
           "name": "FrameTemplate_9S",
-          "width": 1130.6517904425898,
-          "height": 629.805657016118,
+          "width": 628.2550497918874,
+          "height": 1122.8987543214369,
           "pivotX": 0,
           "pivotY": 0,
           "origWidth": 360,
@@ -6508,6 +6549,24 @@
       ],
       "type": "asset",
       "name": "Templateoaaf"
+    },
+    "Templateas0l": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templateas0l_IMG",
+          "width": 1024,
+          "height": 1024,
+          "x": 0,
+          "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
+          "filePath": "images/tempFile1772812951390.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templateas0l"
     }
   },
   "fonts": [
