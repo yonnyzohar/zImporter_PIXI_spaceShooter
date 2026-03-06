@@ -2117,47 +2117,6 @@
       {
         "type": "asset",
         "editorOnly": false,
-        "name": "Templatetqgi",
-        "template": true,
-        "guide": true,
-        "instanceName": "instance_b5cp",
-        "filters": {},
-        "portrait": {
-          "x": -248,
-          "y": 446,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        "landscape": {
-          "x": -248,
-          "y": 446,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        }
-      },
-      {
-        "type": "asset",
-        "editorOnly": false,
         "name": "Templateucm5",
         "template": true,
         "guide": true,
@@ -3863,7 +3822,7 @@
           }
         },
         "landscape": {
-          "x": 1096,
+          "x": 1091,
           "y": 569,
           "rotation": 0,
           "scaleX": 1,
@@ -3871,6 +3830,47 @@
           "alpha": 1,
           "pivotX": 0,
           "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "type": "asset",
+        "editorOnly": false,
+        "name": "Template83q9",
+        "template": true,
+        "guide": false,
+        "instanceName": "keypad",
+        "filters": {},
+        "portrait": {
+          "x": 450,
+          "y": 937,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 0.44,
+          "pivotX": 127.2377046312505,
+          "pivotY": 113.64484355463571,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 944,
+          "y": 455,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 0.44,
+          "pivotX": 127.2377046312505,
+          "pivotY": 113.64484355463571,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -4063,24 +4063,6 @@
       ],
       "type": "asset",
       "name": "Template5kj7"
-    },
-    "Templatetqgi": {
-      "children": [
-        {
-          "type": "img",
-          "name": "Templatetqgi_IMG",
-          "width": 45,
-          "height": 22,
-          "x": 0,
-          "y": 0,
-          "pivotX": 0,
-          "pivotY": 0,
-          "filePath": "images/שכבה 4.png",
-          "filters": {}
-        }
-      ],
-      "type": "asset",
-      "name": "Templatetqgi"
     },
     "Templateucm5": {
       "children": [
@@ -6250,6 +6232,282 @@
       "children": [],
       "type": "asset",
       "name": "Templatefzhj"
+    },
+    "Template83q9": {
+      "children": [
+        {
+          "portrait": {
+            "x": 0,
+            "y": 74,
+            "rotation": 0,
+            "scaleX": 1.98,
+            "scaleY": 3.55,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 74.74,
+            "rotation": 0,
+            "scaleX": 1.98,
+            "scaleY": 3.55,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "type": "btn",
+          "name": "Templatetqgi",
+          "guide": false,
+          "template": true,
+          "instanceName": "leftBTN",
+          "editorOnly": false,
+          "filters": {}
+        },
+        {
+          "portrait": {
+            "x": 159,
+            "y": 74,
+            "rotation": 0,
+            "scaleX": 1.98,
+            "scaleY": 3.55,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 159.71,
+            "y": 74.74,
+            "rotation": 0,
+            "scaleX": 1.98,
+            "scaleY": 3.55,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "type": "btn",
+          "name": "Templatetqgi",
+          "guide": false,
+          "template": true,
+          "instanceName": "rightBTN",
+          "editorOnly": false,
+          "filters": {}
+        },
+        {
+          "portrait": {
+            "x": 77,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1.98,
+            "scaleY": 3.55,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 77.37,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1.98,
+            "scaleY": 3.55,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "type": "btn",
+          "name": "Templatetqgi",
+          "guide": false,
+          "template": true,
+          "instanceName": "upBTN",
+          "editorOnly": false,
+          "filters": {}
+        },
+        {
+          "portrait": {
+            "x": 77,
+            "y": 144,
+            "rotation": 0,
+            "scaleX": 1.98,
+            "scaleY": 3.55,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 77.37,
+            "y": 144.96,
+            "rotation": 0,
+            "scaleX": 1.98,
+            "scaleY": 3.55,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "type": "btn",
+          "name": "Templatetqgi",
+          "guide": false,
+          "template": true,
+          "instanceName": "downBTN",
+          "editorOnly": false,
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Template83q9"
+    },
+    "Templatetqgi": {
+      "type": "btn",
+      "name": "Templatetqgi",
+      "children": [
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Templateoaaf",
+          "template": true,
+          "guide": false,
+          "instanceName": "upState",
+          "filters": {},
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Templateoaaf",
+          "template": true,
+          "guide": false,
+          "instanceName": "downState",
+          "filters": {},
+          "portrait": {
+            "x": 2,
+            "y": 1,
+            "rotation": 0,
+            "scaleX": 0.84,
+            "scaleY": 0.84,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 2,
+            "y": 1,
+            "rotation": 0,
+            "scaleX": 0.84,
+            "scaleY": 0.84,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ]
+    },
+    "Templateoaaf": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templateoaaf_IMG",
+          "width": 45,
+          "height": 22,
+          "x": 0,
+          "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
+          "filePath": "images/שכבה 4.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templateoaaf"
     }
   },
   "fonts": [
