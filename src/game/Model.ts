@@ -271,6 +271,42 @@ export const Model: ModelInterface = {
             type: "entity",
             cannonName: "defaultCannon",
             isAddedToGrid: true
+        },
+        ship2: {
+            assetName: "Ship2",
+            speed: 300,
+            acceleration: 0.06,
+            deceleration: 0.05,
+            type: "entity",
+            cannonName: "defaultCannon",
+            isAddedToGrid: true
+        },
+        ship3: {
+            assetName: "Ship3",
+            speed: 300,
+            acceleration: 0.06,
+            deceleration: 0.05,
+            type: "entity",
+            cannonName: "defaultCannon",
+            isAddedToGrid: true
+        },
+        ship4: {
+            assetName: "Ship4",
+            speed: 300,
+            acceleration: 0.06,
+            deceleration: 0.05,
+            type: "entity",
+            cannonName: "defaultCannon",
+            isAddedToGrid: true
+        },
+        ship5: {
+            assetName: "Ship5",
+            speed: 300,
+            acceleration: 0.06,
+            deceleration: 0.05,
+            type: "entity",
+            cannonName: "defaultCannon",
+            isAddedToGrid: true
         }
     },
     enemies: {
@@ -460,7 +496,7 @@ Model.levels = [
     // Level 0 — Tutorial: slow trickle, single enemy type, gentle introduction
     {
         explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj, // Ship1
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
             spawnRate: 2.0,
@@ -472,7 +508,7 @@ Model.levels = [
     // Level 1 — Scout Wave: two enemy types, moderate pace
     {
         explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        shipParams: Utils.deepcopy(Model.ships.ship2) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
             spawnRate: 1.2,
@@ -484,7 +520,7 @@ Model.levels = [
     // Level 2 — Mixed Assault: three enemy types, tighter spacing
     {
         explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        shipParams: Utils.deepcopy(Model.ships.ship3) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
             spawnRate: 0.9,
@@ -496,7 +532,7 @@ Model.levels = [
     // Level 3 — Speed Run: fast movers, frequent triple-shot enemies
     {
         explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        shipParams: Utils.deepcopy(Model.ships.ship4) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
             spawnRate: 0.7,
@@ -508,7 +544,7 @@ Model.levels = [
     // Level 4 — Heavy Hitters: fast cannons enter the mix
     {
         explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        shipParams: Utils.deepcopy(Model.ships.ship5) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
             spawnRate: 0.65,
@@ -520,7 +556,7 @@ Model.levels = [
     // Level 5 — Swarm: rapid spawns, lots of weak enemies
     {
         explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj, // Ship1
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
             spawnRate: 0.4,
@@ -532,7 +568,7 @@ Model.levels = [
     // Level 6 — Elite Squad: spread-shot enemies, slower but deadly
     {
         explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        shipParams: Utils.deepcopy(Model.ships.ship2) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
             spawnRate: 0.55,
@@ -544,7 +580,7 @@ Model.levels = [
     // Level 7 — Blitz: fast spawn mix of all serious enemies
     {
         explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        shipParams: Utils.deepcopy(Model.ships.ship3) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
             spawnRate: 0.3,
@@ -556,7 +592,7 @@ Model.levels = [
     // Level 8 — All Hands: every enemy type, high pressure
     {
         explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        shipParams: Utils.deepcopy(Model.ships.ship4) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
             spawnRate: 0.25,
@@ -568,7 +604,7 @@ Model.levels = [
     // Level 9 — Apocalypse: maximum chaos, everything at once
     {
         explosionParams: Utils.deepcopy(Model.explosions.defaultExplosion) as EntityObj,
-        shipParams: Utils.deepcopy(Model.ships.defaultShip) as ShipObj,
+        shipParams: Utils.deepcopy(Model.ships.ship5) as ShipObj,
         starsParams: Utils.deepcopy(Model.stars.defaultStars) as StarObj,
         enemyManagerParams: {
             spawnRate: 0.18,
