@@ -1483,57 +1483,57 @@
       },
       {
         "alpha": 0.81,
-        "scaleX": 1.4691113183334938,
-        "scaleY": 1.469111318333494
+        "scaleX": 1.1871948661736496,
+        "scaleY": 1.1871948661736496
       },
       {
         "alpha": 0.6399999999999999,
-        "scaleX": 1.888842497895041,
-        "scaleY": 1.888842497895041
+        "scaleX": 1.3546850095921783,
+        "scaleY": 1.354685009592178
       },
       {
         "alpha": 0.49,
-        "scaleX": 2.2591935386846416,
-        "scaleY": 2.2591935386846416
+        "scaleX": 1.5024704302555858,
+        "scaleY": 1.5024704302555856
       },
       {
         "alpha": 0.3599999999999999,
-        "scaleX": 2.5801644407022954,
-        "scaleY": 2.580164440702296
+        "scaleX": 1.6305511281638725,
+        "scaleY": 1.630551128163872
       },
       {
         "alpha": 0.25,
-        "scaleX": 2.8517552039480023,
-        "scaleY": 2.8517552039480023
+        "scaleX": 1.738927103317038,
+        "scaleY": 1.7389271033170375
       },
       {
         "alpha": 0.16000000000000003,
-        "scaleX": 3.073965828421762,
-        "scaleY": 3.0739658284217626
+        "scaleX": 1.8275983557150823,
+        "scaleY": 1.8275983557150821
       },
       {
         "alpha": 0.09000000000000008,
-        "scaleX": 3.246796314123576,
-        "scaleY": 3.2467963141235763
+        "scaleX": 1.896564885358006,
+        "scaleY": 1.8965648853580055
       },
       {
         "alpha": 0.040000000000000036,
-        "scaleX": 3.3702466610534425,
-        "scaleY": 3.370246661053443
+        "scaleX": 1.9458266922458085,
+        "scaleY": 1.945826692245808
       },
       {
         "alpha": 0.009999999999999898,
-        "scaleX": 3.444316869211363,
-        "scaleY": 3.4443168692113635
+        "scaleX": 1.9753837763784903,
+        "scaleY": 1.9753837763784898
       },
       {
         "alpha": 0,
-        "scaleX": 3.469006938597336,
-        "scaleY": 3.4690069385973366,
+        "scaleX": 1.9852361377560506,
+        "scaleY": 1.9852361377560501,
         "keyFrame": true,
         "currentFrame": 50,
         "endFrame": 50,
-        "easing": "none"
+        "easing": "easeOut"
       }
     ],
     "textContainer_WinMsg": [
@@ -2568,7 +2568,7 @@
       {
         "type": "asset",
         "editorOnly": false,
-        "name": "Sip3",
+        "name": "Ship3",
         "template": true,
         "guide": true,
         "instanceName": "ship3",
@@ -3837,6 +3837,47 @@
             "y": 0
           }
         }
+      },
+      {
+        "type": "asset",
+        "editorOnly": false,
+        "name": "ScoreTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "levelContainer",
+        "filters": {},
+        "portrait": {
+          "x": 593,
+          "y": 1062,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 1096,
+          "y": 569,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
       }
     ],
     "type": "Container",
@@ -4799,11 +4840,11 @@
       "type": "asset",
       "name": "Ship2"
     },
-    "Sip3": {
+    "Ship3": {
       "children": [
         {
           "type": "img",
-          "name": "Sip3_IMG",
+          "name": "Ship3_IMG",
           "width": 88,
           "height": 93,
           "x": 0,
@@ -4815,7 +4856,7 @@
         }
       ],
       "type": "asset",
-      "name": "Sip3"
+      "name": "Ship3"
     },
     "Ship4": {
       "children": [
@@ -5716,12 +5757,12 @@
           "x": 0,
           "y": 0,
           "rotation": 0,
-          "width": 395,
-          "height": 130,
+          "width": 429,
+          "height": 135,
           "alpha": 1,
           "size": 90,
           "align": "center",
-          "fontName": "HeadLineA",
+          "fontName": "Apple LiGothic",
           "z": 1,
           "stroke": "#042895",
           "strokeThickness": 12,
@@ -5738,7 +5779,7 @@
           "pivotY": 0,
           "lineJoin": "round",
           "fontWeight": "bolder",
-          "uniqueFontName": "HeadLineA_ffffff_90",
+          "uniqueFontName": "AppleLiGothic_ffffff_90",
           "dropShadow": true,
           "dropShadowAngle": 1.43,
           "dropShadowBlur": 0,
@@ -5808,12 +5849,12 @@
           "x": 0,
           "y": 0,
           "rotation": 0,
-          "width": 163,
-          "height": 68,
+          "width": 171,
+          "height": 71,
           "alpha": 1,
           "size": 31,
           "align": "center",
-          "fontName": "Marker Felt",
+          "fontName": "Avenir",
           "z": 1,
           "stroke": "#2b1a0d",
           "strokeThickness": 12,
@@ -5830,7 +5871,7 @@
           "pivotY": 0,
           "lineJoin": "round",
           "fontWeight": "Bold",
-          "uniqueFontName": "MarkerFelt_fff700e10e0e_31",
+          "uniqueFontName": "Avenir_fff700e10e0e_31",
           "dropShadow": true,
           "dropShadowAngle": 0,
           "dropShadowBlur": 10,
@@ -6090,15 +6131,15 @@
           "x": 0,
           "y": 0,
           "rotation": 0,
-          "width": 116,
-          "height": 69,
+          "width": 126,
+          "height": 89,
           "alpha": 1,
           "size": 61,
           "align": "right",
           "fontName": "Apple LiGothic",
           "z": 1,
-          "stroke": "#042895",
-          "strokeThickness": 0,
+          "stroke": "#000105",
+          "strokeThickness": 10,
           "wordWrap": false,
           "wordWrapWidth": 100,
           "breakWords": false,
@@ -6117,9 +6158,19 @@
           "dropShadowBlur": 0,
           "dropShadowColor": "#000000",
           "dropShadowDistance": 5,
-          "fillType": "solid",
+          "fillType": "gradient",
           "filters": {},
-          "color": "#ffae00"
+          "gradientData": {
+            "colors": [
+              16777215,
+              14916610
+            ],
+            "percentages": [
+              0.68,
+              0.74
+            ],
+            "fillGradientType": 0
+          }
         }
       ],
       "type": "asset",
@@ -6202,8 +6253,8 @@
     }
   },
   "fonts": [
-    "HeadLineA_ffffff_90",
-    "MarkerFelt_fff700e10e0e_31"
+    "AppleLiGothic_ffffff_90",
+    "Avenir_fff700e10e0e_31"
   ],
   "fps": 60,
   "cuePoints": {},

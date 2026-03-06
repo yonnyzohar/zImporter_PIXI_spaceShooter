@@ -18,6 +18,7 @@ export class Stars {
     private numStars: number;
     private starsArr: Star[] = [];
     private container: PIXI.Container;
+    private starsContainer: PIXI.Container;
 
     constructor(params: StarObj, parent: PIXI.Container) {
         let scene: ZScene = ZScene.getSceneById("game-scene")!;
@@ -25,7 +26,9 @@ export class Stars {
         this.speed = params.speed;
         this.radius = params.radius;
         this.numStars = params.numStars;
-        this.container = parent;
+        this.starsContainer = new PIXI.Container();
+        parent.addChildAt(this.starsContainer, 0);
+        this.container = this.starsContainer;
 
         let allStates: (string | null)[] = [];
 

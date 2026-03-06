@@ -17,6 +17,7 @@ export class Main {
     private frame: PIXI.DisplayObject | null = null;
 
 
+
     constructor(appStage: PIXI.Container, resizeCanvas: () => void) {
 
 
@@ -31,6 +32,7 @@ export class Main {
 
             // Find the "frame" container and keep a reference so it stays on top
             this.frame = stage.get("hud") as PIXI.Container;
+
 
 
             resizeCanvas?.();

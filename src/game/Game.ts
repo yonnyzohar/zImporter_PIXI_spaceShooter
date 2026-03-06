@@ -20,7 +20,7 @@ import { PlanetsManager } from '../managers/PlanetsManager';
 export class Game {
 
     private timersManager = new TimersManager();
-
+    private levelContainer: ZContainer | null = null;
     private enemyManager!: EnemyManager;
     private ship!: Ship;
     private collectiblesManager!: CollectiblesManager;
@@ -70,15 +70,18 @@ export class Game {
         Model.gridSize = Math.min(dimensions!.width, dimensions!.height) / 5;
 
         const levelsObj = Model.levels[Model.level];
+        this.levelContainer = Model.stage!.get("levelContainer") as ZContainer;
+        (this.levelContainer.get("scoreInner") as ZContainer).setText("LEVEL: " + Model.level.toString());
 
         this.healthbar = new Healthbar(levelsObj.healthParams);
-        if (!this.stars) {
-            this.stars = new Stars(levelsObj.starsParams, Model.stage!);
-        }
+        const gameContainer = Model.stage?.get("gameContainer")!;
         // planets layer added inside gameContainer at index 0 so it renders below all game entities
         if (!this.planetsManager) {
-            const gameContainer = Model.stage?.get("gameContainer")!;
             this.planetsManager = new PlanetsManager(gameContainer);
+        }
+        // stars are added at index 0 of gameContainer (behind planets) so they stay within the game frame
+        if (!this.stars) {
+            this.stars = new Stars(levelsObj.starsParams, gameContainer);
         }
 
         levelsObj.shipParams.grid = Model.shipGrid;
