@@ -19,6 +19,8 @@
         "rotation": 0,
         "scaleX": 1,
         "scaleY": 1,
+        "skewX": 0,
+        "skewY": 0,
         "easing": "easeIn"
       },
       {
@@ -175,6 +177,8 @@
         "rotation": 0,
         "scaleX": 1,
         "scaleY": 1,
+        "skewX": 0,
+        "skewY": 0,
         "easing": "easeIn"
       },
       {
@@ -331,6 +335,8 @@
         "rotation": 0,
         "scaleX": 1,
         "scaleY": 1,
+        "skewX": 0,
+        "skewY": 0,
         "easing": "linear"
       },
       {
@@ -460,6 +466,8 @@
         "rotation": 0,
         "scaleX": 1,
         "scaleY": 1,
+        "skewX": 0,
+        "skewY": 0,
         "easing": "linear"
       },
       {
@@ -636,6 +644,8 @@
         "rotation": 0,
         "scaleX": 1,
         "scaleY": 1,
+        "skewX": 0,
+        "skewY": 0,
         "easing": "linear"
       },
       {
@@ -817,6 +827,8 @@
         "rotation": 0,
         "scaleX": 1,
         "scaleY": 1,
+        "skewX": 0,
+        "skewY": 0,
         "easing": "linear"
       },
       {
@@ -905,6 +917,8 @@
         "rotation": 0,
         "scaleX": 1,
         "scaleY": 1,
+        "skewX": 0,
+        "skewY": 0,
         "easing": "linear"
       },
       {
@@ -1008,6 +1022,8 @@
         "rotation": 0,
         "scaleX": 1,
         "scaleY": 1,
+        "skewX": 0,
+        "skewY": 0,
         "easing": "linear"
       },
       {
@@ -1159,6 +1175,8 @@
         "rotation": 0,
         "scaleX": 1,
         "scaleY": 1,
+        "skewX": 0,
+        "skewY": 0,
         "easing": "linear"
       },
       {
@@ -1310,6 +1328,8 @@
         "rotation": 0,
         "scaleX": 0.45,
         "scaleY": 0.45,
+        "skewX": 0,
+        "skewY": 0,
         "easing": "easeOut"
       },
       {
@@ -1551,6 +1571,8 @@
         "rotation": 0,
         "scaleX": 1,
         "scaleY": 1,
+        "skewX": 0,
+        "skewY": 0,
         "easing": "easeOut"
       },
       {
@@ -1743,6 +1765,47 @@
         },
         "attrs": {
           "fitToScreen": true
+        }
+      },
+      {
+        "type": "asset",
+        "editorOnly": false,
+        "name": "HudTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "hud",
+        "filters": {},
+        "portrait": {
+          "x": 4,
+          "y": 7,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 4,
+          "y": 7,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
         }
       },
       {
@@ -2100,88 +2163,6 @@
         "landscape": {
           "x": -319,
           "y": 543,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        }
-      },
-      {
-        "type": "asset",
-        "editorOnly": false,
-        "name": "Templateucm5",
-        "template": true,
-        "guide": true,
-        "instanceName": "instance_rolo",
-        "filters": {},
-        "portrait": {
-          "x": -336,
-          "y": 637,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        "landscape": {
-          "x": -336,
-          "y": 637,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        }
-      },
-      {
-        "type": "asset",
-        "editorOnly": false,
-        "name": "Template4wpi",
-        "template": true,
-        "guide": true,
-        "instanceName": "instance_us74",
-        "filters": {},
-        "portrait": {
-          "x": -420,
-          "y": 672,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        "landscape": {
-          "x": -420,
-          "y": 672,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -3598,7 +3579,7 @@
         "name": "GameOverTemplate",
         "template": true,
         "guide": true,
-        "instanceName": "instance_8ia5",
+        "instanceName": "gameOverAsset",
         "filters": {},
         "portrait": {
           "x": 533,
@@ -3718,47 +3699,6 @@
       {
         "type": "asset",
         "editorOnly": false,
-        "name": "HudTemplate",
-        "template": true,
-        "guide": false,
-        "instanceName": "hud",
-        "filters": {},
-        "portrait": {
-          "x": 4,
-          "y": 7,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        "landscape": {
-          "x": 4,
-          "y": 7,
-          "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "alpha": 1,
-          "pivotX": 0,
-          "pivotY": 0,
-          "visible": true,
-          "isAnchored": false,
-          "anchorLocalPercentage": {
-            "x": 0,
-            "y": 0
-          }
-        }
-      },
-      {
-        "type": "asset",
-        "editorOnly": false,
         "name": "Templatefzhj",
         "template": true,
         "guide": false,
@@ -3841,7 +3781,7 @@
       {
         "type": "asset",
         "editorOnly": false,
-        "name": "Template83q9",
+        "name": "KeyPadTemplate",
         "template": true,
         "guide": false,
         "instanceName": "keypad",
@@ -3869,8 +3809,8 @@
           "scaleX": 1,
           "scaleY": 1,
           "alpha": 0.44,
-          "pivotX": 127.2377046312505,
-          "pivotY": 113.64484355463571,
+          "pivotX": 127.24,
+          "pivotY": 113.64,
           "visible": true,
           "isAnchored": false,
           "anchorLocalPercentage": {
@@ -3882,7 +3822,7 @@
       {
         "type": "asset",
         "editorOnly": false,
-        "name": "Templateas0l",
+        "name": "LogoTemplate",
         "template": true,
         "guide": false,
         "instanceName": "logo",
@@ -3919,6 +3859,47 @@
             "y": 0
           }
         }
+      },
+      {
+        "type": "toggle",
+        "editorOnly": false,
+        "name": "SoundTemplate",
+        "template": true,
+        "guide": false,
+        "instanceName": "sound_btn",
+        "filters": {},
+        "portrait": {
+          "x": 50,
+          "y": 48,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "landscape": {
+          "x": 50,
+          "y": 48,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "alpha": 1,
+          "pivotX": 0,
+          "pivotY": 0,
+          "visible": true,
+          "isAnchored": false,
+          "anchorLocalPercentage": {
+            "x": 0,
+            "y": 0
+          }
+        }
       }
     ],
     "type": "Container",
@@ -3942,6 +3923,352 @@
       ],
       "type": "fullScreen",
       "name": "BGTemplate"
+    },
+    "HudTemplate": {
+      "children": [
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Templateg0go",
+          "template": true,
+          "guide": false,
+          "instanceName": "livesContainer",
+          "filters": {},
+          "portrait": {
+            "x": 37,
+            "y": 37,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 41,
+            "y": 44,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "ScoreTemplate",
+          "template": true,
+          "guide": false,
+          "instanceName": "scoreContainer",
+          "filters": {},
+          "portrait": {
+            "x": 588,
+            "y": 60,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 1094,
+            "y": 61,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Templateg0go",
+          "template": true,
+          "guide": false,
+          "instanceName": "meterSpawn",
+          "filters": {},
+          "portrait": {
+            "x": 38,
+            "y": 1060,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 41,
+            "y": 564,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "FrameTemplate",
+          "template": true,
+          "guide": false,
+          "instanceName": "frame",
+          "filters": {},
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ],
+      "type": "asset",
+      "name": "HudTemplate"
+    },
+    "Templateg0go": {
+      "children": [],
+      "type": "asset",
+      "name": "Templateg0go"
+    },
+    "ScoreTemplate": {
+      "children": [
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Templatejkfc",
+          "template": true,
+          "guide": false,
+          "instanceName": "scoreInner",
+          "filters": {},
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 0.62,
+            "scaleY": 0.62,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 0.62,
+            "scaleY": 0.62,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ],
+      "type": "asset",
+      "name": "ScoreTemplate"
+    },
+    "Templatejkfc": {
+      "children": [
+        {
+          "text": "Score",
+          "type": "textField",
+          "name": "label",
+          "x": 0,
+          "y": 0,
+          "rotation": 0,
+          "width": 126,
+          "height": 89,
+          "alpha": 1,
+          "size": 61,
+          "align": "right",
+          "fontName": "Apple LiGothic",
+          "z": 1,
+          "stroke": "#000105",
+          "strokeThickness": 10,
+          "wordWrap": false,
+          "wordWrapWidth": 100,
+          "breakWords": false,
+          "leading": 0,
+          "letterSpacing": 0,
+          "padding": 0,
+          "textAnchorX": 1,
+          "textAnchorY": 0.5,
+          "lineHeight": 0,
+          "pivotX": 0,
+          "pivotY": 0,
+          "lineJoin": "round",
+          "fontWeight": "bolder",
+          "dropShadow": false,
+          "dropShadowAngle": 0.5235987755982988,
+          "dropShadowBlur": 0,
+          "dropShadowColor": "#000000",
+          "dropShadowDistance": 5,
+          "fillType": "gradient",
+          "filters": {},
+          "gradientData": {
+            "colors": [
+              16777215,
+              14916610
+            ],
+            "percentages": [
+              0.68,
+              0.74
+            ],
+            "fillGradientType": 0
+          }
+        }
+      ],
+      "type": "asset",
+      "name": "Templatejkfc"
+    },
+    "FrameTemplate": {
+      "children": [
+        {
+          "type": "9slice",
+          "name": "FrameTemplate_9S",
+          "width": 1130.6517904425898,
+          "height": 629.805657016118,
+          "pivotX": 0,
+          "pivotY": 0,
+          "origWidth": 360,
+          "origHeight": 360,
+          "x": 0,
+          "y": 0,
+          "filePath": "images/frame.png",
+          "filters": {},
+          "left": 40,
+          "right": 40,
+          "top": 40,
+          "bottom": 40,
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorType": "none",
+            "anchorPercentage": {
+              "x": 0,
+              "y": 0
+            },
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 628.2550497918874,
+            "height": 1122.8987543214369
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorType": "none",
+            "anchorPercentage": {
+              "x": 0,
+              "y": 0
+            },
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 1130.6517904425898,
+            "height": 629.805657016118
+          }
+        }
+      ],
+      "type": "asset",
+      "name": "FrameTemplate"
     },
     "Templatefvz3": {
       "children": [
@@ -4104,42 +4431,6 @@
       ],
       "type": "asset",
       "name": "Template5kj7"
-    },
-    "Templateucm5": {
-      "children": [
-        {
-          "type": "img",
-          "name": "Templateucm5_IMG",
-          "width": 32,
-          "height": 27,
-          "x": 0,
-          "y": 0,
-          "pivotX": 0,
-          "pivotY": 0,
-          "filePath": "images/unmuteBTN.png",
-          "filters": {}
-        }
-      ],
-      "type": "asset",
-      "name": "Templateucm5"
-    },
-    "Template4wpi": {
-      "children": [
-        {
-          "type": "img",
-          "name": "Template4wpi_IMG",
-          "width": 32,
-          "height": 27,
-          "x": 0,
-          "y": 0,
-          "pivotX": 0,
-          "pivotY": 0,
-          "filePath": "images/muteBTN.png",
-          "filters": {}
-        }
-      ],
-      "type": "asset",
-      "name": "Template4wpi"
     },
     "Template9hlf": {
       "children": [
@@ -4933,15 +5224,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           },
           "landscape": {
             "x": 0,
@@ -4949,15 +5238,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           }
         }
       ],
@@ -5052,15 +5339,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           },
           "landscape": {
             "x": 0,
@@ -5068,15 +5353,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           }
         }
       ],
@@ -5135,15 +5418,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           },
           "landscape": {
             "x": 0,
@@ -5151,15 +5432,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           }
         },
         {
@@ -5176,15 +5455,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           },
           "landscape": {
             "x": 0,
@@ -5192,15 +5469,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           }
         },
         {
@@ -5217,15 +5492,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 0,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 0,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           },
           "landscape": {
             "x": 0,
@@ -5233,15 +5506,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 0,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 0,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           }
         }
       ],
@@ -5336,15 +5607,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           },
           "landscape": {
             "x": 0,
@@ -5352,15 +5621,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           }
         },
         {
@@ -5377,15 +5644,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           },
           "landscape": {
             "x": 0,
@@ -5393,15 +5658,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           }
         },
         {
@@ -5418,15 +5681,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 0,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 0,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           },
           "landscape": {
             "x": 0,
@@ -5434,15 +5695,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 0,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 0,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           }
         },
         {
@@ -5459,15 +5718,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 0,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 0,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           },
           "landscape": {
             "x": 0,
@@ -5475,15 +5732,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 0,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 0,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           }
         }
       ],
@@ -5740,15 +5995,13 @@
             "rotation": 0,
             "scaleX": 0.45,
             "scaleY": 0.45,
-            "alpha": 0.19,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 0.19,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           },
           "landscape": {
             "x": 0,
@@ -5756,15 +6009,13 @@
             "rotation": 0,
             "scaleX": 0.45,
             "scaleY": 0.45,
-            "alpha": 0.19,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 0.19,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           }
         }
       ],
@@ -5832,15 +6083,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           },
           "landscape": {
             "x": 0,
@@ -5848,15 +6097,13 @@
             "rotation": 0,
             "scaleX": 1,
             "scaleY": 1,
-            "alpha": 1,
             "pivotX": 0,
             "pivotY": 0,
-            "visible": true,
+            "alpha": 1,
             "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
+            "visible": true,
+            "skewX": 0,
+            "skewY": 0
           }
         }
       ],
@@ -5923,358 +6170,12 @@
       "type": "asset",
       "name": "Template3wzw"
     },
-    "HudTemplate": {
-      "children": [
-        {
-          "type": "asset",
-          "editorOnly": false,
-          "name": "Templateg0go",
-          "template": true,
-          "guide": false,
-          "instanceName": "livesContainer",
-          "filters": {},
-          "portrait": {
-            "x": 37,
-            "y": 37,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          },
-          "landscape": {
-            "x": 41,
-            "y": 44,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          }
-        },
-        {
-          "type": "asset",
-          "editorOnly": false,
-          "name": "ScoreTemplate",
-          "template": true,
-          "guide": false,
-          "instanceName": "scoreContainer",
-          "filters": {},
-          "portrait": {
-            "x": 588,
-            "y": 60,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          },
-          "landscape": {
-            "x": 1094,
-            "y": 61,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          }
-        },
-        {
-          "type": "asset",
-          "editorOnly": false,
-          "name": "Templateg0go",
-          "template": true,
-          "guide": false,
-          "instanceName": "meterSpawn",
-          "filters": {},
-          "portrait": {
-            "x": 38,
-            "y": 1060,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          },
-          "landscape": {
-            "x": 41,
-            "y": 564,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          }
-        },
-        {
-          "type": "asset",
-          "editorOnly": false,
-          "name": "FrameTemplate",
-          "template": true,
-          "guide": false,
-          "instanceName": "frame",
-          "filters": {},
-          "portrait": {
-            "x": 0,
-            "y": 0,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          },
-          "landscape": {
-            "x": 0,
-            "y": 0,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          }
-        }
-      ],
-      "type": "asset",
-      "name": "HudTemplate"
-    },
-    "Templateg0go": {
-      "children": [],
-      "type": "asset",
-      "name": "Templateg0go"
-    },
-    "ScoreTemplate": {
-      "children": [
-        {
-          "type": "asset",
-          "editorOnly": false,
-          "name": "Templatejkfc",
-          "template": true,
-          "guide": false,
-          "instanceName": "scoreInner",
-          "filters": {},
-          "portrait": {
-            "x": 0,
-            "y": 0,
-            "rotation": 0,
-            "scaleX": 0.62,
-            "scaleY": 0.62,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          },
-          "landscape": {
-            "x": 0,
-            "y": 0,
-            "rotation": 0,
-            "scaleX": 0.62,
-            "scaleY": 0.62,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            }
-          }
-        }
-      ],
-      "type": "asset",
-      "name": "ScoreTemplate"
-    },
-    "Templatejkfc": {
-      "children": [
-        {
-          "text": "Score",
-          "type": "textField",
-          "name": "label",
-          "x": 0,
-          "y": 0,
-          "rotation": 0,
-          "width": 126,
-          "height": 89,
-          "alpha": 1,
-          "size": 61,
-          "align": "right",
-          "fontName": "Apple LiGothic",
-          "z": 1,
-          "stroke": "#000105",
-          "strokeThickness": 10,
-          "wordWrap": false,
-          "wordWrapWidth": 100,
-          "breakWords": false,
-          "leading": 0,
-          "letterSpacing": 0,
-          "padding": 0,
-          "textAnchorX": 1,
-          "textAnchorY": 0.5,
-          "lineHeight": 0,
-          "pivotX": 0,
-          "pivotY": 0,
-          "lineJoin": "round",
-          "fontWeight": "bolder",
-          "dropShadow": false,
-          "dropShadowAngle": 0.5235987755982988,
-          "dropShadowBlur": 0,
-          "dropShadowColor": "#000000",
-          "dropShadowDistance": 5,
-          "fillType": "gradient",
-          "filters": {},
-          "gradientData": {
-            "colors": [
-              16777215,
-              14916610
-            ],
-            "percentages": [
-              0.68,
-              0.74
-            ],
-            "fillGradientType": 0
-          }
-        }
-      ],
-      "type": "asset",
-      "name": "Templatejkfc"
-    },
-    "FrameTemplate": {
-      "children": [
-        {
-          "type": "9slice",
-          "name": "FrameTemplate_9S",
-          "width": 628.2550497918874,
-          "height": 1122.8987543214369,
-          "pivotX": 0,
-          "pivotY": 0,
-          "origWidth": 360,
-          "origHeight": 360,
-          "x": 0,
-          "y": 0,
-          "filePath": "images/frame.png",
-          "filters": {},
-          "left": 40,
-          "right": 40,
-          "top": 40,
-          "bottom": 40,
-          "portrait": {
-            "x": 0,
-            "y": 0,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorType": "none",
-            "anchorPercentage": {
-              "x": 0,
-              "y": 0
-            },
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            },
-            "width": 628.2550497918874,
-            "height": 1122.8987543214369
-          },
-          "landscape": {
-            "x": 0,
-            "y": 0,
-            "rotation": 0,
-            "scaleX": 1,
-            "scaleY": 1,
-            "alpha": 1,
-            "pivotX": 0,
-            "pivotY": 0,
-            "visible": true,
-            "isAnchored": false,
-            "anchorType": "none",
-            "anchorPercentage": {
-              "x": 0,
-              "y": 0
-            },
-            "anchorLocalPercentage": {
-              "x": 0,
-              "y": 0
-            },
-            "width": 1130.6517904425898,
-            "height": 629.805657016118
-          }
-        }
-      ],
-      "type": "asset",
-      "name": "FrameTemplate"
-    },
     "Templatefzhj": {
       "children": [],
       "type": "asset",
       "name": "Templatefzhj"
     },
-    "Template83q9": {
+    "KeyPadTemplate": {
       "children": [
         {
           "portrait": {
@@ -6310,7 +6211,7 @@
             }
           },
           "type": "btn",
-          "name": "Templatetqgi",
+          "name": "KeyPadBtnTemplate",
           "guide": false,
           "template": true,
           "instanceName": "leftBTN",
@@ -6351,7 +6252,7 @@
             }
           },
           "type": "btn",
-          "name": "Templatetqgi",
+          "name": "KeyPadBtnTemplate",
           "guide": false,
           "template": true,
           "instanceName": "rightBTN",
@@ -6392,7 +6293,7 @@
             }
           },
           "type": "btn",
-          "name": "Templatetqgi",
+          "name": "KeyPadBtnTemplate",
           "guide": false,
           "template": true,
           "instanceName": "upBTN",
@@ -6433,7 +6334,7 @@
             }
           },
           "type": "btn",
-          "name": "Templatetqgi",
+          "name": "KeyPadBtnTemplate",
           "guide": false,
           "template": true,
           "instanceName": "downBTN",
@@ -6442,11 +6343,11 @@
         }
       ],
       "type": "asset",
-      "name": "Template83q9"
+      "name": "KeyPadTemplate"
     },
-    "Templatetqgi": {
+    "KeyPadBtnTemplate": {
       "type": "btn",
-      "name": "Templatetqgi",
+      "name": "KeyPadBtnTemplate",
       "children": [
         {
           "type": "asset",
@@ -6550,11 +6451,11 @@
       "type": "asset",
       "name": "Templateoaaf"
     },
-    "Templateas0l": {
+    "LogoTemplate": {
       "children": [
         {
           "type": "img",
-          "name": "Templateas0l_IMG",
+          "name": "LogoTemplate_IMG",
           "width": 1024,
           "height": 1024,
           "x": 0,
@@ -6566,7 +6467,131 @@
         }
       ],
       "type": "asset",
-      "name": "Templateas0l"
+      "name": "LogoTemplate"
+    },
+    "SoundTemplate": {
+      "children": [
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Templateucm5",
+          "template": true,
+          "guide": false,
+          "instanceName": "onState",
+          "filters": {},
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1.69,
+            "scaleY": 1.69,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1.69,
+            "scaleY": 1.69,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "type": "asset",
+          "editorOnly": false,
+          "name": "Template4wpi",
+          "template": true,
+          "guide": false,
+          "instanceName": "offState",
+          "filters": {},
+          "portrait": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1.69,
+            "scaleY": 1.69,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "landscape": {
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "scaleX": 1.69,
+            "scaleY": 1.69,
+            "alpha": 1,
+            "pivotX": 0,
+            "pivotY": 0,
+            "visible": true,
+            "isAnchored": false,
+            "anchorLocalPercentage": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ],
+      "type": "toggle",
+      "name": "SoundTemplate"
+    },
+    "Templateucm5": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Templateucm5_IMG",
+          "width": 32,
+          "height": 27,
+          "x": 0,
+          "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
+          "filePath": "images/unmuteBTN.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Templateucm5"
+    },
+    "Template4wpi": {
+      "children": [
+        {
+          "type": "img",
+          "name": "Template4wpi_IMG",
+          "width": 32,
+          "height": 27,
+          "x": 0,
+          "y": 0,
+          "pivotX": 0,
+          "pivotY": 0,
+          "filePath": "images/muteBTN.png",
+          "filters": {}
+        }
+      ],
+      "type": "asset",
+      "name": "Template4wpi"
     }
   },
   "fonts": [
@@ -6576,5 +6601,6 @@
   "fps": 60,
   "cuePoints": {},
   "atlas": false,
-  "stageColor": 3621201
+  "stageColor": 3621201,
+  "exportFormat": "png"
 }
